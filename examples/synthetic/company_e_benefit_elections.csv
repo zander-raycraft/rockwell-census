@@ -1,0 +1,10 @@
+Worker Ref,Employee,Birth Date,Medical Plan,Medical Tier,Medical Status,Dental Plan,Dental Tier,Dental Status,Vision Plan,Vision Tier,Vision Status,Effective From,Effective To,Notes
+J-001,Lucia Garcia,1987-05-17,Cedar PPO 2000,EE + Family,Enrolled,Paper Dental Plus,EE + Child(ren),Enrolled,,,Waived,2026-01-01,,
+J-002,Jose Muller,1990-11-23,Cedar HDHP 3500,EE+SP,Active,,,Declined,Lantern Vision,EE,Active,2026-01-01,,"Employee wrote ""covered elsewhere"" for dental"
+J-003,Jamie Walker,1985-04-03,Cedar PPO 2000,EE,Active,Paper Dental Plus,EE,Active,,,,2026-01-01,,Still enrolled during leave
+J-004,Jamie Walker,1994-08-22,Cedar HDHP 3500,EE,Active,Paper Dental Plus,EE,Active,Lantern Vision,EE,Active,2026-01-01,,
+J-005,Eun Ji Park,1993-06-18,Cedar PPO 2000,EE + Child,Active,Paper Dental Plus,EE + Child,Active,,,Waived,2026-01-01,,
+J-006,Dev Singh,1981-01-31,,,Waived,,,,,,Pending,2026-01-01,,Blank dental status is unknown; not an explicit waiver
+J-007,Rowan Ng,2002-02-28,,,Not elected,,,Not elected,,,Not elected,2026-11-01,,Waiting for new-hire selections
+J-008,Carmen Ochoa,1974-12-09,Cedar PPO 2000,EE+SP,Terminated,Paper Dental Plus,EE+SP,Terminated,,,Waived,2026-01-01,2026-10-15,
+J-003,Jamie Walker,1985-04-03,Cedar HDHP 3500,EE,Pending,,,,,,,2027-01-01,,Future medical selection only; blank other benefits do not cancel current coverage

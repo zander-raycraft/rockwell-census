@@ -1,0 +1,27 @@
+﻿Copper Kite Services;Benefits administration extract;As of 2026-10-31;;;;;;;;;;
+Dates: MM/DD/YYYY unless ISO;Subscriber Ref is NOT payroll Worker Number;;;;;;;;;;;
+;;;;;;;;;;;;
+Product;Plan Option;Subscriber Ref;Subscriber;Covered Person;Rel Code;DOB;Member SSN;Tier;Begin;End;Election Status;Notes
+MED;Harbor PPO 1500;BEN-41;Liz Bennett;Liz Bennett;SELF;01/16/1986;901701001;EE+SP;01/01/2026;;ENROLLED;
+MED;Harbor PPO 1500;BEN-41;Liz Bennett;Taylor Bennett;SP;08/23/1984;;EE+SP;01/01/2026;;Active;
+DEN;Orchard Dental Basic;BEN-41;Liz Bennett;Liz Bennett;SELF;01/16/1986;901701001;EE;01/01/2026;;Active;
+VIS;;BEN-41;Liz Bennett;Liz Bennett;SELF;01/16/1986;901701001;Waived;01/01/2026;;DECLINED;Covered elsewhere
+MED;Harbor HDHP 3000;BEN-42;Alex Patel;Alex Patel;EE;06/02/1988;901701002;Employee;2026-01-01;;Active;
+MED;Harbor PPO 1500;BEN-43;Alex Patel;Alex Patel;EE;09/19/1992;901701003;FAM;01/01/2026;;Active;
+MED;Harbor PPO 1500;BEN-43;Alex Patel;Morgan Shah;Spouse;05/11/1990;;FAM;01/01/2026;;Active;
+MED;Harbor PPO 1500;BEN-43;Alex Patel;Nico Patel;CH;06/18/2020;;FAM;01/01/2026;;Active;
+DEN;Orchard Dental Basic;BEN-43;Alex Patel;Alex Patel;EE;09/19/1992;901701003;EE+SP;01/01/2026;;Active;
+DEN;Orchard Dental Basic;BEN-43;Alex Patel;Morgan Shah;SP;05/11/1990;;EE+SP;01/01/2026;;Active;
+DEN;Orchard Dental Basic;BEN-43;Alex Patel;Nico Patel;CH;06/18/2020;;EE+SP;01/01/2026;;Active;Child listed under spouse-only tier
+MED;Harbor PPO 1500;BEN-44;Sean ONeill;Sean ONeill;Employee;11/05/1977;901701004;EE;01/01/2026;;Active;
+MED;Harbor HDHP 3000;BEN-45;Isabel Ruiz;Isabel Ruiz;EE;04/12/1991;901701005;EE+CH;01/01/2026;;Active;
+MED;Harbor HDHP 3000;BEN-45;Isabel Ruiz;Mila Martinez;Child;02/09/2018;;EE+CH;01/01/2026;;Active;
+MED;Harbor PPO 1500;BEN-46;Marcus Brooks;Marcus Brooks;EE;12/21/1983;901701006;EE;01/01/2026;;Active;"On leave; benefit still active"
+MED;;BEN-47;Naomi Kim;Naomi Kim;EE;07/25/1996;901701007;Declined;01/01/2026;;Waived;DOB supplied here, absent in payroll
+MED;Harbor PPO 1500;BEN-48;Ben Foster;Ben Foster;EE;04/03/1985;901701008;Employee Only;01/01/2026;;Active;
+MED;Harbor HDHP 3000;BEN-50;Arjun Das;Arjun Das;EE;02/08/1994;901701019;EE;01/01/2026;;Active;
+MED;Harbor PPO 1500;BEN-51;Wendy Cole;Wendy Cole;EE;03/17/1972;;EE;01/01/2026;09/30/2026;Terminated;Absent from current payroll
+MED;Harbor PPO 1500;BEN-43;Alex Patel;Nico Patel;CH;06/18/2020;;FAM;01/01/2026;;Active;
+MED;Harbor PPO 1500;BEN-52;Alex Patel;Alex Patel;EE;;;EE;10/01/2026;;Active;Subscriber not linked to a payroll ID
+;;;;;;;;;;;;
+END OF REPORT;"21 detail rows; includes an exact duplicate";;;;;;;;;;;

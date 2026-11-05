@@ -1,0 +1,167 @@
+Moss Lantern Goods,company j handwritten census.csv,Snapshot 2026-10-31,,,,,,
+Dates: DD/MM/YYYY,Synthetic test data,,,,,,,
+,,,,,,,,
+Household ID,Name,Relationship,DOB,SSN,Medical,Dental,Vision,Notes
+000001,"Morgan, Alexander",EE,01/01/1965,907-44-0001,FAM,EE+CH,waive,
+000001,Priya Walker,SP,09/03/1970,,,,,Spouse; coverage not specified
+000001,Remy Walker,,09/04/2007,,,,,Child of preceding employee; coverage not specified
+000002,"Morgan, Alexandra",EE,02/02/1966,907440002,EE+SP,EE,EE,
+,Miles Morgan,SP,10/04/1971,,,,,Spouse; coverage not specified
+000003,"Morgan, Elias",EE,03/03/1967,907-44-0003,EE+CH,EE+CH,EE,
+000003,Sage Morgan,Child,11/05/2009,,,,,Child of preceding employee; coverage not specified
+000004,"Morgan, Maya",EE,,907440004,EE,EE,EE,
+000005,"Morgan, Theo",EE,05/05/1969,,FAM,EE+CH,EE,
+000005,Inez Morgan,SP,13/07/1974,,,,,Spouse; coverage not specified
+000005,Remy Morgan,Child,13/08/2011,,,,,Child of preceding employee; coverage not specified
+000006,"Morgan, Amara",EE,06/06/1970,907440006,EE+SP,EE,waive,
+,Omar Park,SP,14/08/1975,,,,,Spouse; coverage not specified
+000007,"Morgan, Felix",EE,07/07/1971,907-44-0007,EE+CH,EE+CH,EE,
+000007,Sage Morgan,Child,15/09/2013,,,,,Child of preceding employee; coverage not specified
+000008,"Morgan, Lena",EE,08/08/1972,907440008,EE,EE,EE,
+000009,"Morgan, Oscar",EE,09/09/1973,907-44-0009,FAM,EE+CH,EE,Employment ended 2026-09-30
+000009,Ada Morgan,SP,17/11/1978,,,,,Spouse; coverage not specified
+000009,Remy Morgan,Child,17/12/2015,,,,,Child of preceding employee; coverage not specified
+000010,"Morgan, Priya",EE,10/10/1974,907440010,EE+SP,EE,EE,
+,Ivan Morgan,SP,18/12/1979,,,,,Spouse; coverage not specified
+000011,"Morgan, Miles",EE,31/04/1988,907-44-0011,EE+CH,EE+CH,waive,
+000011,Sage Brooks,Child,19/01/2017,,,,,Child of preceding employee; coverage not specified
+" 000012 "," Morgan, Zara ",EE,12/12/1976,907440012,EE,EE,EE,
+000012,"Morgan, Hugo",EE,13/01/1977,907-44-0013,FAM,EE+CH,EE,
+000012,Sana Morgan,SP,21/03/1982,,,,,Spouse; coverage not specified
+000012,Remy Morgan,Child,21/04/2019,,,,,Child of preceding employee; coverage not specified
+000014,"Morgan, Inez",EE,14/02/1978,907440014,EE+SP,EE,EE,
+,Ezra Morgan,SP,22/04/1983,,,,,Spouse; coverage not specified
+000015,"Morgan, Omar",EE,15/03/1979,907-44-0015,EE+CH,EE+CH,EE,
+000015,Sage Morgan,Child,23/05/2021,,,,,Child of preceding employee; coverage not specified
+000016,"Morgan, Clara",EE,04/03/1985,907440016,EE,EE,waive,
+000017,"Morgan, Alex",EE,17/05/1981,907-44-0017,FAM,EE+CH,EE,
+000017,Nora Morgan,SP,25/07/1986,,,,,Spouse; coverage not specified
+000017,Remy Morgan,Child,25/08/2023,,,,,Child of preceding employee; coverage not specified
+000018,"Ellis, Jordan",EE,12/05/1987,907440018,EE+SP,EE,EE,
+,Elias Ellis,SP,26/08/1987,,,,,Spouse; coverage not specified
+000019,"Ellis, Jordan",EE,12/05/1987,907-44-0019,EE+CH,EE+CH,EE,
+000019,Sage Ellis,Child,27/09/2007,,,,,Child of preceding employee; coverage not specified
+000020,"García, Lucía",EE,20/08/1984,907440020,EE,EE,EE,
+000021,"Müller, José",EE,21/09/1985,907-44-0021,FAM,EE+CH,waive,
+000021,Amara Martin,SP,02/11/1990,,,,,Spouse; coverage not specified
+000021,Remy Martin,Child,02/12/2009,,,,,Child of preceding employee; coverage not specified
+000022,"O'Neal, Anne-Marie",EE,22/10/1986,907440022,EE+SP,EE,EE,
+,Felix O'Neal,SP,03/12/1991,,,,,Spouse; coverage not specified
+000023,"Morgan, Ezra",EE,23/11/1987,907-44-0023,EE+CH,EE+CH,EE,
+000023,Sage Morgan,Child,04/01/2011,,,,,Child of preceding employee; coverage not specified
+000024,"Morgan, Vera",EE,24/12/1988,907440024,EE,EE,EE,
+000025,"Santos, Alex",EE,25/01/1989,907-44-0025,FAM,EE+CH,EE,
+000025,Priya Santos,SP,06/03/1994,,,,,Spouse; coverage not specified
+000025,Remy Santos,Child,06/04/2013,,,,,Child of preceding employee; coverage not specified
+000026,"Santos, Nora",EE,26/02/1990,907440026,EE+SP,EE,waive,
+,Miles Morgan,SP,07/04/1995,,,,,Spouse; coverage not specified
+000027,"Santos, Elias",EE,27/03/1991,907-44-0027,EE+CH,EE+CH,EE,
+000027,Sage Santos,Child,08/05/2015,,,,,Child of preceding employee; coverage not specified
+000028,"Santos, Maya",EE,01/04/1992,907440028,EE,EE,EE,
+000029,"Santos, Theo",EE,02/05/1993,907-44-0029,FAM,EE+CH,EE,
+000029,Inez Santos,SP,10/07/1998,,,,,Spouse; coverage not specified
+000029,Remy Santos,Child,10/08/2017,,,,,Child of preceding employee; coverage not specified
+000030,"Santos, Amara",EE,03/06/1994,907440030,EE+SP,EE,EE,
+,Omar Santos,SP,11/08/1970,,,,,Spouse; coverage not specified
+000031,"Santos, Felix",EE,04/07/1995,907-44-0031,EE+CH,EE+CH,waive,
+000031,Sage Reyes,Child,12/09/2019,,,,,Child of preceding employee; coverage not specified
+000032,"Santos, Lena",EE,05/08/1996,907440032,EE,EE,EE,
+000033,"Santos, Oscar",EE,06/09/1997,907-44-0033,FAM,EE+CH,EE,
+000033,Ada Santos,SP,14/11/1973,,,,,Spouse; coverage not specified
+000033,Remy Santos,Child,14/12/2021,,,,,Child of preceding employee; coverage not specified
+000034,"Santos, Priya",EE,07/10/1998,907440034,EE+SP,EE,EE,
+,Ivan Santos,SP,15/12/1974,,,,,Spouse; coverage not specified
+000035,"Santos, Miles",EE,08/11/1999,907-44-0035,EE+CH,EE+CH,EE,
+000035,Sage Santos,Child,16/01/2023,,,,,Child of preceding employee; coverage not specified
+000036,"Santos, Zara",EE,09/12/2000,907440036,EE,EE,waive,
+000037,"Santos, Hugo",EE,10/01/2001,907-44-0037,FAM,EE+CH,EE,
+000037,Sana Santos,SP,18/03/1977,,,,,Spouse; coverage not specified
+000037,Remy Santos,Child,18/04/2007,,,,,Child of preceding employee; coverage not specified
+000038,"Santos, Inez",EE,11/02/1965,907440038,EE+SP,EE,EE,
+,Ezra Santos,SP,19/04/1978,,,,,Spouse; coverage not specified
+000039,"Santos, Omar",EE,12/03/1966,907-44-0039,EE+CH,EE+CH,EE,
+000039,Sage Santos,Child,20/05/2009,,,,,Child of preceding employee; coverage not specified
+000040,"Santos, Clara",EE,13/04/1967,907440040,EE,EE,EE,
+Household ID,Name,Relationship,DOB,SSN,Medical,Dental,Vision,Notes
+000041,"Santos, Jules",EE,14/05/1968,907-44-0041,FAM,EE+CH,waive,
+000041,Nora Murphy,SP,22/07/1981,,,,,Spouse; coverage not specified
+000041,Remy Murphy,Child,22/08/2011,,,,,Child of preceding employee; coverage not specified
+000042,"Santos, Ada",EE,15/06/1969,907440042,EE+SP,EE,EE,
+,Elias Santos,SP,23/08/1982,,,,,Spouse; coverage not specified
+000043,"Santos, Ivan",EE,16/07/1970,907-44-0043,EE+CH,EE+CH,EE,
+000043,Sage Santos,Child,24/09/2013,,,,,Child of preceding employee; coverage not specified
+000044,"Santos, Esme",EE,17/08/1971,907440044,EE,EE,EE,
+000045,"Santos, Noel",EE,18/09/1972,907-44-0045,FAM,EE+CH,EE,
+000045,Amara Santos,SP,26/11/1985,,,,,Spouse; coverage not specified
+000045,Remy Santos,Child,26/12/2015,,,,,Child of preceding employee; coverage not specified
+000046,"Santos, Sana",EE,19/10/1973,907440046,EE+SP,EE,waive,
+,Felix Hayes,SP,27/12/1986,,,,,Spouse; coverage not specified
+000047,"Santos, Ezra",EE,20/11/1974,907-44-0047,EE+CH,EE+CH,EE,
+000047,Sage Santos,Child,01/01/2017,,,,,Child of preceding employee; coverage not specified
+000048,"Santos, Vera",EE,21/12/1975,907440048,EE,EE,EE,
+000049,"Khan, Alex",EE,22/01/1976,907-44-0049,FAM,EE+CH,EE,
+000049,Priya Khan,SP,03/03/1989,,,,,Spouse; coverage not specified
+000049,Remy Khan,Child,03/04/2019,,,,,Child of preceding employee; coverage not specified
+000050,"Khan, Nora",EE,23/02/1977,907440050,EE+SP,EE,EE,
+,Miles Khan,SP,04/04/1990,,,,,Spouse; coverage not specified
+000051,"Khan, Elias",EE,24/03/1978,907-44-0051,EE+CH,EE+CH,waive,
+000051,Sage Ellis,Child,05/05/2021,,,,,Child of preceding employee; coverage not specified
+000052,"Khan, Maya",EE,25/04/1979,907440052,EE,EE,EE,
+000053,"Khan, Theo",EE,26/05/1980,907-44-0053,FAM,EE+CH,EE,
+000053,Inez Khan,SP,07/07/1993,,,,,Spouse; coverage not specified
+000053,Remy Khan,Child,07/08/2023,,,,,Child of preceding employee; coverage not specified
+000054,"Khan, Amara",EE,27/06/1981,907440054,EE+SP,EE,EE,
+,Omar Khan,SP,08/08/1994,,,,,Spouse; coverage not specified
+000055,"Khan, Felix",EE,01/07/1982,907-44-0055,EE+CH,EE+CH,EE,
+000055,Sage Khan,Child,09/09/2007,,,,,Child of preceding employee; coverage not specified
+000056,"Khan, Lena",EE,02/08/1983,907440056,EE,EE,waive,
+000057,"Khan, Oscar",EE,03/09/1984,907-44-0057,FAM,EE+CH,EE,
+000057,Ada Khan,SP,11/11/1997,,,,,Spouse; coverage not specified
+000057,Remy Khan,Child,11/12/2009,,,,,Child of preceding employee; coverage not specified
+000058,"Khan, Priya",EE,04/10/1985,907440058,EE+SP,EE,EE,
+,Ivan Khan,SP,12/12/1998,,,,,Spouse; coverage not specified
+000059,"Khan, Miles",EE,05/11/1986,907-44-0059,EE+CH,EE+CH,EE,
+000059,Sage Khan,Child,13/01/2011,,,,,Child of preceding employee; coverage not specified
+000060,"Khan, Zara",EE,06/12/1987,907440060,EE,EE,EE,
+000061,"Khan, Hugo",EE,07/01/1988,907-44-0061,FAM,EE+CH,waive,
+000061,Sana Baker,SP,15/03/1972,,,,,Spouse; coverage not specified
+000061,Remy Baker,Child,15/04/2013,,,,,Child of preceding employee; coverage not specified
+000062,"Khan, Inez",EE,08/02/1989,907440062,EE+SP,EE,EE,
+,Ezra Khan,SP,16/04/1973,,,,,Spouse; coverage not specified
+000063,"Khan, Omar",EE,09/03/1990,907-44-0063,EE+CH,EE+CH,EE,
+000063,Sage Khan,Child,17/05/2015,,,,,Child of preceding employee; coverage not specified
+000064,"Khan, Clara",EE,10/04/1991,907440064,EE,EE,EE,
+000065,"Khan, Jules",EE,11/05/1992,907-44-0065,FAM,EE+CH,EE,
+000065,Nora Khan,SP,19/07/1976,,,,,Spouse; coverage not specified
+000065,Remy Khan,Child,19/08/2017,,,,,Child of preceding employee; coverage not specified
+000066,"Khan, Ada",EE,12/06/1993,907440066,EE+SP,EE,waive,
+,Elias Chen,SP,20/08/1977,,,,,Spouse; coverage not specified
+000067,"Khan, Ivan",EE,13/07/1994,907-44-0067,EE+CH,EE+CH,EE,
+000067,Sage Khan,Child,21/09/2019,,,,,Child of preceding employee; coverage not specified
+000068,"Khan, Esme",EE,14/08/1995,907440068,EE,EE,EE,
+000069,"Khan, Noel",EE,15/09/1996,907-44-0069,FAM,EE+CH,EE,
+000069,Amara Khan,SP,23/11/1980,,,,,Spouse; coverage not specified
+000069,Remy Khan,Child,23/12/2021,,,,,Child of preceding employee; coverage not specified
+000070,"Khan, Sana",EE,16/10/1997,907440070,EE+SP,EE,EE,
+,Felix Khan,SP,24/12/1981,,,,,Spouse; coverage not specified
+000071,"Khan, Ezra",EE,17/11/1998,907-44-0071,EE+CH,EE+CH,waive,
+000071,Sage Diaz,Child,25/01/2023,,,,,Child of preceding employee; coverage not specified
+000072,"Khan, Vera",EE,18/12/1999,907440072,EE,EE,EE,
+000073,"Baker, Alex",EE,19/01/2000,907-44-0073,FAM,EE+CH,EE,
+000073,Priya Baker,SP,27/03/1984,,,,,Spouse; coverage not specified
+000073,Remy Baker,Child,27/04/2007,,,,,Child of preceding employee; coverage not specified
+000074,"Baker, Nora",EE,20/02/2001,907440074,EE+SP,EE,EE,
+,Miles Baker,SP,01/04/1985,,,,,Spouse; coverage not specified
+000075,"Baker, Elias",EE,21/03/1965,907-44-0075,EE+CH,EE+CH,EE,
+000075,Sage Baker,Child,02/05/2009,,,,,Child of preceding employee; coverage not specified
+000076,"Baker, Maya",EE,22/04/1966,907440076,EE,EE,waive,
+000077,"Baker, Theo",EE,23/05/1967,907-44-0077,FAM,EE+CH,EE,
+000077,Inez Baker,SP,04/07/1988,,,,,Spouse; coverage not specified
+000077,Remy Baker,Child,04/08/2011,,,,,Child of preceding employee; coverage not specified
+000078,"Baker, Amara",EE,24/06/1968,907440078,EE+SP,EE,EE,
+,Omar Baker,SP,05/08/1989,,,,,Spouse; coverage not specified
+000079,"Baker, Felix",EE,25/07/1969,907-44-0079,EE+CH,EE+CH,EE,
+000079,Sage Baker,Child,06/09/2013,,,,,Child of preceding employee; coverage not specified
+000080,"Baker, Lena",EE,26/08/1970,907440080,EE,EE,EE,New hire; benefits not yet elected
+,,,,,,,,
+REPORT TOTAL,163,Unverified manual total,,,,,,

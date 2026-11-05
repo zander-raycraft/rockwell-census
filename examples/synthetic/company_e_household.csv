@@ -1,0 +1,15 @@
+Juniper Paper Studio;Dependent roster;As of 31/10/2026;;;;;;;;;
+Dates: DD/MM/YYYY;"Y = enrolled; N = not enrolled; blank = unknown";Coverage begin/end apply to Y benefits in this row;;;;;;;;;
+Household Ref;Employee Name;Dependent Name;Relationship;DOB;SSN;Medical?;Dental?;Vision?;Coverage Begin;Coverage End;Notes
+J-001;Lucía García;Rafael Ortiz;Spouse;21/08/1986;902-80-2001;Y;N;N;01/01/2026;;Spouse has medical only
+J-001;Lucía García;Sofía García Ortiz;Daughter;14/02/2016;;Y;Y;N;01/01/2026;;
+J-001;Lucía García;Leo García Ortiz;Son;26/09/2026;;Y;Y;N;01/10/2026;;Newborn added during year
+J-002;José Müller;Anika Müller;SP;05/10/1992;;Yes;No;No;01/01/2026;;
+J-002;José Müller;Milo Müller;CH;11/06/2018;;N;N;N;;;"Household member; not enrolled in any listed benefit"
+J-005;Eun-ji Park;Hana Park;child;08/03/2019;;Y;Y;N;01/01/2026;;
+J-006;Dev Singh;Asha Singh;Spouse;;;;;;;;"Dependent known; DOB and coverage not supplied"
+J-008;Carmen Ochoa;Diego Ochoa;Husband;16/04/1973;;Y;Y;N;01/01/2026;15/10/2026;Historical coverage ended with employee
+J-999;Quinn Ellis;Sky Ellis;Child;04/07/2017;;Y;N;N;01/01/2026;;Employee missing from staff and elections
+J-004;Jamie Walker;Robin Walker;Spouse;29/02/2023;;Y;N;N;01/11/2026;31/10/2026;"Check DOB and coverage dates; employee election says employee only"
+;Jamie Walker;Alex Walker;Child;15/01/2020;;;;;;;"Employee name ambiguous; no household reference"
+TOTAL DEPENDENTS;11;;;;;;;;;;

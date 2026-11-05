@@ -1,0 +1,87 @@
+Willow Loom Supply;company f enrollment.csv;Snapshot 2026-10-31;;;;;;;;;;
+Dates: MM/DD/YYYY;Synthetic test data;;;;;;;;;;;
+Subscriber Ref;Subscriber;Member;Relationship;Member DOB;Member SSN;Benefit;Plan;Tier;Status;Start;End;Notes
+F-BEN-0001;Alex Morgan;Alex Morgan;Employee;1/1/1965;903400001;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0001;Alex Morgan;Priya Walker;Spouse;3/9/1970;903602001;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0001;Alex Morgan;Remy Walker;Child;4/9/2007;903602002;Medical;Willow PPO 2000;Family;Active;7/1/2026;;
+F-BEN-0001;Alex Morgan;Alex Morgan;Employee;1/1/1965;903400001;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0001;Alex Morgan;Remy Walker;Child;4/9/2007;903602002;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;7/1/2026;;
+F-BEN-0001;Alex Morgan;Alex Morgan;Employee;1/1/1965;903400001;Vision;;Employee Only;Waived;1/1/2026;;Employee declined this benefit
+F-BEN-0002;Alex Morgan;Alex Morgan;Employee;2/2/1966;903400002;Medical;Willow PPO 2000;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0002;Alex Morgan;Miles Morgan;Spouse;4/10/1971;;Medical;Willow PPO 2000;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0002;Alex Morgan;Alex Morgan;Employee;2/2/1966;903400002;DENTAL;Ribbon Dental Basic;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0002;Alex Morgan;Alex Morgan;Employee;2/2/1966;903400002;Vision;Kite Vision Select;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0003;Elias Morgan;Elias Morgan;Employee;3/3/1967;903400003;Medical;;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0003;Elias Morgan;Sage Morgan;Child;5/11/2009;;Medical;Willow PPO 2000;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0003;Elias Morgan;Elias Morgan;Employee;3/3/1967;903400003;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0003;Elias Morgan;Sage Morgan;Child;5/11/2009;;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0003;Elias Morgan;Elias Morgan;Employee;3/3/1967;903400003;Vision;Kite Vision Select;Employee Only;Active;1/1/2026;;
+F-BEN-0004;Maya Morgan;Maya Morgan;Employee;4/4/1968;903400004;Medical;Willow PPO 2000;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0004;Maya Morgan;Maya Morgan;Employee;4/4/1968;903400004;DENTAL;Ribbon Dental Basic;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0004;Maya Morgan;Maya Morgan;Employee;4/4/1968;903400004;Vision;Kite Vision Select;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0005;Theo Morgan;Theo Morgan;Employee;5/5/1969;903400005;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0005;Theo Morgan;Inez Morgan;Spouse;7/13/1974;;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0005;Theo Morgan;Remy Morgan;Child;8/13/2011;;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0005;Theo Morgan;Theo Morgan;Employee;5/5/1969;903400005;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0005;Theo Morgan;Remy Morgan;Child;8/13/2011;;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0005;Theo Morgan;Theo Morgan;Employee;5/5/1969;903400005;Vision;Kite Vision Select;Employee Only;Active;1/1/2026;;
+F-BEN-0006;Amara Morgan;Amara Morgan;Employee;6/6/1970;903400006;Medical;Willow PPO 2000;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0006;Amara Morgan;Amara Morgan;Employee;6/6/1970;903400006;DENTAL;Ribbon Dental Basic;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0006;Amara Morgan;Amara Morgan;Employee;6/6/1970;903400006;Vision;;Employee Only;Waived;1/1/2026;;Employee declined this benefit
+F-BEN-0007;Felix Morgan;Felix Morgan;Employee;7/7/1971;903400007;Medical;Willow PPO 2000;E+1;Active;1/1/2026;;
+F-BEN-0007;Felix Morgan;Sage Morgan;Child;9/15/2013;903602013;Medical;Willow PPO 2000;E+1;Active;1/1/2026;;
+F-BEN-0007;Felix Morgan;Felix Morgan;Employee;7/7/1971;903400007;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0007;Felix Morgan;Sage Morgan;Child;9/15/2013;903602013;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0007;Felix Morgan;Felix Morgan;Employee;7/7/1971;903400007;Vision;Kite Vision Select;Employee Only;Active;1/1/2026;;
+F-BEN-0008;Lena Morgan;Lena Morgan;Employee;8/8/1972;903400008;Medical;Willow PPO 2000;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0008;Lena Morgan;Lena Morgan;Employee;8/8/1972;903400008;DENTAL;Ribbon Dental Basic;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0008;Lena Morgan;Lena Morgan;Employee;8/8/1972;903400008;Vision;Kite Vision Select;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0009;Oscar Morgan;Oscar Morgan;Employee;9/9/1973;903400009;Medical;Willow PPO 2000;Family;Terminated;1/1/2026;9/30/2026;
+F-BEN-0009;Oscar Morgan;Ada Morgan;Spouse;11/17/1978;;Medical;Willow PPO 2000;Family;Terminated;1/1/2026;9/30/2026;
+F-BEN-0009;Oscar Morgan;Remy Morgan;Child;12/17/2015;;Medical;Willow PPO 2000;Family;Terminated;1/1/2026;9/30/2026;
+F-BEN-0009;Oscar Morgan;Oscar Morgan;Employee;9/9/1973;903400009;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Terminated;1/1/2026;9/30/2026;
+F-BEN-0009;Oscar Morgan;Remy Morgan;Child;12/17/2015;;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Terminated;1/1/2026;9/30/2026;
+F-BEN-0009;Oscar Morgan;Oscar Morgan;Employee;9/9/1973;903400009;Vision;Kite Vision Select;Employee + Spouse;Terminated;1/1/2026;9/30/2026;
+F-BEN-0009;Oscar Morgan;Ada Morgan;Spouse;11/17/1978;;Vision;Kite Vision Select;Employee + Spouse;Terminated;1/1/2026;9/30/2026;
+F-BEN-0010;Priya Morgan;Priya Morgan;Employee;10/10/1974;903400010;Medical;Willow PPO 2000;Employee + Spouse;ENROLLED;1/1/2026;;
+F-BEN-0010;Priya Morgan;Ivan Morgan;Spouse;12/18/1979;903602019;Medical;Willow PPO 2000;Employee + Spouse;ENROLLED;1/1/2026;;
+F-BEN-0010;Priya Morgan;Priya Morgan;Employee;10/10/1974;903400010;DENTAL;Ribbon Dental Basic;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0010;Priya Morgan;Priya Morgan;Employee;10/10/1974;903400010;Vision;Kite Vision Select;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0011;Miles Morgan;Miles Morgan;Employee;11/11/1975;903400011;Medical;Willow PPO 2000;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0011;Miles Morgan;Sage Brooks;Child;1/19/2017;;Medical;Willow PPO 2000;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0011;Miles Morgan;Miles Morgan;Employee;11/11/1975;903400011;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0011;Miles Morgan;Sage Brooks;Child;1/19/2017;;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0011;Miles Morgan;Miles Morgan;Employee;11/11/1975;903400011;Vision;;Employee Only;Waived;1/1/2026;;Employee declined this benefit
+F-BEN-0012;Zara Morgan;Zara Morgan;Employee;12/12/1976;903400012;Medical;Willow PPO 2000;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0012;Zara Morgan;Zara Morgan;Employee;12/12/1976;903400012;DENTAL;Ribbon Dental Basic;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0012;Zara Morgan;Zara Morgan;Employee;12/12/1976;903400012;Vision;Kite Vision Select;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0013;Hugo Morgan;Hugo Morgan;Employee;1/13/1977;903400013;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0013;Hugo Morgan;Sana Morgan;Spouse;3/21/1982;903602025;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0013;Hugo Morgan;Remy Morgan;Child;4/21/2019;903602026;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0013;Hugo Morgan;Hugo Morgan;Employee;1/13/1977;903400013;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0013;Hugo Morgan;Remy Morgan;Child;4/21/2019;903602026;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0013;Hugo Morgan;Hugo Morgan;Employee;1/13/1977;903400013;Vision;Kite Vision Select;Employee Only;Active;1/1/2026;;
+F-BEN-0014;Inez Morgan;Inez Morgan;Employee;2/14/1978;903400014;Medical;Willow PPO 2000;Employee + Spouse;ENROLLED;1/1/2026;;
+F-BEN-0014;Inez Morgan;Ezra Morgan;Spouse;4/22/1983;;Medical;Willow PPO 2000;Employee + Spouse;ENROLLED;1/1/2026;;
+F-BEN-0014;Inez Morgan;Inez Morgan;Employee;2/14/1978;903400014;DENTAL;Ribbon Dental Basic;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0014;Inez Morgan;Inez Morgan;Employee;2/14/1978;903400014;Vision;Kite Vision Select;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0015;Omar Morgan;Omar Morgan;Employee;3/15/1979;903409898;Medical;Willow PPO 2000;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0015;Omar Morgan;Sage Morgan;Child;5/23/2021;;Medical;Willow PPO 2000;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0015;Omar Morgan;Omar Morgan;Employee;3/15/1979;903400015;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0015;Omar Morgan;Sage Morgan;Child;5/23/2021;;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0015;Omar Morgan;Omar Morgan;Employee;3/15/1979;903400015;Vision;Kite Vision Select;Employee Only;Active;1/1/2026;;
+F-BEN-0016;Clara Morgan;Clara Morgan;Employee;4/3/1985;903400016;Medical;Willow PPO 2000;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0016;Clara Morgan;Clara Morgan;Employee;3/4/1985;903400016;DENTAL;Ribbon Dental Basic;Employee Only;ENROLLED;1/1/2026;;
+F-BEN-0016;Clara Morgan;Clara Morgan;Employee;3/4/1985;903400016;Vision;;Employee Only;Waived;1/1/2026;;Employee declined this benefit
+F-BEN-0017;Alex Morgan;Alex Morgan;Employee;;;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0017;Alex Morgan;Nora Morgan;Spouse;;;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0017;Alex Morgan;Remy Morgan;Child;;;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+F-BEN-0017;Alex Morgan;Alex Morgan;Employee;;;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0017;Alex Morgan;Remy Morgan;Child;;;DENTAL;Ribbon Dental Basic;Employee + Child(ren);Active;1/1/2026;;
+F-BEN-0017;Alex Morgan;Alex Morgan;Employee;;;Vision;Kite Vision Select;Employee + Spouse;Active;1/1/2026;;
+F-BEN-0017;Alex Morgan;Nora Morgan;Spouse;;;Vision;Kite Vision Select;Employee + Spouse;Active;1/1/2026;;
+F-BEN-0008;Lena Morgan;Lena Morgan;Employee;8/8/1972;903-40-0008;Medical;Willow HDHP 4000;EE;Pending;1/1/2027;;"Future election; retain current medical record"
+F-BEN-ORPHAN;Drew Sample;Drew Sample;Employee;9/16/1980;;Medical;Willow PPO 2000;EE;Terminated;1/1/2026;8/31/2026;Absent from current staff
+F-BEN-0001;Alex Morgan;Alex Morgan;Employee;1/1/1965;903400001;Medical;Willow PPO 2000;Family;Active;1/1/2026;;
+;;;;;;;;;;;;
+REPORT TOTAL;81;Excludes exact duplicate;;;;;;;;;;

@@ -1,0 +1,833 @@
+Blue Thread Services|company l enrollment.csv|Snapshot 2026-10-31||||||||||
+Dates: YYYY-MM-DD|Synthetic test data|||||||||||
+Benefit|Plan|Subscriber Ref|Subscriber|Member|Relationship|Member DOB|Member SSN|Tier|Status|Start|End|Notes
+Medical|Willow PPO 2000|L-BEN-0001|Alex Morgan|Alex Morgan|Employee|1965-01-01|909460001|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0001|Alex Morgan|Priya Walker|Spouse|1970-03-09|909662001|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0001|Alex Morgan|Remy Walker|Child|2007-04-09|909662002|Family|Active|2026-07-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0001|Alex Morgan|Alex Morgan|Employee|1965-01-01|909460001|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0001|Alex Morgan|Remy Walker|Child|2007-04-09|909662002|Employee + Child(ren)|Active|2026-07-01||
+Vision||L-BEN-0001|Alex Morgan|Alex Morgan|Employee|1965-01-01|909460001|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0002|Alex Morgan|Alex Morgan|Employee|1966-02-02|909460002|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0002|Alex Morgan|Miles Morgan|Spouse|1971-04-10||Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0002|Alex Morgan|Alex Morgan|Employee|1966-02-02|909460002|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0002|Alex Morgan|Alex Morgan|Employee|1966-02-02|909460002|Employee Only|ENROLLED|2026-01-01||
+Medical||L-BEN-0003|Elias Morgan|Elias Morgan|Employee|1967-03-03|909460003|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0003|Elias Morgan|Sage Morgan|Child|2009-05-11||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0003|Elias Morgan|Elias Morgan|Employee|1967-03-03|909460003|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0003|Elias Morgan|Sage Morgan|Child|2009-05-11||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0003|Elias Morgan|Elias Morgan|Employee|1967-03-03|909460003|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0004|Maya Morgan|Maya Morgan|Employee|1968-04-04|909460004|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0004|Maya Morgan|Maya Morgan|Employee|1968-04-04|909460004|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0004|Maya Morgan|Maya Morgan|Employee|1968-04-04|909460004|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0005|Theo Morgan|Theo Morgan|Employee|1969-05-05|909460005|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0005|Theo Morgan|Inez Morgan|Spouse|1974-07-13||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0005|Theo Morgan|Remy Morgan|Child|2011-08-13||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0005|Theo Morgan|Theo Morgan|Employee|1969-05-05|909460005|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0005|Theo Morgan|Remy Morgan|Child|2011-08-13||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0005|Theo Morgan|Theo Morgan|Employee|1969-05-05|909460005|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0006|Amara Morgan|Amara Morgan|Employee|1970-06-06|909460006|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0006|Amara Morgan|Amara Morgan|Employee|1970-06-06|909460006|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0006|Amara Morgan|Amara Morgan|Employee|1970-06-06|909460006|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0007|Felix Morgan|Felix Morgan|Employee|1971-07-07|909460007|E+1|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0007|Felix Morgan|Sage Morgan|Child|2013-09-15|909662013|E+1|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0007|Felix Morgan|Felix Morgan|Employee|1971-07-07|909460007|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0007|Felix Morgan|Sage Morgan|Child|2013-09-15|909662013|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0007|Felix Morgan|Felix Morgan|Employee|1971-07-07|909460007|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0008|Lena Morgan|Lena Morgan|Employee|1972-08-08|909460008|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0008|Lena Morgan|Lena Morgan|Employee|1972-08-08|909460008|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0008|Lena Morgan|Lena Morgan|Employee|1972-08-08|909460008|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0009|Oscar Morgan|Oscar Morgan|Employee|1973-09-09|909460009|Family|Terminated|2026-01-01|2026-09-30|
+Medical|Willow PPO 2000|L-BEN-0009|Oscar Morgan|Ada Morgan|Spouse|1978-11-17||Family|Terminated|2026-01-01|2026-09-30|
+Medical|Willow PPO 2000|L-BEN-0009|Oscar Morgan|Remy Morgan|Child|2015-12-17||Family|Terminated|2026-01-01|2026-09-30|
+DENTAL|Ribbon Dental Basic|L-BEN-0009|Oscar Morgan|Oscar Morgan|Employee|1973-09-09|909460009|Employee + Child(ren)|Terminated|2026-01-01|2026-09-30|
+DENTAL|Ribbon Dental Basic|L-BEN-0009|Oscar Morgan|Remy Morgan|Child|2015-12-17||Employee + Child(ren)|Terminated|2026-01-01|2026-09-30|
+Vision|Kite Vision Select|L-BEN-0009|Oscar Morgan|Oscar Morgan|Employee|1973-09-09|909460009|Employee + Spouse|Terminated|2026-01-01|2026-09-30|
+Vision|Kite Vision Select|L-BEN-0009|Oscar Morgan|Ada Morgan|Spouse|1978-11-17||Employee + Spouse|Terminated|2026-01-01|2026-09-30|
+Medical|Willow PPO 2000|L-BEN-0010|Priya Morgan|Priya Morgan|Employee|1974-10-10|909460010|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0010|Priya Morgan|Ivan Morgan|Spouse|1979-12-18|909662019|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0010|Priya Morgan|Priya Morgan|Employee|1974-10-10|909460010|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0010|Priya Morgan|Priya Morgan|Employee|1974-10-10|909460010|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0011|Miles Morgan|Miles Morgan|Employee|1975-11-11|909460011|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0011|Miles Morgan|Sage Brooks|Child|2017-01-19||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0011|Miles Morgan|Miles Morgan|Employee|1975-11-11|909460011|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0011|Miles Morgan|Sage Brooks|Child|2017-01-19||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0011|Miles Morgan|Miles Morgan|Employee|1975-11-11|909460011|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0012|Zara Morgan|Zara Morgan|Employee|1976-12-12|909460012|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0012|Zara Morgan|Zara Morgan|Employee|1976-12-12|909460012|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0012|Zara Morgan|Zara Morgan|Employee|1976-12-12|909460012|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0013|Hugo Morgan|Hugo Morgan|Employee|1977-01-13|909460013|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0013|Hugo Morgan|Sana Morgan|Spouse|1982-03-21|909662025|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0013|Hugo Morgan|Remy Morgan|Child|2019-04-21|909662026|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0013|Hugo Morgan|Hugo Morgan|Employee|1977-01-13|909460013|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0013|Hugo Morgan|Remy Morgan|Child|2019-04-21|909662026|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0013|Hugo Morgan|Hugo Morgan|Employee|1977-01-13|909460013|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0014|Inez Morgan|Inez Morgan|Employee|1978-02-14|909460014|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0014|Inez Morgan|Ezra Morgan|Spouse|1983-04-22||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0014|Inez Morgan|Inez Morgan|Employee|1978-02-14|909460014|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0014|Inez Morgan|Inez Morgan|Employee|1978-02-14|909460014|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0015|Omar Morgan|Omar Morgan|Employee|1979-03-15|909469898|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0015|Omar Morgan|Sage Morgan|Child|2021-05-23||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0015|Omar Morgan|Omar Morgan|Employee|1979-03-15|909460015|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0015|Omar Morgan|Sage Morgan|Child|2021-05-23||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0015|Omar Morgan|Omar Morgan|Employee|1979-03-15|909460015|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0016|Clara Morgan|Clara Morgan|Employee|1985-04-03|909460016|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0016|Clara Morgan|Clara Morgan|Employee|1985-03-04|909460016|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0016|Clara Morgan|Clara Morgan|Employee|1985-03-04|909460016|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0017|Alex Morgan|Alex Morgan|Employee|||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0017|Alex Morgan|Nora Morgan|Spouse|||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0017|Alex Morgan|Remy Morgan|Child|||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0017|Alex Morgan|Alex Morgan|Employee|||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0017|Alex Morgan|Remy Morgan|Child|||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0017|Alex Morgan|Alex Morgan|Employee|||Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0017|Alex Morgan|Nora Morgan|Spouse|||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0018|Jordan Ellis|Jordan Ellis|Employee|1987-05-12|909460018|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0018|Jordan Ellis|Elias Ellis|Spouse|1987-08-26||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0018|Jordan Ellis|Jordan Ellis|Employee|1987-05-12|909460018|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0018|Jordan Ellis|Jordan Ellis|Employee|1987-05-12|909460018|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0019|Jordan Ellis|Jordan Ellis|Employee|1987-05-12|909460019|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0019|Jordan Ellis|Sage Ellis|Child|2007-09-27|909662037|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0019|Jordan Ellis|Jordan Ellis|Employee|1987-05-12|909460019|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0019|Jordan Ellis|Sage Ellis|Child|2007-09-27|909662037|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0019|Jordan Ellis|Jordan Ellis|Employee|1987-05-12|909460019|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0020|Lucia Garcia|Lucia Garcia|Employee|1984-08-20|909460020|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0020|Lucia Garcia|Lucia Garcia|Employee|1984-08-20|909460020|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0020|Lucia Garcia|Lucia Garcia|Employee|1984-08-20|909460020|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0021|Jose Muller|Jose Muller|Employee|1985-09-21|909460021|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0021|Jose Muller|Amara Martin|Spouse|1990-11-02||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0021|Jose Muller|Remy Martin|Child|2009-12-02||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0021|Jose Muller|Jose Muller|Employee|1985-09-21|909460021|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0021|Jose Muller|Remy Martin|Child|2009-12-02||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0021|Jose Muller|Jose Muller|Employee|1985-09-21|909460021|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0022|Anne-Marie ONeal|Anne-Marie ONeal|Employee|1986-10-22|909460022|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0022|Anne-Marie ONeal|Felix O'Neal|Spouse|1991-12-03|909662043|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0022|Anne-Marie ONeal|Anne-Marie ONeal|Employee|1986-10-22|909460022|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0022|Anne-Marie ONeal|Anne-Marie ONeal|Employee|1986-10-22|909460022|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0023|Ezra Morgan|Ezra Morgan|Employee|1987-11-23|909460023|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0023|Ezra Morgan|Sage Morgan|Child|2011-01-04||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0023|Ezra Morgan|Ezra Morgan|Employee|1987-11-23|909460023|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0023|Ezra Morgan|Sage Morgan|Child|2011-01-04||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0023|Ezra Morgan|Ezra Morgan|Employee|1987-11-23|909460023|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0024|Vera Morgan|Vera Morgan|Employee|1988-12-24|909460024|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0024|Vera Morgan|Vera Morgan|Employee|1988-12-24|909460024|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0024|Vera Morgan|Vera Morgan|Employee|1988-12-24|909460024|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0025|Alex Santos|Alex Santos|Employee|1989-01-25|909460025|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0025|Alex Santos|Priya Santos|Spouse|1994-03-06|909662049|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0025|Alex Santos|Remy Santos|Child|2013-04-06|909662050|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0025|Alex Santos|Alex Santos|Employee|1989-01-25|909460025|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0025|Alex Santos|Remy Santos|Child|2013-04-06|909662050|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0025|Alex Santos|Alex Santos|Employee|1989-01-25|909460025|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0025|Alex Santos|Priya Santos|Spouse|1994-03-06|909662049|Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0026|Nora Santos|Nora Santos|Employee|1990-02-26|909460026|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0026|Nora Santos|Miles Morgan|Spouse|1995-04-07||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0026|Nora Santos|Nora Santos|Employee|1990-02-26|909460026|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0026|Nora Santos|Nora Santos|Employee|1990-02-26|909460026|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0027|Elias Santos|Elias Santos|Employee|1991-03-27|909460027|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0027|Elias Santos|Sage Santos|Child|2015-05-08||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0027|Elias Santos|Elias Santos|Employee|1991-03-27|909460027|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0027|Elias Santos|Sage Santos|Child|2015-05-08||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0027|Elias Santos|Elias Santos|Employee|1991-03-27|909460027|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0028|Maya Santos|Maya Santos|Employee|1992-04-01|909460028|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0028|Maya Santos|Maya Santos|Employee|1992-04-01|909460028|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0028|Maya Santos|Maya Santos|Employee|1992-04-01|909460028|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0029|Theo Santos|Theo Santos|Employee|1993-05-02|909460029|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0029|Theo Santos|Inez Santos|Spouse|1998-07-10||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0029|Theo Santos|Remy Santos|Child|2017-08-10||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0029|Theo Santos|Theo Santos|Employee|1993-05-02|909460029|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0029|Theo Santos|Remy Santos|Child|2017-08-10||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0029|Theo Santos|Theo Santos|Employee|1993-05-02|909460029|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0030|Amara Santos|Amara Santos|Employee|1994-06-03|909460030|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0030|Amara Santos|Omar Santos|Spouse|1970-08-11||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0030|Amara Santos|Amara Santos|Employee|1994-06-03|909460030|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0030|Amara Santos|Amara Santos|Employee|1994-06-03|909460030|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0031|Felix Santos|Felix Santos|Employee|1995-07-04|909460031|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0031|Felix Santos|Sage Reyes|Child|2019-09-12|909662061|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0031|Felix Santos|Felix Santos|Employee|1995-07-04|909460031|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0031|Felix Santos|Sage Reyes|Child|2019-09-12|909662061|Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0031|Felix Santos|Felix Santos|Employee|1995-07-04|909460031|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0032|Lena Santos|Lena Santos|Employee|1996-08-05|909460032|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0032|Lena Santos|Lena Santos|Employee|1996-08-05|909460032|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0032|Lena Santos|Lena Santos|Employee|1996-08-05|909460032|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0033|Oscar Santos|Oscar Santos|Employee|1997-09-06|909460033|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0033|Oscar Santos|Ada Santos|Spouse|1973-11-14||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0033|Oscar Santos|Remy Santos|Child|2021-12-14||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0033|Oscar Santos|Oscar Santos|Employee|1997-09-06|909460033|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0033|Oscar Santos|Remy Santos|Child|2021-12-14||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0033|Oscar Santos|Oscar Santos|Employee|1997-09-06|909460033|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0033|Oscar Santos|Ada Santos|Spouse|1973-11-14||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0034|Priya Santos|Priya Santos|Employee|1998-10-07|909460034|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0034|Priya Santos|Ivan Santos|Spouse|1974-12-15|909662067|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0034|Priya Santos|Priya Santos|Employee|1998-10-07|909460034|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0034|Priya Santos|Priya Santos|Employee|1998-10-07|909460034|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0035|Miles Santos|Miles Santos|Employee|1999-11-08|909460035|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0035|Miles Santos|Sage Santos|Child|2023-01-16||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0035|Miles Santos|Miles Santos|Employee|1999-11-08|909460035|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0035|Miles Santos|Sage Santos|Child|2023-01-16||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0035|Miles Santos|Miles Santos|Employee|1999-11-08|909460035|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0036|Zara Santos|Zara Santos|Employee|2000-12-09|909460036|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0036|Zara Santos|Zara Santos|Employee|2000-12-09|909460036|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0036|Zara Santos|Zara Santos|Employee|2000-12-09|909460036|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0037|Hugo Santos|Hugo Santos|Employee|2001-01-10|909460037|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0037|Hugo Santos|Sana Santos|Spouse|1977-03-18|909662073|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0037|Hugo Santos|Remy Santos|Child|2007-04-18|909662074|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0037|Hugo Santos|Hugo Santos|Employee|2001-01-10|909460037|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0037|Hugo Santos|Remy Santos|Child|2007-04-18|909662074|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0037|Hugo Santos|Hugo Santos|Employee|2001-01-10|909460037|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0038|Inez Santos|Inez Santos|Employee|1965-02-11|909460038|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0038|Inez Santos|Ezra Santos|Spouse|1978-04-19||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0038|Inez Santos|Inez Santos|Employee|1965-02-11|909460038|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0038|Inez Santos|Inez Santos|Employee|1965-02-11|909460038|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0039|Omar Santos|Omar Santos|Employee|1966-03-12|909460039|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0039|Omar Santos|Sage Santos|Child|2009-05-20||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0039|Omar Santos|Omar Santos|Employee|1966-03-12|909460039|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0039|Omar Santos|Sage Santos|Child|2009-05-20||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0039|Omar Santos|Omar Santos|Employee|1966-03-12|909460039|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0040|Clara Santos|Clara Santos|Employee|1967-04-13|909460040|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0040|Clara Santos|Clara Santos|Employee|1967-04-13|909460040|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0040|Clara Santos|Clara Santos|Employee|1967-04-13|909460040|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0041|Jules Santos|Jules Santos|Employee|1968-05-14|909460041|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0041|Jules Santos|Nora Murphy|Spouse|1981-07-22||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0041|Jules Santos|Remy Murphy|Child|2011-08-22||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0041|Jules Santos|Jules Santos|Employee|1968-05-14|909460041|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0041|Jules Santos|Remy Murphy|Child|2011-08-22||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0041|Jules Santos|Jules Santos|Employee|1968-05-14|909460041|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0042|Ada Santos|Ada Santos|Employee|1969-06-15|909460042|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0042|Ada Santos|Elias Santos|Spouse|1982-08-23||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0042|Ada Santos|Ada Santos|Employee|1969-06-15|909460042|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0042|Ada Santos|Ada Santos|Employee|1969-06-15|909460042|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0043|Ivan Santos|Ivan Santos|Employee|1970-07-16|909460043|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0043|Ivan Santos|Sage Santos|Child|2013-09-24|909662085|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0043|Ivan Santos|Ivan Santos|Employee|1970-07-16|909460043|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0043|Ivan Santos|Sage Santos|Child|2013-09-24|909662085|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0043|Ivan Santos|Ivan Santos|Employee|1970-07-16|909460043|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0044|Esme Santos|Esme Santos|Employee|1971-08-17|909460044|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0044|Esme Santos|Esme Santos|Employee|1971-08-17|909460044|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0044|Esme Santos|Esme Santos|Employee|1971-08-17|909460044|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0045|Noel Santos|Noel Santos|Employee|1972-09-18|909460045|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0045|Noel Santos|Amara Santos|Spouse|1985-11-26||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0045|Noel Santos|Remy Santos|Child|2015-12-26||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0045|Noel Santos|Noel Santos|Employee|1972-09-18|909460045|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0045|Noel Santos|Remy Santos|Child|2015-12-26||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0045|Noel Santos|Noel Santos|Employee|1972-09-18|909460045|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0046|Sana Santos|Sana Santos|Employee|1973-10-19|909460046|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0046|Sana Santos|Felix Hayes|Spouse|1986-12-27|909662091|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0046|Sana Santos|Sana Santos|Employee|1973-10-19|909460046|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0046|Sana Santos|Sana Santos|Employee|1973-10-19|909460046|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0047|Ezra Santos|Ezra Santos|Employee|1974-11-20|909460047|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0047|Ezra Santos|Sage Santos|Child|2017-01-01||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0047|Ezra Santos|Ezra Santos|Employee|1974-11-20|909460047|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0047|Ezra Santos|Sage Santos|Child|2017-01-01||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0047|Ezra Santos|Ezra Santos|Employee|1974-11-20|909460047|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0048|Vera Santos|Vera Santos|Employee|1975-12-21|909460048|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0048|Vera Santos|Vera Santos|Employee|1975-12-21|909460048|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0048|Vera Santos|Vera Santos|Employee|1975-12-21|909460048|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0049|Alex Khan|Alex Khan|Employee|1976-01-22|909460049|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0049|Alex Khan|Priya Khan|Spouse|1989-03-03|909662097|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0049|Alex Khan|Remy Khan|Child|2019-04-03|909662098|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0049|Alex Khan|Alex Khan|Employee|1976-01-22|909460049|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0049|Alex Khan|Remy Khan|Child|2019-04-03|909662098|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0049|Alex Khan|Alex Khan|Employee|1976-01-22|909460049|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0049|Alex Khan|Priya Khan|Spouse|1989-03-03|909662097|Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0050|Nora Khan|Nora Khan|Employee|1977-02-23|909460050|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0050|Nora Khan|Miles Khan|Spouse|1990-04-04||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0050|Nora Khan|Nora Khan|Employee|1977-02-23|909460050|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0050|Nora Khan|Nora Khan|Employee|1977-02-23|909460050|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0051|Elias Khan|Elias Khan|Employee|1978-03-24|909460051|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0051|Elias Khan|Sage Ellis|Child|2021-05-05||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0051|Elias Khan|Elias Khan|Employee|1978-03-24|909460051|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0051|Elias Khan|Sage Ellis|Child|2021-05-05||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0051|Elias Khan|Elias Khan|Employee|1978-03-24|909460051|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0052|Maya Khan|Maya Khan|Employee|1979-04-25|909460052|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0052|Maya Khan|Maya Khan|Employee|1979-04-25|909460052|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0052|Maya Khan|Maya Khan|Employee|1979-04-25|909460052|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0053|Theo Khan|Theo Khan|Employee|1980-05-26|909460053|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0053|Theo Khan|Inez Khan|Spouse|1993-07-07||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0053|Theo Khan|Remy Khan|Child|2023-08-07||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0053|Theo Khan|Theo Khan|Employee|1980-05-26|909460053|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0053|Theo Khan|Remy Khan|Child|2023-08-07||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0053|Theo Khan|Theo Khan|Employee|1980-05-26|909460053|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0054|Amara Khan|Amara Khan|Employee|1981-06-27|909460054|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0054|Amara Khan|Omar Khan|Spouse|1994-08-08||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0054|Amara Khan|Amara Khan|Employee|1981-06-27|909460054|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0054|Amara Khan|Amara Khan|Employee|1981-06-27|909460054|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0055|Felix Khan|Felix Khan|Employee|1982-07-01|909460055|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0055|Felix Khan|Sage Khan|Child|2007-09-09|909662109|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0055|Felix Khan|Felix Khan|Employee|1982-07-01|909460055|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0055|Felix Khan|Sage Khan|Child|2007-09-09|909662109|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0055|Felix Khan|Felix Khan|Employee|1982-07-01|909460055|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0056|Lena Khan|Lena Khan|Employee|1983-08-02|909460056|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0056|Lena Khan|Lena Khan|Employee|1983-08-02|909460056|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0056|Lena Khan|Lena Khan|Employee|1983-08-02|909460056|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0057|Oscar Khan|Oscar Khan|Employee|1984-09-03|909460057|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0057|Oscar Khan|Ada Khan|Spouse|1997-11-11||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0057|Oscar Khan|Remy Khan|Child|2009-12-11||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0057|Oscar Khan|Oscar Khan|Employee|1984-09-03|909460057|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0057|Oscar Khan|Remy Khan|Child|2009-12-11||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0057|Oscar Khan|Oscar Khan|Employee|1984-09-03|909460057|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0057|Oscar Khan|Ada Khan|Spouse|1997-11-11||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0058|Priya Khan|Priya Khan|Employee|1985-10-04|909460058|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0058|Priya Khan|Ivan Khan|Spouse|1998-12-12|909662115|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0058|Priya Khan|Priya Khan|Employee|1985-10-04|909460058|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0058|Priya Khan|Priya Khan|Employee|1985-10-04|909460058|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0059|Miles Khan|Miles Khan|Employee|1986-11-05|909460059|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0059|Miles Khan|Sage Khan|Child|2011-01-13||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0059|Miles Khan|Miles Khan|Employee|1986-11-05|909460059|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0059|Miles Khan|Sage Khan|Child|2011-01-13||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0059|Miles Khan|Miles Khan|Employee|1986-11-05|909460059|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0060|Zara Khan|Zara Khan|Employee|1987-12-06|909460060|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0060|Zara Khan|Zara Khan|Employee|1987-12-06|909460060|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0060|Zara Khan|Zara Khan|Employee|1987-12-06|909460060|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0061|Hugo Khan|Hugo Khan|Employee|1988-01-07|909460061|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0061|Hugo Khan|Sana Baker|Spouse|1972-03-15|909662121|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0061|Hugo Khan|Remy Baker|Child|2013-04-15|909662122|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0061|Hugo Khan|Hugo Khan|Employee|1988-01-07|909460061|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0061|Hugo Khan|Remy Baker|Child|2013-04-15|909662122|Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0061|Hugo Khan|Hugo Khan|Employee|1988-01-07|909460061|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0062|Inez Khan|Inez Khan|Employee|1989-02-08|909460062|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0062|Inez Khan|Ezra Khan|Spouse|1973-04-16||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0062|Inez Khan|Inez Khan|Employee|1989-02-08|909460062|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0062|Inez Khan|Inez Khan|Employee|1989-02-08|909460062|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0063|Omar Khan|Omar Khan|Employee|1990-03-09|909460063|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0063|Omar Khan|Sage Khan|Child|2015-05-17||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0063|Omar Khan|Omar Khan|Employee|1990-03-09|909460063|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0063|Omar Khan|Sage Khan|Child|2015-05-17||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0063|Omar Khan|Omar Khan|Employee|1990-03-09|909460063|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0064|Clara Khan|Clara Khan|Employee|1991-04-10|909460064|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0064|Clara Khan|Clara Khan|Employee|1991-04-10|909460064|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0064|Clara Khan|Clara Khan|Employee|1991-04-10|909460064|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0065|Jules Khan|Jules Khan|Employee|1992-05-11|909460065|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0065|Jules Khan|Nora Khan|Spouse|1976-07-19||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0065|Jules Khan|Remy Khan|Child|2017-08-19||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0065|Jules Khan|Jules Khan|Employee|1992-05-11|909460065|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0065|Jules Khan|Remy Khan|Child|2017-08-19||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0065|Jules Khan|Jules Khan|Employee|1992-05-11|909460065|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0065|Jules Khan|Nora Khan|Spouse|1976-07-19||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0066|Ada Khan|Ada Khan|Employee|1993-06-12|909460066|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0066|Ada Khan|Elias Chen|Spouse|1977-08-20||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0066|Ada Khan|Ada Khan|Employee|1993-06-12|909460066|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0066|Ada Khan|Ada Khan|Employee|1993-06-12|909460066|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0067|Ivan Khan|Ivan Khan|Employee|1994-07-13|909460067|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0067|Ivan Khan|Sage Khan|Child|2019-09-21|909662133|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0067|Ivan Khan|Ivan Khan|Employee|1994-07-13|909460067|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0067|Ivan Khan|Sage Khan|Child|2019-09-21|909662133|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0067|Ivan Khan|Ivan Khan|Employee|1994-07-13|909460067|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0068|Esme Khan|Esme Khan|Employee|1995-08-14|909460068|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0068|Esme Khan|Esme Khan|Employee|1995-08-14|909460068|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0068|Esme Khan|Esme Khan|Employee|1995-08-14|909460068|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0069|Noel Khan|Noel Khan|Employee|1996-09-15|909460069|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0069|Noel Khan|Amara Khan|Spouse|1980-11-23||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0069|Noel Khan|Remy Khan|Child|2021-12-23||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0069|Noel Khan|Noel Khan|Employee|1996-09-15|909460069|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0069|Noel Khan|Remy Khan|Child|2021-12-23||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0069|Noel Khan|Noel Khan|Employee|1996-09-15|909460069|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0070|Sana Khan|Sana Khan|Employee|1997-10-16|909460070|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0070|Sana Khan|Felix Khan|Spouse|1981-12-24|909662139|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0070|Sana Khan|Sana Khan|Employee|1997-10-16|909460070|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0070|Sana Khan|Sana Khan|Employee|1997-10-16|909460070|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0071|Ezra Khan|Ezra Khan|Employee|1998-11-17|909460071|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0071|Ezra Khan|Sage Diaz|Child|2023-01-25||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0071|Ezra Khan|Ezra Khan|Employee|1998-11-17|909460071|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0071|Ezra Khan|Sage Diaz|Child|2023-01-25||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0071|Ezra Khan|Ezra Khan|Employee|1998-11-17|909460071|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0072|Vera Khan|Vera Khan|Employee|1999-12-18|909460072|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0072|Vera Khan|Vera Khan|Employee|1999-12-18|909460072|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0072|Vera Khan|Vera Khan|Employee|1999-12-18|909460072|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0073|Alex Baker|Alex Baker|Employee|2000-01-19|909460073|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0073|Alex Baker|Priya Baker|Spouse|1984-03-27|909662145|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0073|Alex Baker|Remy Baker|Child|2007-04-27|909662146|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0073|Alex Baker|Alex Baker|Employee|2000-01-19|909460073|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0073|Alex Baker|Remy Baker|Child|2007-04-27|909662146|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0073|Alex Baker|Alex Baker|Employee|2000-01-19|909460073|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0073|Alex Baker|Priya Baker|Spouse|1984-03-27|909662145|Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0074|Nora Baker|Nora Baker|Employee|2001-02-20|909460074|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0074|Nora Baker|Miles Baker|Spouse|1985-04-01||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0074|Nora Baker|Nora Baker|Employee|2001-02-20|909460074|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0074|Nora Baker|Nora Baker|Employee|2001-02-20|909460074|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0075|Elias Baker|Elias Baker|Employee|1965-03-21|909460075|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0075|Elias Baker|Sage Baker|Child|2009-05-02||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0075|Elias Baker|Elias Baker|Employee|1965-03-21|909460075|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0075|Elias Baker|Sage Baker|Child|2009-05-02||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0075|Elias Baker|Elias Baker|Employee|1965-03-21|909460075|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0076|Maya Baker|Maya Baker|Employee|1966-04-22|909460076|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0076|Maya Baker|Maya Baker|Employee|1966-04-22|909460076|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0076|Maya Baker|Maya Baker|Employee|1966-04-22|909460076|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0077|Theo Baker|Theo Baker|Employee|1967-05-23|909460077|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0077|Theo Baker|Inez Baker|Spouse|1988-07-04||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0077|Theo Baker|Remy Baker|Child|2011-08-04||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0077|Theo Baker|Theo Baker|Employee|1967-05-23|909460077|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0077|Theo Baker|Remy Baker|Child|2011-08-04||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0077|Theo Baker|Theo Baker|Employee|1967-05-23|909460077|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0078|Amara Baker|Amara Baker|Employee|1968-06-24|909460078|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0078|Amara Baker|Omar Baker|Spouse|1989-08-05||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0078|Amara Baker|Amara Baker|Employee|1968-06-24|909460078|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0078|Amara Baker|Amara Baker|Employee|1968-06-24|909460078|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0079|Felix Baker|Felix Baker|Employee|1969-07-25|909460079|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0079|Felix Baker|Sage Baker|Child|2013-09-06|909662157|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0079|Felix Baker|Felix Baker|Employee|1969-07-25|909460079|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0079|Felix Baker|Sage Baker|Child|2013-09-06|909662157|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0079|Felix Baker|Felix Baker|Employee|1969-07-25|909460079|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0080|Lena Baker|Lena Baker|Employee|1970-08-26|909460080|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0080|Lena Baker|Lena Baker|Employee|1970-08-26|909460080|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0080|Lena Baker|Lena Baker|Employee|1970-08-26|909460080|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0081|Oscar Baker|Oscar Baker|Employee|1971-09-27|909460081|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0081|Oscar Baker|Ada Foster|Spouse|1992-11-08||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0081|Oscar Baker|Remy Foster|Child|2015-12-08||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0081|Oscar Baker|Oscar Baker|Employee|1971-09-27|909460081|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0081|Oscar Baker|Remy Foster|Child|2015-12-08||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0081|Oscar Baker|Oscar Baker|Employee|1971-09-27|909460081|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0082|Priya Baker|Priya Baker|Employee|1972-10-01|909460082|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0082|Priya Baker|Ivan Baker|Spouse|1993-12-09|909662163|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0082|Priya Baker|Priya Baker|Employee|1972-10-01|909460082|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0082|Priya Baker|Priya Baker|Employee|1972-10-01|909460082|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0083|Miles Baker|Miles Baker|Employee|1973-11-02|909460083|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0083|Miles Baker|Sage Baker|Child|2017-01-10||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0083|Miles Baker|Miles Baker|Employee|1973-11-02|909460083|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0083|Miles Baker|Sage Baker|Child|2017-01-10||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0083|Miles Baker|Miles Baker|Employee|1973-11-02|909460083|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0084|Zara Baker|Zara Baker|Employee|1974-12-03|909460084|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0084|Zara Baker|Zara Baker|Employee|1974-12-03|909460084|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0084|Zara Baker|Zara Baker|Employee|1974-12-03|909460084|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0085|Hugo Baker|Hugo Baker|Employee|1975-01-04|909460085|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0085|Hugo Baker|Sana Baker|Spouse|1996-03-12|909662169|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0085|Hugo Baker|Remy Baker|Child|2019-04-12|909662170|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0085|Hugo Baker|Hugo Baker|Employee|1975-01-04|909460085|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0085|Hugo Baker|Remy Baker|Child|2019-04-12|909662170|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0085|Hugo Baker|Hugo Baker|Employee|1975-01-04|909460085|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0086|Inez Baker|Inez Baker|Employee|1976-02-05|909460086|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0086|Inez Baker|Ezra Ibrahim|Spouse|1997-04-13||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0086|Inez Baker|Inez Baker|Employee|1976-02-05|909460086|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0086|Inez Baker|Inez Baker|Employee|1976-02-05|909460086|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0087|Omar Baker|Omar Baker|Employee|1977-03-06|909460087|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0087|Omar Baker|Sage Baker|Child|2021-05-14||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0087|Omar Baker|Omar Baker|Employee|1977-03-06|909460087|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0087|Omar Baker|Sage Baker|Child|2021-05-14||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0087|Omar Baker|Omar Baker|Employee|1977-03-06|909460087|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0088|Clara Baker|Clara Baker|Employee|1978-04-07|909460088|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0088|Clara Baker|Clara Baker|Employee|1978-04-07|909460088|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0088|Clara Baker|Clara Baker|Employee|1978-04-07|909460088|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0089|Jules Baker|Jules Baker|Employee|1979-05-08|909460089|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0089|Jules Baker|Nora Baker|Spouse|1971-07-16||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0089|Jules Baker|Remy Baker|Child|2023-08-16||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0089|Jules Baker|Jules Baker|Employee|1979-05-08|909460089|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0089|Jules Baker|Remy Baker|Child|2023-08-16||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0089|Jules Baker|Jules Baker|Employee|1979-05-08|909460089|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0089|Jules Baker|Nora Baker|Spouse|1971-07-16||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0090|Ada Baker|Ada Baker|Employee|1980-06-09|909460090|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0090|Ada Baker|Elias Baker|Spouse|1972-08-17||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0090|Ada Baker|Ada Baker|Employee|1980-06-09|909460090|Employee Only|ENROLLED|2026-01-01||
+Benefit|Plan|Subscriber Ref|Subscriber|Member|Relationship|Member DOB|Member SSN|Tier|Status|Start|End|Notes
+Vision|Kite Vision Select|L-BEN-0090|Ada Baker|Ada Baker|Employee|1980-06-09|909460090|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0091|Ivan Baker|Ivan Baker|Employee|1981-07-10|909460091|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0091|Ivan Baker|Sage Santos|Child|2007-09-18|909662181|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0091|Ivan Baker|Ivan Baker|Employee|1981-07-10|909460091|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0091|Ivan Baker|Sage Santos|Child|2007-09-18|909662181|Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0091|Ivan Baker|Ivan Baker|Employee|1981-07-10|909460091|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0092|Esme Baker|Esme Baker|Employee|1982-08-11|909460092|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0092|Esme Baker|Esme Baker|Employee|1982-08-11|909460092|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0092|Esme Baker|Esme Baker|Employee|1982-08-11|909460092|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0093|Noel Baker|Noel Baker|Employee|1983-09-12|909460093|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0093|Noel Baker|Amara Baker|Spouse|1975-11-20||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0093|Noel Baker|Remy Baker|Child|2009-12-20||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0093|Noel Baker|Noel Baker|Employee|1983-09-12|909460093|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0093|Noel Baker|Remy Baker|Child|2009-12-20||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0093|Noel Baker|Noel Baker|Employee|1983-09-12|909460093|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0094|Sana Baker|Sana Baker|Employee|1984-10-13|909460094|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0094|Sana Baker|Felix Baker|Spouse|1976-12-21|909662187|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0094|Sana Baker|Sana Baker|Employee|1984-10-13|909460094|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0094|Sana Baker|Sana Baker|Employee|1984-10-13|909460094|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0095|Ezra Baker|Ezra Baker|Employee|1985-11-14|909460095|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0095|Ezra Baker|Sage Baker|Child|2011-01-22||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0095|Ezra Baker|Ezra Baker|Employee|1985-11-14|909460095|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0095|Ezra Baker|Sage Baker|Child|2011-01-22||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0095|Ezra Baker|Ezra Baker|Employee|1985-11-14|909460095|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0096|Vera Baker|Vera Baker|Employee|1986-12-15|909460096|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0096|Vera Baker|Vera Baker|Employee|1986-12-15|909460096|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0096|Vera Baker|Vera Baker|Employee|1986-12-15|909460096|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0097|Alex Okoro|Alex Okoro|Employee|1987-01-16|909460097|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0097|Alex Okoro|Priya Okoro|Spouse|1979-03-24|909662193|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0097|Alex Okoro|Remy Okoro|Child|2013-04-24|909662194|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0097|Alex Okoro|Alex Okoro|Employee|1987-01-16|909460097|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0097|Alex Okoro|Remy Okoro|Child|2013-04-24|909662194|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0097|Alex Okoro|Alex Okoro|Employee|1987-01-16|909460097|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0097|Alex Okoro|Priya Okoro|Spouse|1979-03-24|909662193|Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0098|Nora Okoro|Nora Okoro|Employee|1988-02-17|909460098|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0098|Nora Okoro|Miles Okoro|Spouse|1980-04-25||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0098|Nora Okoro|Nora Okoro|Employee|1988-02-17|909460098|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0098|Nora Okoro|Nora Okoro|Employee|1988-02-17|909460098|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0099|Elias Okoro|Elias Okoro|Employee|1989-03-18|909460099|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0099|Elias Okoro|Sage Okoro|Child|2015-05-26||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0099|Elias Okoro|Elias Okoro|Employee|1989-03-18|909460099|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0099|Elias Okoro|Sage Okoro|Child|2015-05-26||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0099|Elias Okoro|Elias Okoro|Employee|1989-03-18|909460099|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0100|Maya Okoro|Maya Okoro|Employee|1990-04-19|909460100|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0100|Maya Okoro|Maya Okoro|Employee|1990-04-19|909460100|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0100|Maya Okoro|Maya Okoro|Employee|1990-04-19|909460100|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0101|Theo Okoro|Theo Okoro|Employee|1991-05-20|909460101|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0101|Theo Okoro|Inez Bennett|Spouse|1983-07-01||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0101|Theo Okoro|Remy Bennett|Child|2017-08-01||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0101|Theo Okoro|Theo Okoro|Employee|1991-05-20|909460101|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0101|Theo Okoro|Remy Bennett|Child|2017-08-01||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0101|Theo Okoro|Theo Okoro|Employee|1991-05-20|909460101|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0102|Amara Okoro|Amara Okoro|Employee|1992-06-21|909460102|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0102|Amara Okoro|Omar Okoro|Spouse|1984-08-02||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0102|Amara Okoro|Amara Okoro|Employee|1992-06-21|909460102|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0102|Amara Okoro|Amara Okoro|Employee|1992-06-21|909460102|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0103|Felix Okoro|Felix Okoro|Employee|1993-07-22|909460103|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0103|Felix Okoro|Sage Okoro|Child|2019-09-03|909662205|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0103|Felix Okoro|Felix Okoro|Employee|1993-07-22|909460103|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0103|Felix Okoro|Sage Okoro|Child|2019-09-03|909662205|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0103|Felix Okoro|Felix Okoro|Employee|1993-07-22|909460103|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0104|Lena Okoro|Lena Okoro|Employee|1994-08-23|909460104|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0104|Lena Okoro|Lena Okoro|Employee|1994-08-23|909460104|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0104|Lena Okoro|Lena Okoro|Employee|1994-08-23|909460104|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0105|Oscar Okoro|Oscar Okoro|Employee|1995-09-24|909460105|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0105|Oscar Okoro|Ada Okoro|Spouse|1987-11-05||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0105|Oscar Okoro|Remy Okoro|Child|2021-12-05||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0105|Oscar Okoro|Oscar Okoro|Employee|1995-09-24|909460105|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0105|Oscar Okoro|Remy Okoro|Child|2021-12-05||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0105|Oscar Okoro|Oscar Okoro|Employee|1995-09-24|909460105|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0105|Oscar Okoro|Ada Okoro|Spouse|1987-11-05||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0106|Priya Okoro|Priya Okoro|Employee|1996-10-25|909460106|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0106|Priya Okoro|Ivan Costa|Spouse|1988-12-06|909662211|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0106|Priya Okoro|Priya Okoro|Employee|1996-10-25|909460106|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0106|Priya Okoro|Priya Okoro|Employee|1996-10-25|909460106|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0107|Miles Okoro|Miles Okoro|Employee|1997-11-26|909460107|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0107|Miles Okoro|Sage Okoro|Child|2023-01-07||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0107|Miles Okoro|Miles Okoro|Employee|1997-11-26|909460107|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0107|Miles Okoro|Sage Okoro|Child|2023-01-07||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0107|Miles Okoro|Miles Okoro|Employee|1997-11-26|909460107|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0108|Zara Okoro|Zara Okoro|Employee|1998-12-27|909460108|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0108|Zara Okoro|Zara Okoro|Employee|1998-12-27|909460108|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0108|Zara Okoro|Zara Okoro|Employee|1998-12-27|909460108|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0109|Hugo Okoro|Hugo Okoro|Employee|1999-01-01|909460109|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0109|Hugo Okoro|Sana Okoro|Spouse|1991-03-09|909662217|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0109|Hugo Okoro|Remy Okoro|Child|2007-04-09|909662218|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0109|Hugo Okoro|Hugo Okoro|Employee|1999-01-01|909460109|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0109|Hugo Okoro|Remy Okoro|Child|2007-04-09|909662218|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0109|Hugo Okoro|Hugo Okoro|Employee|1999-01-01|909460109|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0110|Inez Okoro|Inez Okoro|Employee|2000-02-02|909460110|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0110|Inez Okoro|Ezra Okoro|Spouse|1992-04-10||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0110|Inez Okoro|Inez Okoro|Employee|2000-02-02|909460110|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0110|Inez Okoro|Inez Okoro|Employee|2000-02-02|909460110|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0111|Omar Okoro|Omar Okoro|Employee|2001-03-03|909460111|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0111|Omar Okoro|Sage Tran|Child|2009-05-11||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0111|Omar Okoro|Omar Okoro|Employee|2001-03-03|909460111|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0111|Omar Okoro|Sage Tran|Child|2009-05-11||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0111|Omar Okoro|Omar Okoro|Employee|2001-03-03|909460111|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0112|Clara Okoro|Clara Okoro|Employee|1965-04-04|909460112|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0112|Clara Okoro|Clara Okoro|Employee|1965-04-04|909460112|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0112|Clara Okoro|Clara Okoro|Employee|1965-04-04|909460112|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0113|Jules Okoro|Jules Okoro|Employee|1966-05-05|909460113|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0113|Jules Okoro|Nora Okoro|Spouse|1995-07-13||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0113|Jules Okoro|Remy Okoro|Child|2011-08-13||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0113|Jules Okoro|Jules Okoro|Employee|1966-05-05|909460113|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0113|Jules Okoro|Remy Okoro|Child|2011-08-13||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0113|Jules Okoro|Jules Okoro|Employee|1966-05-05|909460113|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0113|Jules Okoro|Nora Okoro|Spouse|1995-07-13||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0114|Ada Okoro|Ada Okoro|Employee|1967-06-06|909460114|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0114|Ada Okoro|Elias Okoro|Spouse|1996-08-14||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0114|Ada Okoro|Ada Okoro|Employee|1967-06-06|909460114|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0114|Ada Okoro|Ada Okoro|Employee|1967-06-06|909460114|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0115|Ivan Okoro|Ivan Okoro|Employee|1968-07-07|909460115|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0115|Ivan Okoro|Sage Okoro|Child|2013-09-15|909662229|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0115|Ivan Okoro|Ivan Okoro|Employee|1968-07-07|909460115|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0115|Ivan Okoro|Sage Okoro|Child|2013-09-15|909662229|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0115|Ivan Okoro|Ivan Okoro|Employee|1968-07-07|909460115|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0116|Esme Okoro|Esme Okoro|Employee|1969-08-08|909460116|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0116|Esme Okoro|Esme Okoro|Employee|1969-08-08|909460116|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0116|Esme Okoro|Esme Okoro|Employee|1969-08-08|909460116|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0117|Noel Okoro|Noel Okoro|Employee|1970-09-09|909460117|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0117|Noel Okoro|Amara Okoro|Spouse|1970-11-17||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0117|Noel Okoro|Remy Okoro|Child|2015-12-17||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0117|Noel Okoro|Noel Okoro|Employee|1970-09-09|909460117|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0117|Noel Okoro|Remy Okoro|Child|2015-12-17||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0117|Noel Okoro|Noel Okoro|Employee|1970-09-09|909460117|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0118|Sana Okoro|Sana Okoro|Employee|1971-10-10|909460118|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0118|Sana Okoro|Felix Okoro|Spouse|1971-12-18|909662235|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0118|Sana Okoro|Sana Okoro|Employee|1971-10-10|909460118|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0118|Sana Okoro|Sana Okoro|Employee|1971-10-10|909460118|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0119|Ezra Okoro|Ezra Okoro|Employee|1972-11-11|909460119|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0119|Ezra Okoro|Sage Okoro|Child|2017-01-19||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0119|Ezra Okoro|Ezra Okoro|Employee|1972-11-11|909460119|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0119|Ezra Okoro|Sage Okoro|Child|2017-01-19||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0119|Ezra Okoro|Ezra Okoro|Employee|1972-11-11|909460119|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0120|Vera Okoro|Vera Okoro|Employee|1973-12-12|909460120|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0120|Vera Okoro|Vera Okoro|Employee|1973-12-12|909460120|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0120|Vera Okoro|Vera Okoro|Employee|1973-12-12|909460120|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0121|Alex Reyes|Alex Reyes|Employee|1974-01-13|909460121|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0121|Alex Reyes|Priya Ortiz|Spouse|1974-03-21|909662241|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0121|Alex Reyes|Remy Ortiz|Child|2019-04-21|909662242|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0121|Alex Reyes|Alex Reyes|Employee|1974-01-13|909460121|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0121|Alex Reyes|Remy Ortiz|Child|2019-04-21|909662242|Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0121|Alex Reyes|Alex Reyes|Employee|1974-01-13|909460121|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0122|Nora Reyes|Nora Reyes|Employee|1975-02-14|909460122|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0122|Nora Reyes|Miles Reyes|Spouse|1975-04-22||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0122|Nora Reyes|Nora Reyes|Employee|1975-02-14|909460122|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0122|Nora Reyes|Nora Reyes|Employee|1975-02-14|909460122|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0123|Elias Reyes|Elias Reyes|Employee|1976-03-15|909460123|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0123|Elias Reyes|Sage Reyes|Child|2021-05-23||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0123|Elias Reyes|Elias Reyes|Employee|1976-03-15|909460123|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0123|Elias Reyes|Sage Reyes|Child|2021-05-23||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0123|Elias Reyes|Elias Reyes|Employee|1976-03-15|909460123|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0124|Maya Reyes|Maya Reyes|Employee|1977-04-16|909460124|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0124|Maya Reyes|Maya Reyes|Employee|1977-04-16|909460124|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0124|Maya Reyes|Maya Reyes|Employee|1977-04-16|909460124|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0125|Theo Reyes|Theo Reyes|Employee|1978-05-17|909460125|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0125|Theo Reyes|Inez Reyes|Spouse|1978-07-25||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0125|Theo Reyes|Remy Reyes|Child|2023-08-25||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0125|Theo Reyes|Theo Reyes|Employee|1978-05-17|909460125|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0125|Theo Reyes|Remy Reyes|Child|2023-08-25||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0125|Theo Reyes|Theo Reyes|Employee|1978-05-17|909460125|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0126|Amara Reyes|Amara Reyes|Employee|1979-06-18|909460126|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0126|Amara Reyes|Omar Okoro|Spouse|1979-08-26||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0126|Amara Reyes|Amara Reyes|Employee|1979-06-18|909460126|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0126|Amara Reyes|Amara Reyes|Employee|1979-06-18|909460126|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0127|Felix Reyes|Felix Reyes|Employee|1980-07-19|909460127|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0127|Felix Reyes|Sage Reyes|Child|2007-09-27|909662253|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0127|Felix Reyes|Felix Reyes|Employee|1980-07-19|909460127|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0127|Felix Reyes|Sage Reyes|Child|2007-09-27|909662253|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0127|Felix Reyes|Felix Reyes|Employee|1980-07-19|909460127|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0128|Lena Reyes|Lena Reyes|Employee|1981-08-20|909460128|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0128|Lena Reyes|Lena Reyes|Employee|1981-08-20|909460128|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0128|Lena Reyes|Lena Reyes|Employee|1981-08-20|909460128|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0129|Oscar Reyes|Oscar Reyes|Employee|1982-09-21|909460129|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0129|Oscar Reyes|Ada Reyes|Spouse|1982-11-02||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0129|Oscar Reyes|Remy Reyes|Child|2009-12-02||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0129|Oscar Reyes|Oscar Reyes|Employee|1982-09-21|909460129|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0129|Oscar Reyes|Remy Reyes|Child|2009-12-02||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0129|Oscar Reyes|Oscar Reyes|Employee|1982-09-21|909460129|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0129|Oscar Reyes|Ada Reyes|Spouse|1982-11-02||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0130|Priya Reyes|Priya Reyes|Employee|1983-10-22|909460130|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0130|Priya Reyes|Ivan Reyes|Spouse|1983-12-03|909662259|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0130|Priya Reyes|Priya Reyes|Employee|1983-10-22|909460130|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0130|Priya Reyes|Priya Reyes|Employee|1983-10-22|909460130|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0131|Miles Reyes|Miles Reyes|Employee|1984-11-23|909460131|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0131|Miles Reyes|Sage Cruz|Child|2011-01-04||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0131|Miles Reyes|Miles Reyes|Employee|1984-11-23|909460131|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0131|Miles Reyes|Sage Cruz|Child|2011-01-04||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0131|Miles Reyes|Miles Reyes|Employee|1984-11-23|909460131|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0132|Zara Reyes|Zara Reyes|Employee|1985-12-24|909460132|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0132|Zara Reyes|Zara Reyes|Employee|1985-12-24|909460132|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0132|Zara Reyes|Zara Reyes|Employee|1985-12-24|909460132|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0133|Hugo Reyes|Hugo Reyes|Employee|1986-01-25|909460133|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0133|Hugo Reyes|Sana Reyes|Spouse|1986-03-06|909662265|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0133|Hugo Reyes|Remy Reyes|Child|2013-04-06|909662266|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0133|Hugo Reyes|Hugo Reyes|Employee|1986-01-25|909460133|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0133|Hugo Reyes|Remy Reyes|Child|2013-04-06|909662266|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0133|Hugo Reyes|Hugo Reyes|Employee|1986-01-25|909460133|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0134|Inez Reyes|Inez Reyes|Employee|1987-02-26|909460134|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0134|Inez Reyes|Ezra Reyes|Spouse|1987-04-07||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0134|Inez Reyes|Inez Reyes|Employee|1987-02-26|909460134|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0134|Inez Reyes|Inez Reyes|Employee|1987-02-26|909460134|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0135|Omar Reyes|Omar Reyes|Employee|1988-03-27|909460135|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0135|Omar Reyes|Sage Reyes|Child|2015-05-08||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0135|Omar Reyes|Omar Reyes|Employee|1988-03-27|909460135|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0135|Omar Reyes|Sage Reyes|Child|2015-05-08||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0135|Omar Reyes|Omar Reyes|Employee|1988-03-27|909460135|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0136|Clara Reyes|Clara Reyes|Employee|1989-04-01|909460136|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0136|Clara Reyes|Clara Reyes|Employee|1989-04-01|909460136|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0136|Clara Reyes|Clara Reyes|Employee|1989-04-01|909460136|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0137|Jules Reyes|Jules Reyes|Employee|1990-05-02|909460137|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0137|Jules Reyes|Nora Reyes|Spouse|1990-07-10||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0137|Jules Reyes|Remy Reyes|Child|2017-08-10||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0137|Jules Reyes|Jules Reyes|Employee|1990-05-02|909460137|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0137|Jules Reyes|Remy Reyes|Child|2017-08-10||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0137|Jules Reyes|Jules Reyes|Employee|1990-05-02|909460137|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0137|Jules Reyes|Nora Reyes|Spouse|1990-07-10||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0138|Ada Reyes|Ada Reyes|Employee|1991-06-03|909460138|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0138|Ada Reyes|Elias Reyes|Spouse|1991-08-11||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0138|Ada Reyes|Ada Reyes|Employee|1991-06-03|909460138|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0138|Ada Reyes|Ada Reyes|Employee|1991-06-03|909460138|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0139|Ivan Reyes|Ivan Reyes|Employee|1992-07-04|909460139|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0139|Ivan Reyes|Sage Reyes|Child|2019-09-12|909662277|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0139|Ivan Reyes|Ivan Reyes|Employee|1992-07-04|909460139|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0139|Ivan Reyes|Sage Reyes|Child|2019-09-12|909662277|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0139|Ivan Reyes|Ivan Reyes|Employee|1992-07-04|909460139|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0140|Esme Reyes|Esme Reyes|Employee|1993-08-05|909460140|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0140|Esme Reyes|Esme Reyes|Employee|1993-08-05|909460140|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0140|Esme Reyes|Esme Reyes|Employee|1993-08-05|909460140|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0141|Noel Reyes|Noel Reyes|Employee|1994-09-06|909460141|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0141|Noel Reyes|Amara Kim|Spouse|1994-11-14||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0141|Noel Reyes|Remy Kim|Child|2021-12-14||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0141|Noel Reyes|Noel Reyes|Employee|1994-09-06|909460141|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0141|Noel Reyes|Remy Kim|Child|2021-12-14||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0141|Noel Reyes|Noel Reyes|Employee|1994-09-06|909460141|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0142|Sana Reyes|Sana Reyes|Employee|1995-10-07|909460142|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0142|Sana Reyes|Felix Reyes|Spouse|1995-12-15|909662283|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0142|Sana Reyes|Sana Reyes|Employee|1995-10-07|909460142|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0142|Sana Reyes|Sana Reyes|Employee|1995-10-07|909460142|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0143|Ezra Reyes|Ezra Reyes|Employee|1996-11-08|909460143|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0143|Ezra Reyes|Sage Reyes|Child|2023-01-16||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0143|Ezra Reyes|Ezra Reyes|Employee|1996-11-08|909460143|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0143|Ezra Reyes|Sage Reyes|Child|2023-01-16||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0143|Ezra Reyes|Ezra Reyes|Employee|1996-11-08|909460143|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0144|Vera Reyes|Vera Reyes|Employee|1997-12-09|909460144|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0144|Vera Reyes|Vera Reyes|Employee|1997-12-09|909460144|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0144|Vera Reyes|Vera Reyes|Employee|1997-12-09|909460144|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0145|Alex Patel|Alex Patel|Employee|1998-01-10|909460145|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0145|Alex Patel|Priya Patel|Spouse|1998-03-18|909662289|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0145|Alex Patel|Remy Patel|Child|2007-04-18|909662290|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0145|Alex Patel|Alex Patel|Employee|1998-01-10|909460145|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0145|Alex Patel|Remy Patel|Child|2007-04-18|909662290|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0145|Alex Patel|Alex Patel|Employee|1998-01-10|909460145|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0145|Alex Patel|Priya Patel|Spouse|1998-03-18|909662289|Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0146|Nora Patel|Nora Patel|Employee|1999-02-11|909460146|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0146|Nora Patel|Miles Rivera|Spouse|1970-04-19||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0146|Nora Patel|Nora Patel|Employee|1999-02-11|909460146|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0146|Nora Patel|Nora Patel|Employee|1999-02-11|909460146|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0147|Elias Patel|Elias Patel|Employee|2000-03-12|909460147|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0147|Elias Patel|Sage Patel|Child|2009-05-20||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0147|Elias Patel|Elias Patel|Employee|2000-03-12|909460147|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0147|Elias Patel|Sage Patel|Child|2009-05-20||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0147|Elias Patel|Elias Patel|Employee|2000-03-12|909460147|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0148|Maya Patel|Maya Patel|Employee|2001-04-13|909460148|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0148|Maya Patel|Maya Patel|Employee|2001-04-13|909460148|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0148|Maya Patel|Maya Patel|Employee|2001-04-13|909460148|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0149|Theo Patel|Theo Patel|Employee|1965-05-14|909460149|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0149|Theo Patel|Inez Patel|Spouse|1973-07-22||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0149|Theo Patel|Remy Patel|Child|2011-08-22||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0149|Theo Patel|Theo Patel|Employee|1965-05-14|909460149|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0149|Theo Patel|Remy Patel|Child|2011-08-22||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0149|Theo Patel|Theo Patel|Employee|1965-05-14|909460149|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0150|Amara Patel|Amara Patel|Employee|1966-06-15|909460150|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0150|Amara Patel|Omar Patel|Spouse|1974-08-23||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0150|Amara Patel|Amara Patel|Employee|1966-06-15|909460150|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0150|Amara Patel|Amara Patel|Employee|1966-06-15|909460150|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0151|Felix Patel|Felix Patel|Employee|1967-07-16|909460151|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0151|Felix Patel|Sage Wong|Child|2013-09-24|909662301|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0151|Felix Patel|Felix Patel|Employee|1967-07-16|909460151|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0151|Felix Patel|Sage Wong|Child|2013-09-24|909662301|Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0151|Felix Patel|Felix Patel|Employee|1967-07-16|909460151|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0152|Lena Patel|Lena Patel|Employee|1968-08-17|909460152|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0152|Lena Patel|Lena Patel|Employee|1968-08-17|909460152|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0152|Lena Patel|Lena Patel|Employee|1968-08-17|909460152|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0153|Oscar Patel|Oscar Patel|Employee|1969-09-18|909460153|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0153|Oscar Patel|Ada Patel|Spouse|1977-11-26||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0153|Oscar Patel|Remy Patel|Child|2015-12-26||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0153|Oscar Patel|Oscar Patel|Employee|1969-09-18|909460153|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0153|Oscar Patel|Remy Patel|Child|2015-12-26||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0153|Oscar Patel|Oscar Patel|Employee|1969-09-18|909460153|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0153|Oscar Patel|Ada Patel|Spouse|1977-11-26||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0154|Priya Patel|Priya Patel|Employee|1970-10-19|909460154|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0154|Priya Patel|Ivan Patel|Spouse|1978-12-27|909662307|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0154|Priya Patel|Priya Patel|Employee|1970-10-19|909460154|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0154|Priya Patel|Priya Patel|Employee|1970-10-19|909460154|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0155|Miles Patel|Miles Patel|Employee|1971-11-20|909460155|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0155|Miles Patel|Sage Patel|Child|2017-01-01||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0155|Miles Patel|Miles Patel|Employee|1971-11-20|909460155|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0155|Miles Patel|Sage Patel|Child|2017-01-01||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0155|Miles Patel|Miles Patel|Employee|1971-11-20|909460155|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0156|Zara Patel|Zara Patel|Employee|1972-12-21|909460156|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0156|Zara Patel|Zara Patel|Employee|1972-12-21|909460156|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0156|Zara Patel|Zara Patel|Employee|1972-12-21|909460156|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0157|Hugo Patel|Hugo Patel|Employee|1973-01-22|909460157|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0157|Hugo Patel|Sana Patel|Spouse|1981-03-03|909662313|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0157|Hugo Patel|Remy Patel|Child|2019-04-03|909662314|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0157|Hugo Patel|Hugo Patel|Employee|1973-01-22|909460157|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0157|Hugo Patel|Remy Patel|Child|2019-04-03|909662314|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0157|Hugo Patel|Hugo Patel|Employee|1973-01-22|909460157|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0158|Inez Patel|Inez Patel|Employee|1974-02-23|909460158|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0158|Inez Patel|Ezra Patel|Spouse|1982-04-04||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0158|Inez Patel|Inez Patel|Employee|1974-02-23|909460158|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0158|Inez Patel|Inez Patel|Employee|1974-02-23|909460158|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0159|Omar Patel|Omar Patel|Employee|1975-03-24|909460159|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0159|Omar Patel|Sage Patel|Child|2021-05-05||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0159|Omar Patel|Omar Patel|Employee|1975-03-24|909460159|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0159|Omar Patel|Sage Patel|Child|2021-05-05||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0159|Omar Patel|Omar Patel|Employee|1975-03-24|909460159|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0160|Clara Patel|Clara Patel|Employee|1976-04-25|909460160|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0160|Clara Patel|Clara Patel|Employee|1976-04-25|909460160|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0160|Clara Patel|Clara Patel|Employee|1976-04-25|909460160|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0161|Jules Patel|Jules Patel|Employee|1977-05-26|909460161|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0161|Jules Patel|Nora Walker|Spouse|1985-07-07||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0161|Jules Patel|Remy Walker|Child|2023-08-07||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0161|Jules Patel|Jules Patel|Employee|1977-05-26|909460161|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0161|Jules Patel|Remy Walker|Child|2023-08-07||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0161|Jules Patel|Jules Patel|Employee|1977-05-26|909460161|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0162|Ada Patel|Ada Patel|Employee|1978-06-27|909460162|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0162|Ada Patel|Elias Patel|Spouse|1986-08-08||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0162|Ada Patel|Ada Patel|Employee|1978-06-27|909460162|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0162|Ada Patel|Ada Patel|Employee|1978-06-27|909460162|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0163|Ivan Patel|Ivan Patel|Employee|1979-07-01|909460163|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0163|Ivan Patel|Sage Patel|Child|2007-09-09|909662325|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0163|Ivan Patel|Ivan Patel|Employee|1979-07-01|909460163|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0163|Ivan Patel|Sage Patel|Child|2007-09-09|909662325|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0163|Ivan Patel|Ivan Patel|Employee|1979-07-01|909460163|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0164|Esme Patel|Esme Patel|Employee|1980-08-02|909460164|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0164|Esme Patel|Esme Patel|Employee|1980-08-02|909460164|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0164|Esme Patel|Esme Patel|Employee|1980-08-02|909460164|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0165|Noel Patel|Noel Patel|Employee|1981-09-03|909460165|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0165|Noel Patel|Amara Patel|Spouse|1989-11-11||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0165|Noel Patel|Remy Patel|Child|2009-12-11||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0165|Noel Patel|Noel Patel|Employee|1981-09-03|909460165|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0165|Noel Patel|Remy Patel|Child|2009-12-11||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0165|Noel Patel|Noel Patel|Employee|1981-09-03|909460165|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0166|Sana Patel|Sana Patel|Employee|1982-10-04|909460166|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0166|Sana Patel|Felix Park|Spouse|1990-12-12|909662331|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0166|Sana Patel|Sana Patel|Employee|1982-10-04|909460166|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0166|Sana Patel|Sana Patel|Employee|1982-10-04|909460166|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0167|Ezra Patel|Ezra Patel|Employee|1983-11-05|909460167|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0167|Ezra Patel|Sage Patel|Child|2011-01-13||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0167|Ezra Patel|Ezra Patel|Employee|1983-11-05|909460167|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0167|Ezra Patel|Sage Patel|Child|2011-01-13||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0167|Ezra Patel|Ezra Patel|Employee|1983-11-05|909460167|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0168|Vera Patel|Vera Patel|Employee|1984-12-06|909460168|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0168|Vera Patel|Vera Patel|Employee|1984-12-06|909460168|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0168|Vera Patel|Vera Patel|Employee|1984-12-06|909460168|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0169|Alex Walker|Alex Walker|Employee|1985-01-07|909460169|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0169|Alex Walker|Priya Walker|Spouse|1993-03-15|909662337|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0169|Alex Walker|Remy Walker|Child|2013-04-15|909662338|Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0169|Alex Walker|Alex Walker|Employee|1985-01-07|909460169|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0169|Alex Walker|Remy Walker|Child|2013-04-15|909662338|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0169|Alex Walker|Alex Walker|Employee|1985-01-07|909460169|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0169|Alex Walker|Priya Walker|Spouse|1993-03-15|909662337|Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0170|Nora Walker|Nora Walker|Employee|1986-02-08|909460170|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0170|Nora Walker|Miles Walker|Spouse|1994-04-16||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0170|Nora Walker|Nora Walker|Employee|1986-02-08|909460170|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0170|Nora Walker|Nora Walker|Employee|1986-02-08|909460170|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0171|Elias Walker|Elias Walker|Employee|1987-03-09|909460171|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0171|Elias Walker|Sage Brooks|Child|2015-05-17||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0171|Elias Walker|Elias Walker|Employee|1987-03-09|909460171|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0171|Elias Walker|Sage Brooks|Child|2015-05-17||Employee + Child(ren)|Active|2026-01-01||
+Vision||L-BEN-0171|Elias Walker|Elias Walker|Employee|1987-03-09|909460171|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0172|Maya Walker|Maya Walker|Employee|1988-04-10|909460172|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0172|Maya Walker|Maya Walker|Employee|1988-04-10|909460172|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0172|Maya Walker|Maya Walker|Employee|1988-04-10|909460172|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0173|Theo Walker|Theo Walker|Employee|1989-05-11|909460173|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0173|Theo Walker|Inez Walker|Spouse|1997-07-19||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0173|Theo Walker|Remy Walker|Child|2017-08-19||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0173|Theo Walker|Theo Walker|Employee|1989-05-11|909460173|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0173|Theo Walker|Remy Walker|Child|2017-08-19||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0173|Theo Walker|Theo Walker|Employee|1989-05-11|909460173|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0174|Amara Walker|Amara Walker|Employee|1990-06-12|909460174|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0174|Amara Walker|Omar Walker|Spouse|1998-08-20||Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0174|Amara Walker|Amara Walker|Employee|1990-06-12|909460174|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0174|Amara Walker|Amara Walker|Employee|1990-06-12|909460174|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0175|Felix Walker|Felix Walker|Employee|1991-07-13|909460175|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0175|Felix Walker|Sage Walker|Child|2019-09-21|909662349|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0175|Felix Walker|Felix Walker|Employee|1991-07-13|909460175|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0175|Felix Walker|Sage Walker|Child|2019-09-21|909662349|Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0175|Felix Walker|Felix Walker|Employee|1991-07-13|909460175|Employee Only|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0176|Lena Walker|Lena Walker|Employee|1992-08-14|909460176|Employee Only|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0176|Lena Walker|Lena Walker|Employee|1992-08-14|909460176|Employee Only|ENROLLED|2026-01-01||
+Vision||L-BEN-0176|Lena Walker|Lena Walker|Employee|1992-08-14|909460176|Employee Only|Waived|2026-01-01||Employee declined this benefit
+Medical|Willow PPO 2000|L-BEN-0177|Oscar Walker|Oscar Walker|Employee|1993-09-15|909460177|Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0177|Oscar Walker|Ada Walker|Spouse|1972-11-23||Family|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0177|Oscar Walker|Remy Walker|Child|2021-12-23||Family|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0177|Oscar Walker|Oscar Walker|Employee|1993-09-15|909460177|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0177|Oscar Walker|Remy Walker|Child|2021-12-23||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0177|Oscar Walker|Oscar Walker|Employee|1993-09-15|909460177|Employee + Spouse|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0177|Oscar Walker|Ada Walker|Spouse|1972-11-23||Employee + Spouse|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0178|Priya Walker|Priya Walker|Employee|1994-10-16|909460178|Employee + Spouse|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0178|Priya Walker|Ivan Walker|Spouse|1973-12-24|909662355|Employee + Spouse|ENROLLED|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0178|Priya Walker|Priya Walker|Employee|1994-10-16|909460178|Employee Only|ENROLLED|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0178|Priya Walker|Priya Walker|Employee|1994-10-16|909460178|Employee Only|ENROLLED|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0179|Miles Walker|Miles Walker|Employee|1995-11-17|909460179|Employee + Child(ren)|Active|2026-01-01||
+Medical|Willow PPO 2000|L-BEN-0179|Miles Walker|Sage Walker|Child|2023-01-25||Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0179|Miles Walker|Miles Walker|Employee|1995-11-17|909460179|Employee + Child(ren)|Active|2026-01-01||
+DENTAL|Ribbon Dental Basic|L-BEN-0179|Miles Walker|Sage Walker|Child|2023-01-25||Employee + Child(ren)|Active|2026-01-01||
+Vision|Kite Vision Select|L-BEN-0179|Miles Walker|Miles Walker|Employee|1995-11-17|909460179|Employee Only|Active|2026-01-01||
+Medical|Willow HDHP 4000|L-BEN-0008|Lena Morgan|Lena Morgan|Employee|1972-08-08|909-46-0008|EE|Pending|2027-01-01||Future election; retain current medical record
+Medical|Willow PPO 2000|L-BEN-ORPHAN|Drew Sample|Drew Sample|Employee|1980-09-16||EE|Terminated|2026-01-01|2026-08-31|Absent from current staff
+Medical|Willow PPO 2000|L-BEN-0001|Alex Morgan|Alex Morgan|Employee|1965-01-01|909460001|Family|Active|2026-01-01||
+||||||||||||
+REPORT TOTAL|826|Excludes exact duplicate||||||||||

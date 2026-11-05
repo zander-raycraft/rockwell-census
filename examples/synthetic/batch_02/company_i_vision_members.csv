@@ -1,0 +1,72 @@
+﻿Cedar Ribbon Labs|company i vision members.csv|Snapshot 2026-10-31||||||||||
+Dates: MM/DD/YYYY|Synthetic test data|||||||||||
+Subscriber Ref|Subscriber|Member|Relationship|Member DOB|Member SSN|Benefit|Plan|Tier|Status|Start|End|Notes
+V-I-BEN-0001|Alex Morgan|Alex Morgan|Employee|1/1/1965|906430001|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0002|Alex Morgan|Alex Morgan|Employee|2/2/1966|906430002|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0003|Elias Morgan|Elias Morgan|Employee|3/3/1967|906430003|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0004|Maya Morgan|Maya Morgan|Employee|4/4/1968|906430004|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0005|Theo Morgan|Theo Morgan|Employee|5/5/1969|906430005|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0006|Amara Morgan|Amara Morgan|Employee|6/6/1970|906430006|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0007|Felix Morgan|Felix Morgan|Employee|7/7/1971|906430007|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0008|Lena Morgan|Lena Morgan|Employee|8/8/1972|906430008|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0009|Oscar Morgan|Oscar Morgan|Employee|9/9/1973|906430009|Vision|Kite Vision Select|EE+SP|Terminated|1/1/2026|9/30/2026|
+V-I-BEN-0009|Oscar Morgan|Ada Morgan|Spouse|11/17/1978||Vision|Kite Vision Select|EE+SP|Terminated|1/1/2026|9/30/2026|
+V-I-BEN-0010|Priya Morgan|Priya Morgan|Employee|10/10/1974|906430010|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0011|Miles Morgan|Miles Morgan|Employee|11/11/1975|906430011|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0012|Zara Morgan|Zara Morgan|Employee|12/12/1976|906430012|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0013|Hugo Morgan|Hugo Morgan|Employee|1/13/1977|906430013|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0014|Inez Morgan|Inez Morgan|Employee|2/14/1978|906430014|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0015|Omar Morgan|Omar Morgan|Employee|3/15/1979|906430015|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0016|Clara Morgan|Clara Morgan|Employee|3/4/1985|906430016|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0017|Alex Morgan|Alex Morgan|Employee|||Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0017|Alex Morgan|Nora Morgan|Spouse|||Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0018|Jordan Ellis|Jordan Ellis|Employee|5/12/1987|906430018|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0019|Jordan Ellis|Jordan Ellis|Employee|5/12/1987|906430019|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0020|Lucia Garcia|Lucia Garcia|Employee|8/20/1984|906430020|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0021|Jose Muller|Jose Muller|Employee|9/21/1985|906430021|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0022|Anne-Marie ONeal|Anne-Marie ONeal|Employee|10/22/1986|906430022|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0023|Ezra Morgan|Ezra Morgan|Employee|11/23/1987|906430023|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0024|Vera Morgan|Vera Morgan|Employee|12/24/1988|906430024|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0025|Alex Santos|Alex Santos|Employee|1/25/1989|906430025|Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0025|Alex Santos|Priya Santos|Spouse|3/6/1994|906632049|Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0026|Nora Santos|Nora Santos|Employee|2/26/1990|906430026|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0027|Elias Santos|Elias Santos|Employee|3/27/1991|906430027|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0028|Maya Santos|Maya Santos|Employee|4/1/1992|906430028|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0029|Theo Santos|Theo Santos|Employee|5/2/1993|906430029|Vision|Kite Vision Select|EE|Active|1/1/2026||
+Subscriber Ref|Subscriber|Member|Relationship|Member DOB|Member SSN|Benefit|Plan|Tier|Status|Start|End|Notes
+V-I-BEN-0030|Amara Santos|Amara Santos|Employee|6/3/1994|906430030|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0031|Felix Santos|Felix Santos|Employee|7/4/1995|906430031|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0032|Lena Santos|Lena Santos|Employee|8/5/1996|906430032|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0033|Oscar Santos|Oscar Santos|Employee|9/6/1997|906430033|Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0033|Oscar Santos|Ada Santos|Spouse|11/14/1973||Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0034|Priya Santos|Priya Santos|Employee|10/7/1998|906430034|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0035|Miles Santos|Miles Santos|Employee|11/8/1999|906430035|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0036|Zara Santos|Zara Santos|Employee|12/9/2000|906430036|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0037|Hugo Santos|Hugo Santos|Employee|1/10/2001|906430037|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0038|Inez Santos|Inez Santos|Employee|2/11/1965|906430038|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0039|Omar Santos|Omar Santos|Employee|3/12/1966|906430039|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0040|Clara Santos|Clara Santos|Employee|4/13/1967|906430040|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0041|Jules Santos|Jules Santos|Employee|5/14/1968|906430041|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0042|Ada Santos|Ada Santos|Employee|6/15/1969|906430042|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0043|Ivan Santos|Ivan Santos|Employee|7/16/1970|906430043|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0044|Esme Santos|Esme Santos|Employee|8/17/1971|906430044|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0045|Noel Santos|Noel Santos|Employee|9/18/1972|906430045|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0046|Sana Santos|Sana Santos|Employee|10/19/1973|906430046|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0047|Ezra Santos|Ezra Santos|Employee|11/20/1974|906430047|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0048|Vera Santos|Vera Santos|Employee|12/21/1975|906430048|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0049|Alex Khan|Alex Khan|Employee|1/22/1976|906430049|Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0049|Alex Khan|Priya Khan|Spouse|3/3/1989|906632097|Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0050|Nora Khan|Nora Khan|Employee|2/23/1977|906430050|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0051|Elias Khan|Elias Khan|Employee|3/24/1978|906430051|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0052|Maya Khan|Maya Khan|Employee|4/25/1979|906430052|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0053|Theo Khan|Theo Khan|Employee|5/26/1980|906430053|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0054|Amara Khan|Amara Khan|Employee|6/27/1981|906430054|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0055|Felix Khan|Felix Khan|Employee|7/1/1982|906430055|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0056|Lena Khan|Lena Khan|Employee|8/2/1983|906430056|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+V-I-BEN-0057|Oscar Khan|Oscar Khan|Employee|9/3/1984|906430057|Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0057|Oscar Khan|Ada Khan|Spouse|11/11/1997||Vision|Kite Vision Select|EE+SP|Active|1/1/2026||
+V-I-BEN-0058|Priya Khan|Priya Khan|Employee|10/4/1985|906430058|Vision|Kite Vision Select|EE|ENROLLED|1/1/2026||
+V-I-BEN-0059|Miles Khan|Miles Khan|Employee|11/5/1986|906430059|Vision|Kite Vision Select|EE|Active|1/1/2026||
+V-I-BEN-0001|Alex Morgan|Alex Morgan|Employee|1/1/1965|906430001|Vision||EE|Waived|1/1/2026||Employee declined this benefit
+||||||||||||
+REPORT TOTAL|65|Excludes exact duplicate||||||||||

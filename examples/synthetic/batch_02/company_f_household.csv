@@ -1,0 +1,27 @@
+Willow Loom Supply|company f household.csv|Snapshot 2026-10-31|||||||||
+Dates: MM/DD/YYYY|Synthetic test data||||||||||
+Subscriber Ref|Employee|Dependent|Relationship|DOB|SSN|Medical|Dental|Vision|Start|End|Notes
+F-BEN-0001|Alexander Morgan|Priya Walker|SP|3/9/1970|903-60-2001|Y|N|Y|1/1/2026||
+F-BEN-0001|Alexander Morgan|Remy Walker|CH|4/9/2007|903-60-2002|Y|Y|N|7/1/2026||Added midyear
+F-BEN-0002|Alexandra Morgan|Miles Morgan|SP|4/10/1971||Y|N|N|1/1/2026||
+F-BEN-0003|Elias Morgan|Sage Morgan|CH|5/11/2009||Y|Y|N|1/1/2026||
+F-BEN-0005|Theo Morgan|Inez Morgan|SP|02/29/2023||Y|N|N|1/1/2026||
+F-BEN-0005|Theo Morgan|Remy Morgan|CH|8/13/2011||Y|Y|N|1/1/2026||
+F-BEN-0006|Amara Morgan|Omar Park|SP|8/14/1975|||||1/1/2026||Coverage not provided
+F-BEN-0007|Felix Morgan|Sage Morgan|CH|9/15/2013|903-60-2013|Y|Y|N|1/1/2026||
+F-BEN-0009|Oscar Morgan|Ada Morgan|SP|11/17/1978||Y|N|Y|1/1/2026|9/30/2026|
+F-BEN-0009|Oscar Morgan|Remy Morgan|CH|12/17/2015||Y|Y|N|1/1/2026|9/30/2026|
+|Priya Morgan|Ivan Morgan|SP|12/18/1979|903-60-2019|Y|N|N|1/1/2026||
+F-BEN-0011|Miles Morgan|Sage Brooks|CH|1/19/2017||Y|Y|N|1/1/2026||
+F-BEN-0013|Hugo Morgan|Sana Morgan|SP|3/21/1982|903-60-2025|Y|N|N|1/1/2026||
+F-BEN-0013|Hugo Morgan|Remy Morgan|CH|4/21/2019|903-60-2026|Y|Y|N|1/1/2026||
+F-BEN-0014|Inez Morgan|Ezra Morgan|SP|4/22/1983||Y|N|N|11/1/2026|10/31/2026|
+F-BEN-0015|Omar Morgan|Sage Morgan|CH|5/23/2021||Y|Y|N|1/1/2026||
+F-BEN-0017|Alex Morgan|Nora Morgan|SP|7/25/1986||Y|N|Y|1/1/2026||
+F-BEN-0017|Alex Morgan|Remy Morgan|CH|8/25/2023||Y|Y|N|1/1/2026||
+F-BEN-0018|Jordan Ellis|Elias Ellis|SP|8/26/1987||Y|N|N|1/1/2026||
+F-UNKNOWN|Quinn Sample|Sky Sample|Child|6/14/2016||Y|N|N|1/1/2026||Employee absent from other source files
+F-BEN-0003|Elias Morgan|Casey Morgan|Child|8/10/2019||N|N|N|||Household only; explicitly not covered
+F-BEN-0001|Alexander Morgan|Priya Walker|SP|3/9/1970|903-60-2001|Y|N|Y|1/1/2026||
+|||||||||||
+REPORT TOTAL|21|Excludes exact duplicate|||||||||

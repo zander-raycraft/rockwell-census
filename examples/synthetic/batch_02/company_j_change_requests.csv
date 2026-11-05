@@ -1,0 +1,15 @@
+Moss Lantern Goods|company j change requests.csv|Snapshot 2026-10-31||||||
+Dates: YYYY-MM-DD|Synthetic test data|||||||
+Event ID|Worker No|Employee|Benefit|Action|Effective|Requested Plan|Requested Tier|Notes
+EV-1|000001|Alexander Morgan|Medical|Update|2026-10-01|Moss PPO 1500|EE|Change request only; not proof of approval
+EV-2|000004|Maya Morgan|Dental|Update|2026-10-01|Moss PPO 1500|EE|Change request only; not proof of approval
+EV-3|000006|Amara Morgan|Medical|Update|2026-10-01|Moss PPO 1500|EE+SP|Change request only; not proof of approval
+EV-4|000008|Lena Morgan|Dental|Future election|2027-01-01|Moss HDHP 4000|EE|Change request only; not proof of approval
+EV-5|000009|Oscar Morgan|Medical|Terminate|2026-09-30|Moss PPO 1500|EE|Change request only; not proof of approval
+EV-6|000013|Hugo Morgan|Dental|Update|2026-10-01|Moss PPO 1500|EE|Change request only; not proof of approval
+EV-7|000015|Omar Morgan|Medical|Update|2026-10-01|Moss PPO 1500|EE|Conflicts with current census; HR review requested
+EV-8|000016|Clara Morgan|Dental|Update|2026-10-01|Moss PPO 1500|EE|Change request only; not proof of approval
+EV-9|000017|Alex Morgan|Medical|Update|2026-10-01|Moss PPO 1500|EE|Name ambiguous without confirmed source ID mapping
+EV-1|000001|Alexander Morgan|Medical|Update|2026-10-01|Moss PPO 1500|EE|Change request only; not proof of approval
+||||||||
+REPORT TOTAL|9|Excludes exact duplicate||||||

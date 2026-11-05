@@ -1,0 +1,24 @@
+Employee ID,Employee Name,Member Name,Relationship,Member DOB,Gender,Coverage Type,Plan Name,Coverage Level,Effective Date,Enrollment Status
+BA-1001,Bob Thompson,Bob Thompson,Employee,02/17/1979,M,Medical,Aetna Open Access PPO 1500,Employee + Spouse,01/01/2026,Active
+BA-1001,Bob Thompson,Linda Thompson,Spouse,09/02/1980,F,Medical,Aetna Open Access PPO 1500,Employee + Spouse,01/01/2026,Active
+BA-1001,Bob Thompson,Bob Thompson,Employee,02/17/1979,M,Dental,Guardian DHMO,Employee + Spouse,01/01/2026,Active
+BA-1001,Bob Thompson,Linda Thompson,Spouse,09/02/1980,F,Dental,Guardian DHMO,Employee + Spouse,01/01/2026,Active
+BA-1001,Bob Thompson,Bob Thompson,Employee,02/17/1979,M,Vision,VSP Choice,Employee + Spouse,01/01/2026,Active
+BA-1001,Bob Thompson,Linda Thompson,Spouse,09/02/1980,F,Vision,VSP Choice,Employee + Spouse,01/01/2026,Active
+BA-1002,Maria Garcia,Maria Garcia,Employee,08/08/1990,F,Medical,Aetna HDHP 3000 HSA,Employee + Child(ren),01/01/2026,Active
+BA-1002,Maria Garcia,Lucas Garcia-Lopez,Child,04/21/2017,M,Medical,Aetna HDHP 3000 HSA,Employee + Child(ren),01/01/2026,Active
+BA-1002,Maria Garcia,Maria Garcia,Employee,08/08/1990,F,Dental,,Waived,01/01/2026,Waived
+BA-1003,Jonathon Reyes,Jonathon Reyes,Employee,12/01/1993,M,Medical,Aetna Open Access PPO 1500,Employee Only,01/01/2026,Active
+BA-1003,Jonathon Reyes,Jonathon Reyes,Employee,12/01/1993,M,Dental,Guardian DHMO,Employee Only,01/01/2026,Active
+BA-1004,Chris Lee,Chris Lee,Employee,06/11/1987,M,Medical,Aetna HDHP 3000 HSA,Employee Only,01/01/2026,Active
+BA-1005,Chris Lee,Chris Lee,Employee,01/23/1992,F,Medical,Aetna Open Access PPO 1500,Family,01/01/2026,Active
+BA-1005,Chris Lee,Daniel Park,Spouse,07/14/1990,M,Medical,Aetna Open Access PPO 1500,Family,01/01/2026,Active
+BA-1005,Chris Lee,Mia Lee-Park,Child,10/03/2021,F,Medical,Aetna Open Access PPO 1500,Family,01/01/2026,Active
+BA-1005,Chris Lee,Chris Lee,Employee,01/23/1992,F,Dental,Guardian DHMO,Employee + Spouse,01/01/2026,Active
+BA-1005,Chris Lee,Daniel Park,Spouse,07/14/1990,M,Dental,Guardian DHMO,Employee + Spouse,01/01/2026,Active
+BA-1005,Chris Lee,Mia Lee-Park,Child,10/03/2021,F,Dental,Guardian DHMO,Employee + Spouse,01/01/2026,Active
+BA-1006,Kate Nguyen,Kate Nguyen,Employee,05/29/1984,F,Medical,Aetna Open Access PPO 1500,Employee + Spouse,01/01/2026,Active
+BA-1006,Kate Nguyen,Ethan Nguyen,Child,12/12/2012,M,Medical,Aetna Open Access PPO 1500,Employee + Spouse,01/01/2026,Active
+BA-1007,Derek Olson,Derek Olson,Employee,11/30/1975,M,Medical,Aetna Open Access PPO 1500,Employee Only,01/01/2026,Terminated 09/30/2026
+BA-1008,Samuel Okonkwo,Samuel Okonkwo,Employee,03/04/1985,M,Medical,Aetna HDHP 3000 HSA,Employee Only,01/01/2026,Active
+BA-1009,Grace Kim,Grace Kim,Employee,10/14/1996,F,Medical,,Waived,01/01/2026,Waived

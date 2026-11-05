@@ -1,0 +1,40 @@
+Ember Finch Design;company g household.csv;Snapshot 2026-10-31;;;;;;;;;
+Dates: DD/MM/YYYY;Synthetic test data;;;;;;;;;;
+Subscriber Ref;Employee;Dependent;Relationship;DOB;SSN;Medical;Dental;Vision;Start;End;Notes
+G-BEN-0001;Alexander Morgan;Priya Walker;SP;09/03/1970;904-61-2001;Y;N;Y;01/01/2026;;
+G-BEN-0001;Alexander Morgan;Remy Walker;CH;09/04/2007;904-61-2002;Y;Y;N;01/07/2026;;Added midyear
+G-BEN-0002;Alexandra Morgan;Miles Morgan;SP;10/04/1971;;Y;N;N;01/01/2026;;
+G-BEN-0003;Elias Morgan;Sage Morgan;CH;11/05/2009;;Y;Y;N;01/01/2026;;
+G-BEN-0005;Theo Morgan;Inez Morgan;SP;29/02/2023;;Y;N;N;01/01/2026;;
+G-BEN-0005;Theo Morgan;Remy Morgan;CH;13/08/2011;;Y;Y;N;01/01/2026;;
+G-BEN-0006;Amara Morgan;Omar Park;SP;14/08/1975;;;;;01/01/2026;;Coverage not provided
+G-BEN-0007;Felix Morgan;Sage Morgan;CH;15/09/2013;904-61-2013;Y;Y;N;01/01/2026;;
+G-BEN-0009;Oscar Morgan;Ada Morgan;SP;17/11/1978;;Y;N;Y;01/01/2026;30/09/2026;
+G-BEN-0009;Oscar Morgan;Remy Morgan;CH;17/12/2015;;Y;Y;N;01/01/2026;30/09/2026;
+;Priya Morgan;Ivan Morgan;SP;18/12/1979;904-61-2019;Y;N;N;01/01/2026;;
+G-BEN-0011;Miles Morgan;Sage Brooks;CH;19/01/2017;;Y;Y;N;01/01/2026;;
+G-BEN-0013;Hugo Morgan;Sana Morgan;SP;21/03/1982;904-61-2025;Y;N;N;01/01/2026;;
+G-BEN-0013;Hugo Morgan;Remy Morgan;CH;21/04/2019;904-61-2026;Y;Y;N;01/01/2026;;
+G-BEN-0014;Inez Morgan;Ezra Morgan;SP;22/04/1983;;Y;N;N;01/11/2026;31/10/2026;
+G-BEN-0015;Omar Morgan;Sage Morgan;CH;23/05/2021;;Y;Y;N;01/01/2026;;
+G-BEN-0017;Alex Morgan;Nora Morgan;SP;25/07/1986;;Y;N;Y;01/01/2026;;
+G-BEN-0017;Alex Morgan;Remy Morgan;CH;25/08/2023;;Y;Y;N;01/01/2026;;
+G-BEN-0018;Jordan Ellis;Elias Ellis;SP;26/08/1987;;Y;N;N;01/01/2026;;
+G-BEN-0019;Jordan Ellis;Sage Ellis;CH;27/09/2007;904-61-2037;Y;Y;N;01/01/2026;;
+G-BEN-0021;José Müller;Amara Martin;SP;02/11/1990;;Y;N;N;01/01/2026;;
+G-BEN-0021;José Müller;Remy Martin;CH;02/12/2009;;Y;Y;N;01/01/2026;;
+G-BEN-0022;Anne-Marie O'Neal;Felix O'Neal;SP;03/12/1991;904-61-2043;Y;N;N;01/01/2026;;
+G-BEN-0023;Ezra Morgan;Sage Morgan;CH;04/01/2011;;Y;Y;N;01/01/2026;;
+G-BEN-0025;Alex Santos;Priya Santos;SP;06/03/1994;904-61-2049;Y;N;Y;01/01/2026;;
+G-BEN-0025;Alex Santos;Remy Santos;CH;06/04/2013;904-61-2050;Y;Y;N;01/01/2026;;
+G-BEN-0026;Nora Santos;Miles Morgan;SP;07/04/1995;;Y;N;N;01/01/2026;;
+G-BEN-0027;Elias Santos;Sage Santos;CH;08/05/2015;;Y;Y;N;01/01/2026;;
+G-BEN-0029;Theo Santos;Inez Santos;SP;10/07/1998;;Y;N;N;01/01/2026;;
+G-BEN-0029;Theo Santos;Remy Santos;CH;10/08/2017;;Y;Y;N;01/01/2026;;
+G-BEN-0030;Amara Santos;Omar Santos;SP;11/08/1970;;Y;N;N;01/01/2026;;
+G-BEN-0031;Felix Santos;Sage Reyes;CH;12/09/2019;904-61-2061;Y;Y;N;01/01/2026;;
+G-UNKNOWN;Quinn Sample;Sky Sample;Child;14/06/2016;;Y;N;N;01/01/2026;;Employee absent from other source files
+G-BEN-0003;Elias Morgan;Casey Morgan;Child;10/08/2019;;N;N;N;;;"Household only; explicitly not covered"
+G-BEN-0001;Alexander Morgan;Priya Walker;SP;09/03/1970;904-61-2001;Y;N;Y;01/01/2026;;
+;;;;;;;;;;;
+REPORT TOTAL;37;Unverified manual total;;;;;;;;;
