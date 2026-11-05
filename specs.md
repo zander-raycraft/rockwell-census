@@ -8,7 +8,7 @@ Turn messy company census documents into one consistent set of employee, depende
 
 A basic web frontend lets users create companies (accounts), upload documents, review issues, and download exports (cleaned employee data). A Go backend handles uploads, processing, storage, and retrieval; I am picking go because I can run a bunch of lightweioght go processes. Postgres stores the original document bytes and metadata alongside the company, employee, dependent, and enrollment records. Extraction plans, source references, and review decisions will also be stored in Postgre.
 
-A durable queue holds document IDs and workers can pull fropm that for the jobs. Workers load documents by ID and process them in the background. A failed attempt gets one retry. After a second failure, the worker sets the document's failed flag and leaves it for manual review. Results are committed before the job is acknowledged, and retries must not create duplicate records.
+A durable queue holds document IDs and workers can pull from that for the jobs. Workers load documents by ID and process them in the background. A failed attempt gets one retry. After a second failure, the worker sets the document's failed flag and leaves it for manual review. Results are committed before the job is acknowledged, and retries must not create duplicate records.
 
 ### DATABASE TABLES (PGDB)
     COMPANY
@@ -56,17 +56,22 @@ A durable queue holds document IDs and workers can pull fropm that for the jobs.
         uploaded_at -> date
         failed -> bool (1=passed, 0=failed)
 
+    DOCUMENT_QUEUE
+        id -> UUID -> (FK TABLES:DOCUMENTS.id)
+
 
 ### Backend Routes
-    - /uploadDocments
+    - /uploadDocments -> takes in uploaded documents, puts them into the documents db and adds them to the queue, then spawns worker
     - /slmExtractor -> spawns go worker to read from queue and run the slmExtraction 
     - /xlsxExtraction -> called after the slm extraction takes output JSON from slmExtractor and document id, starts parsing the
                          document content writing it to local worker memory stored in ram
-    - /contentVerifier -> takes the workers local memory and starts to parse it validating content and creating employee profiles to be
+    - /contentVerifier* -> takes the workers local memory and starts to parse it validating content and creating employee profiles to be
                           written to the DB; holds it in ram as it is processing new list before commiting list to db; Updates working memory of extraction worker. Taking in raw extracted content and appending complete and incopmlete profiles and eventually overwrites all teh raw working memory with the new filled out and missing information employee tables, they then
-    - /storeData -> takes the working validated json from the extraction workers memory and writes them to the database tables
+    - /storeData* -> takes the working validated json from the extraction workers memory and writes them to the database tables
     - /contentRetreiver -> extracts companies information and employees/dependents and either displays them or fills them into a
                            predefined xml template for document/ppt rendering
+
+    * Mean these can just be funcitons inside, dont need to be actual api routes to call
 
 ## Extraction Pipeline
 
