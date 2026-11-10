@@ -905,3 +905,30 @@ td {
   color: #819375;
   font-size: 10px;
 }
+.company-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  margin-left: auto;
+}
+.company-picker label {
+  color: #a0ad9d;
+}
+.company-picker select {
+  max-width: 220px;
+}
+@media (max-width: 900px) {
+  .header {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 640px) {
+  .company-picker {
+    margin-left: 0;
+    width: 100%;
+  }
+  .company-picker select {
+    flex: 1;
+  }
+}

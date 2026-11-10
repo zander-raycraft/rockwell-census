@@ -1395,3 +1395,42 @@ func Summarize(state State) Summary {
 	summary.HeldIdentities = len(held)
 	return summary
 }
+
+/*
+Company identifies one saved company for the frontend selector.
+
+* @brief: Company -> saved company identity and name
+* @returns: value [Company] -> selectable company
+*/
+type Company struct {
+	ID   string `json:"id"`
+	Name string `json:"name"`
+}
+
+/*
+Companies lists saved companies without creating a census or loading member data.
+
+* @brief: Companies -> reads existing company names
+* @params: ctx [context.Context] -> request cancellation
+* @returns: companies [[]Company] -> companies ordered by name
+* @returns: err [error] -> database failure
+*/
+func (db *DB) Companies(ctx context.Context) ([]Company, error) {
+	rows, err := traceQuery(ctx, db.pool, `SELECT id::text, name FROM company ORDER BY lower(name), id`)
+	if err != nil {
+		return nil, fmt.Errorf("list companies: %w", err)
+	}
+	defer rows.Close()
+	companies := []Company{}
+	for rows.Next() {
+		var company Company
+		if err := rows.Scan(ctx, &company.ID, &company.Name); err != nil {
+			return nil, fmt.Errorf("list companies: %w", err)
+		}
+		companies = append(companies, company)
+	}
+	if err := rows.Err(ctx); err != nil {
+		return nil, fmt.Errorf("list companies: %w", err)
+	}
+	return companies, nil
+}

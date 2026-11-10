@@ -36,6 +36,7 @@ function installAPI(hasFailure = false): string[] {
   vi.stubGlobal(
     "fetch",
     vi.fn(async (path: string, options?: RequestInit) => {
+      if (path === "/api/companies") return new Response("[]");
       if (path.includes("/runs?")) return new Response("[]");
       if (path.includes("/state?")) return new Response(JSON.stringify(STATE));
       if (path.includes("/logs/")) return new Response("");
@@ -176,4 +177,46 @@ describe("document workspace", () => {
     fireEvent.click(screen.getByRole("button", { name: "correction.txt ↗" }));
     expect(onRun).toHaveBeenCalledWith("later-run");
   });
+});
+
+it("opens a saved company from the selector and switches to another company", async () => {
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(async (path: string) => {
+      if (path === "/api/companies")
+        return new Response(
+          JSON.stringify([
+            { id: "a", name: "Alpha" },
+            { id: "b", name: "Beta" },
+          ]),
+        );
+      if (path.includes("/runs?")) return new Response("[]");
+      if (path.includes("/state?")) {
+        const company = new URL(path, "http://localhost").searchParams.get(
+          "company",
+        );
+        return new Response(
+          JSON.stringify({
+            ...STATE,
+            company_id: company === "Alpha" ? "a" : "b",
+            company_name: company,
+          }),
+        );
+      }
+      throw new Error(`Unexpected request ${path}`);
+    }),
+  );
+  render(<App />);
+  await screen.findByRole("option", { name: "Alpha" });
+  fireEvent.change(screen.getByLabelText("Switch company"), {
+    target: { value: "Alpha" },
+  });
+  await screen.findByRole("heading", { name: "Alpha" });
+  fireEvent.change(screen.getByLabelText("Switch company"), {
+    target: { value: "Beta" },
+  });
+  await screen.findByRole("heading", { name: "Beta" });
+  expect(
+    screen.queryByRole("heading", { name: "Alpha" }),
+  ).toBeNull();
 });

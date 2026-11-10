@@ -1,0 +1,21 @@
+{
+	admin off
+	persist_config off
+	auto_https off
+}
+
+:{$PORT:8080} {
+	encode gzip zstd
+
+	handle_path /api/* {
+		reverse_proxy {$BACKEND_URL} {
+			header_up Host {upstream_hostport}
+		}
+	}
+
+	handle {
+		root * /app/dist
+		try_files {path} /index.html
+		file_server
+	}
+}

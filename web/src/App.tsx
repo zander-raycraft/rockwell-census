@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import type { DragEvent, FormEvent } from "react";
-import { listRuns, loadState, loadTrace, submitDocument } from "./api";
-import type { AuditEvent, CensusState, Run } from "./api";
+import {
+  listCompanies,
+  listRuns,
+  loadState,
+  loadTrace,
+  submitDocument,
+} from "./api";
+import type { AuditEvent, CensusState, Company, Run } from "./api";
 import { AuditView, IssuesView } from "./AuditView";
 import { CensusView } from "./CensusView";
 
@@ -21,6 +27,8 @@ function errorText(error: unknown): string {
  * @returns: view [React.JSX.Element] -> document, run and issue workspace
  */
 export function App() {
+  const [companies, setCompanies] = useState<Company[]>([]);
+  const [companyError, setCompanyError] = useState("");
   const [companyInput, setCompanyInput] = useState("");
   const [company, setCompany] = useState("");
   const [feedback, setFeedback] = useState("");
@@ -50,6 +58,28 @@ export function App() {
   const latestFinished =
     runs.find((run) => run.status === "completed" || run.status === "failed")
       ?.id ?? "";
+
+  useEffect(() => {
+    const controller = new AbortController();
+    /**
+     * refreshCompanies discovers saved companies when the workspace opens or refreshes.
+     * @brief: refreshCompanies -> updates the selector from the database
+     * @returns: done [Promise<void>] -> company list loaded or error displayed
+     */
+    async function refreshCompanies(): Promise<void> {
+      try {
+        const next = await listCompanies(controller.signal);
+        if (!controller.signal.aborted) {
+          setCompanies(next);
+          setCompanyError("");
+        }
+      } catch (failure) {
+        if (!controller.signal.aborted) setCompanyError(errorText(failure));
+      }
+    }
+    void refreshCompanies();
+    return () => controller.abort();
+  }, [refresh]);
 
   useEffect(() => {
     return () => uploadController.current?.abort();
@@ -107,6 +137,11 @@ export function App() {
         const next = await loadState(company, controller.signal);
         if (!controller.signal.aborted) {
           setState(next);
+          setCompanies((current) =>
+            current.some((saved) => saved.id === next.company_id)
+              ? current
+              : [...current, { id: next.company_id, name: next.company_name }],
+          );
           setStateError("");
         }
       } catch (failure) {
@@ -166,13 +201,23 @@ export function App() {
    */
   function openCompany(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    const next = companyInput.trim();
+    switchCompany(companyInput.trim());
+  }
+
+  /**
+   * switchCompany cancels old requests before loading another company.
+   * @brief: switchCompany -> opens one exact company name
+   * @params: next [string] -> saved or newly entered company name
+   * @returns: result [void] -> reset workspace for the selected company
+   */
+  function switchCompany(next: string): void {
     if (!next) return;
     uploadController.current?.abort();
     pendingRun.current = undefined;
     setIsSubmitting(false);
     setUploadStatus("");
     setCompany(next);
+    setCompanyInput(next);
     setFeedback("");
     setRuns([]);
     setSelectedID("");
@@ -308,6 +353,21 @@ export function App() {
     <div className="app">
       <header className="header">
         <span className="wordmark">Rockwell</span>
+        <div className="company-picker">
+          <label htmlFor="saved-company">Switch company</label>
+          <select
+            id="saved-company"
+            value={company}
+            onChange={(event) => switchCompany(event.target.value)}
+          >
+            <option value="">Choose a company</option>
+            {companies.map((saved) => (
+              <option key={saved.id} value={saved.name}>
+                {saved.name}
+              </option>
+            ))}
+          </select>
+        </div>
         <form className="company-form" onSubmit={openCompany}>
           <label htmlFor="company">Company</label>
           <input
@@ -487,6 +547,11 @@ export function App() {
               </button>
             ))}
           </div>
+          {companyError && (
+            <p className="error" role="alert">
+              Company list: {companyError}
+            </p>
+          )}
           {stateError && (
             <p className="error" role="alert">
               {stateError}

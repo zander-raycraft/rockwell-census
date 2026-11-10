@@ -111,6 +111,7 @@ describe("saved census and replies", () => {
       vi.stubGlobal(
         "fetch",
         vi.fn(async (path: string, options?: RequestInit) => {
+          if (path === "/api/companies") return new Response("[]");
           if (path.includes("/runs?")) return new Response("[]");
           if (path.includes("/state?"))
             return new Response(JSON.stringify(STATE));

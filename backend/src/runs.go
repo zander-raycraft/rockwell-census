@@ -141,3 +141,21 @@ func readRunListing(path string) (run runListing, ok bool) {
 	}
 	return run, true
 }
+
+/*
+handleCompanies lists database-backed companies for the frontend selector.
+
+* @brief: handleCompanies -> returns saved company names
+* @params: w [http.ResponseWriter] -> JSON response writer
+* @params: r [*http.Request] -> request cancellation
+* @api: /companies [GET] -> lists existing companies
+*/
+func (s *server) handleCompanies(w http.ResponseWriter, r *http.Request) {
+	companies, err := s.db.Companies(r.Context())
+	if err != nil {
+		writeJSON(w, http.StatusInternalServerError, errorResponse{Error: "companies could not be loaded"})
+		return
+	}
+	w.Header().Set("Cache-Control", "no-store")
+	writeJSON(w, http.StatusOK, companies)
+}

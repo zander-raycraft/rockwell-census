@@ -742,3 +742,15 @@ Limits
   browser check confirms typed SSN/identity confirmation produces CORRECTION
   with email_resolution and an auditable committed run. Backend logic unchanged.
 - Temporary verification used port 5174 and was stopped afterward; 5173 stays off.
+
+2026-11-10 — Fix hosted API routing and add saved-company selection
+- Railway served API paths as the frontend index.html because Vite proxy rules
+  only apply to the development server. Added web/Caddyfile so production /api
+  routes forward to BACKEND_URL before the static-page fallback.
+- Empty/HTML API responses now produce clear routing/backend errors.
+- Added read-only GET /companies over the existing company table and a saved
+  company dropdown. Switching cancels old requests; newly opened companies are
+  added to the selector without introducing tables or a client store.
+- Eleven frontend checks, type-check/build and Go suite pass. Validated Caddy
+  config, static serving, proxied GET and multipart-route POST errors against the
+  hosted backend. Local PostgreSQL company listing returns saved company IDs.

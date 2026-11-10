@@ -174,6 +174,63 @@ function isMember(value: unknown): value is Member {
 }
 
 /**
+ * readJSON reports hosting failures without leaking HTML into JSON parser errors.
+ * @brief: readJSON -> checks one API response before decoding
+ * @params: response [Response] -> backend or proxy response
+ * @returns: value [Promise<unknown>] -> unchecked JSON body
+ */
+async function readJSON(response: Response): Promise<unknown> {
+  const body = await response.text();
+  if (!body.trim())
+    throw new Error(
+      `The backend returned an empty response (HTTP ${response.status}). Check the backend and API proxy.`,
+    );
+  if (body.trimStart().startsWith("<"))
+    throw new Error(
+      `The API returned HTML instead of JSON (HTTP ${response.status}). Check the frontend /api proxy and BACKEND_URL.`,
+    );
+  try {
+    return JSON.parse(body);
+  } catch {
+    throw new Error(
+      `The backend returned invalid JSON (HTTP ${response.status}).`,
+    );
+  }
+}
+
+/**
+ * Company describes a saved company available in the selector.
+ * @brief: Company -> database identity and name
+ * @returns: value [Company] -> a selectable company
+ */
+export interface Company {
+  id: string;
+  name: string;
+}
+
+/**
+ * listCompanies reads the database-backed company selector.
+ * @brief: listCompanies -> loads saved company names
+ * @params: signal [AbortSignal] -> request cancellation
+ * @returns: companies [Promise<Company[]>] -> saved companies
+ * @api: /companies [GET] -> existing companies
+ */
+export async function listCompanies(signal: AbortSignal): Promise<Company[]> {
+  const value = await request("/companies", signal);
+  if (
+    !Array.isArray(value) ||
+    !value.every(
+      (item): item is Company =>
+        isRecord(item) &&
+        typeof item.id === "string" &&
+        typeof item.name === "string",
+    )
+  )
+    throw new Error("The server returned an invalid company list.");
+  return value;
+}
+
+/**
  * request reads JSON and preserves server error messages.
  * @brief: request -> performs one cancellable API request
  * @params: path [string] -> API route
@@ -192,7 +249,7 @@ async function request(
     signal,
     cache: "no-store",
   });
-  const value: unknown = await response.json();
+  const value: unknown = await readJSON(response);
   if (!response.ok)
     throw new Error(
       isRecord(value) && typeof value.error === "string"
@@ -280,7 +337,7 @@ export async function submitDocument(
     body: form,
     signal,
   });
-  const value: unknown = await response.json();
+  const value: unknown = await readJSON(response);
   if (!isRecord(value) || typeof value.run_id !== "string")
     throw new Error("The server returned no run identity.");
   if (!response.ok)
@@ -311,6 +368,10 @@ export async function loadTrace(
   );
   if (!response.ok) throw new Error(`Trace unavailable (${response.status}).`);
   const text = await response.text();
+  if (text.trimStart().startsWith("<"))
+    throw new Error(
+      "The trace API returned HTML. Check the frontend /api proxy and BACKEND_URL.",
+    );
   const lines = text.split("\n");
   if (!text.endsWith("\n")) lines.pop();
   return lines
