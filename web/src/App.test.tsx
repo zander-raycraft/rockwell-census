@@ -216,7 +216,103 @@ it("opens a saved company from the selector and switches to another company", as
     target: { value: "Beta" },
   });
   await screen.findByRole("heading", { name: "Beta" });
+  expect(screen.queryByRole("heading", { name: "Alpha" })).toBeNull();
+});
+
+/**
+ * showFailedRun opens a failed job using only fixed server responses.
+ * @brief: showFailedRun -> supplies a selectable failed job and observes actions
+ * @returns: calls [Promise<string[]>] -> HTTP mutations requested by the controls
+ */
+async function showFailedRun(): Promise<string[]> {
+  const calls: string[] = [];
+  let isRemoved = false;
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(async (path: string, options?: RequestInit) => {
+      if (path === "/api/companies") return new Response("[]");
+      if (path.includes("/runs?"))
+        return new Response(
+          JSON.stringify(
+            isRemoved
+              ? []
+              : [
+                  {
+                    id: "failed-run",
+                    company: "Example",
+                    filename: "failed.csv",
+                    status: "failed",
+                    started_at: "2026-11-10T12:00:00Z",
+                  },
+                ],
+          ),
+        );
+      if (path.includes("/state?")) return new Response(JSON.stringify(STATE));
+      if (path.includes("/logs/"))
+        return new Response(
+          JSON.stringify({
+            run_id: "failed-run",
+            sequence: 1,
+            timestamp: "2026-11-10T12:00:00Z",
+            component: "http",
+            operation: "request",
+            status: "ok",
+            elapsed_ms: 1,
+            input: {},
+            output: null,
+          }) + "\n",
+        );
+      if (path === "/api/runs/failed-run" && options?.method === "DELETE") {
+        calls.push("remove");
+        isRemoved = true;
+        return new Response('{"removed":"failed-run"}');
+      }
+      if (path === "/api/run" && options?.body instanceof FormData) {
+        expect(options.body.get("source_system")).toBe("payroll");
+        const file = options.body.get("file");
+        expect(file instanceof File && file.name).toBe("failed.csv");
+        calls.push("retry");
+        return new Response(
+          JSON.stringify({ run_id: "new-attempt", state: STATE }),
+        );
+      }
+      throw new Error(`Unexpected request ${path}`);
+    }),
+  );
+  render(<App />);
+  await openCompany();
+  await screen.findByRole("button", { name: "Remove run from history" });
+  return calls;
+}
+
+it("removes a failed job from company history without clearing the census", async () => {
+  const calls = await showFailedRun();
+  fireEvent.click(
+    screen.getByRole("button", { name: "Remove run from history" }),
+  );
+  await waitFor(() => expect(calls).toEqual(["remove"]));
+  await waitFor(() =>
+    expect(screen.queryByRole("button", { name: /failed.csv/ })).toBeNull(),
+  );
   expect(
-    screen.queryByRole("heading", { name: "Alpha" }),
-  ).toBeNull();
+    screen.getByText("1 employees · 0 dependents · 0 enrollments"),
+  ).toBeTruthy();
+});
+
+it("retries a failed job using its recovered original file and source namespace", async () => {
+  const api = await import("./api");
+  vi.spyOn(api, "recoverUpload").mockResolvedValue({
+    file: new File(["Original content"], "failed.csv", { type: "text/csv" }),
+    sourceSystem: "payroll",
+  });
+  const calls = await showFailedRun();
+  const retry = await screen.findByRole("button", { name: "Retry run" });
+  await waitFor(() =>
+    expect((retry as HTMLButtonElement).disabled).toBe(false),
+  );
+  fireEvent.click(retry);
+  await waitFor(() => expect(calls).toEqual(["retry"]));
+  expect(
+    screen.getByText("1 employees · 0 dependents · 0 enrollments"),
+  ).toBeTruthy();
 });

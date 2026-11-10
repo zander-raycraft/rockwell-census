@@ -1,4 +1,4 @@
-import type { CensusState } from "./api";
+import type { CensusState, OpenIssue } from "./api";
 
 /**
  * CensusViewProps supplies the committed census without client-side reconciliation.
@@ -22,6 +22,34 @@ function cellText(value: unknown): string {
   return typeof value === "string" || typeof value === "number"
     ? String(value).replaceAll("_", " ")
     : "Unknown";
+}
+
+/**
+ * reviewText labels only open issues attached to this saved record.
+ * @brief: reviewText -> summarizes unresolved record issues for screen and PDF
+ * @params: issues [OpenIssue[]] -> saved company issues
+ * @params: id [string] -> saved record identity
+ * @returns: text [string] -> issue labels or no open issues
+ */
+function reviewText(issues: OpenIssue[], id: string): string {
+  const labels = issues
+    .filter(
+      (issue) =>
+        issue.status === "OPEN" && (issue.subject || issue.employee_id) === id,
+    )
+    .map((issue) => {
+      if (issue.kind === "MISSING_FIELD" && issue.field) {
+        const field =
+          issue.field === "ssn"
+            ? "SSN"
+            : issue.field === "dob"
+              ? "date of birth"
+              : issue.field.replaceAll("_", " ");
+        return `Missing ${field} — open issue`;
+      }
+      return `${issue.detail || issue.kind.replaceAll("_", " ")} — open issue`;
+    });
+  return labels.join("; ") || "No open issues";
 }
 
 /**
@@ -105,10 +133,12 @@ export function CensusView({ state }: CensusViewProps) {
   const employees = state.employees.map((person) => ({
     ...person,
     name: names.get(person.id),
+    review: reviewText(state.open_issues, person.id),
   }));
   const dependents = state.dependents.map((person) => ({
     ...person,
     name: names.get(person.id),
+    review: reviewText(state.open_issues, person.id),
     employee:
       typeof person.employee_id === "string"
         ? names.get(person.employee_id)
@@ -116,6 +146,7 @@ export function CensusView({ state }: CensusViewProps) {
   }));
   const coverage = state.enrollments.map((enrollment) => ({
     ...enrollment,
+    review: reviewText(state.open_issues, String(enrollment.id)),
     member: names.get(
       String(enrollment.dependent_id ?? enrollment.employee_id),
     ),
@@ -133,7 +164,9 @@ export function CensusView({ state }: CensusViewProps) {
         </button>
       </div>
       <p className="muted">
-        Current saved records. Unknown means no confirmed value.
+        Current saved records. Unknown means no confirmed value.{" "}
+        {state.open_issues.filter((issue) => issue.status === "OPEN").length}{" "}
+        open issues; records with open issues require review before use.
       </p>
       <CensusTable
         title="Employees"
@@ -143,6 +176,7 @@ export function CensusView({ state }: CensusViewProps) {
           ["ssn", "SSN"],
           ["employment_status", "Employment"],
           ["hire_date", "Hire date"],
+          ["review", "Open issues"],
         ]}
         rows={employees}
       />
@@ -154,6 +188,7 @@ export function CensusView({ state }: CensusViewProps) {
           ["relationship", "Relationship"],
           ["dob", "Date of birth"],
           ["ssn", "SSN"],
+          ["review", "Open issues"],
         ]}
         rows={dependents}
       />
@@ -167,6 +202,7 @@ export function CensusView({ state }: CensusViewProps) {
           ["status", "Status"],
           ["effective_start", "Starts"],
           ["effective_end", "Ends"],
+          ["review", "Open issues"],
         ]}
         rows={coverage}
       />

@@ -128,6 +128,7 @@ func serve() error {
 	mux.HandleFunc("POST /run", s.handleRun)
 	mux.HandleFunc("GET /logs/{id}", s.handleLogs)
 	mux.HandleFunc("GET /runs", s.handleRuns)
+	mux.HandleFunc("DELETE /runs/{id}", s.handleRemoveRun)
 	mux.HandleFunc("GET /companies", s.handleCompanies)
 	mux.HandleFunc("GET /state", s.handleState)
 	srv := &http.Server{

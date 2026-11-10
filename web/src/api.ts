@@ -181,6 +181,10 @@ function isMember(value: unknown): value is Member {
  */
 async function readJSON(response: Response): Promise<unknown> {
   const body = await response.text();
+  if (response.status === 429)
+    throw new Error(
+      "Too many requests (HTTP 429). Wait a moment, then refresh. Saved company data has not been removed.",
+    );
   if (!body.trim())
     throw new Error(
       `The backend returned an empty response (HTTP ${response.status}). Check the backend and API proxy.`,
@@ -321,6 +325,7 @@ export async function loadState(
  * @params: company [string] -> exact company name
  * @params: file [File] -> original document
  * @params: signal [AbortSignal] -> request cancellation
+ * @params: sourceSystem [string] -> original source namespace when retrying
  * @returns: result [Promise<RunResult>] -> run identity, committed state or server error
  * @api: /run [POST] -> processes one document
  */
@@ -328,10 +333,12 @@ export async function submitDocument(
   company: string,
   file: File,
   signal: AbortSignal,
+  sourceSystem = "",
 ): Promise<RunResult> {
   const form = new FormData();
   form.set("company", company);
   form.set("file", file);
+  if (sourceSystem) form.set("source_system", sourceSystem);
   const response = await fetch("/api/run", {
     method: "POST",
     body: form,
@@ -348,6 +355,96 @@ export async function submitDocument(
       committed: value.committed === true,
     };
   return { run_id: value.run_id, state: readState(value.state) };
+}
+
+/**
+ * RecoveredUpload contains the original document and source namespace from a trace.
+ * @brief: RecoveredUpload -> unchanged retry input
+ * @returns: value [RecoveredUpload] -> original file and source system
+ */
+interface RecoveredUpload {
+  file: File;
+  sourceSystem: string;
+}
+
+/**
+ * recoverUpload reads the original multipart document from recorded request bytes.
+ * @brief: recoverUpload -> restores a failed upload without reselecting the file
+ * @params: events [AuditEvent[]] -> failed run trace
+ * @params: company [string] -> active company required to match the original request
+ * @returns: upload [Promise<RecoveredUpload>] -> recovered document and namespace
+ */
+export async function recoverUpload(
+  events: AuditEvent[],
+  company: string,
+): Promise<RecoveredUpload> {
+  const request = events.find(
+    (event) => event.component === "http" && event.operation === "request",
+  );
+  const input = request?.input;
+  if (
+    !isRecord(input) ||
+    input.company !== company ||
+    input.body_complete !== true ||
+    !isRecord(input.body) ||
+    typeof input.body.bytes !== "string" ||
+    !isRecord(input.headers)
+  )
+    throw new Error(
+      "The original upload is unavailable. Please select the document again.",
+    );
+  const header = Object.entries(input.headers).find(
+    ([name]) => name.toLowerCase() === "content-type",
+  )?.[1];
+  if (!Array.isArray(header) || typeof header[0] !== "string")
+    throw new Error("The original upload format is unavailable.");
+  const bytes = Uint8Array.from(atob(input.body.bytes), (character) =>
+    character.charCodeAt(0),
+  );
+  const form = await new Response(bytes, {
+    headers: { "Content-Type": header[0] },
+  }).formData();
+  if (form.get("company") !== company)
+    throw new Error("The original upload belongs to another company.");
+  const file = form.get("file");
+  const text = form.get("text");
+  const document =
+    file && typeof file !== "string"
+      ? file
+      : typeof text === "string"
+        ? new File([text], "email.txt", { type: "text/plain" })
+        : undefined;
+  if (!document) throw new Error("The original document is unavailable.");
+  const source = form.get("source_system");
+  return {
+    file: document,
+    sourceSystem: typeof source === "string" ? source : "",
+  };
+}
+
+/**
+ * removeRun hides a run without deleting its audit evidence or committed census.
+ * @brief: removeRun -> removes a finished job from visible history
+ * @params: id [string] -> run identity
+ * @params: signal [AbortSignal] -> request cancellation
+ * @returns: done [Promise<void>] -> hidden run or server error
+ * @api: /runs/{id} [DELETE] -> hides one run
+ */
+export async function removeRun(
+  id: string,
+  signal: AbortSignal,
+): Promise<void> {
+  const response = await fetch(`/api/runs/${encodeURIComponent(id)}`, {
+    method: "DELETE",
+    signal,
+  });
+  const value = await readJSON(response);
+  if (!response.ok)
+    throw new Error(
+      isRecord(value) && typeof value.error === "string"
+        ? value.error
+        : "The run could not be removed.",
+    );
 }
 
 /**

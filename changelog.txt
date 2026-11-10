@@ -754,3 +754,19 @@ Limits
 - Eleven frontend checks, type-check/build and Go suite pass. Validated Caddy
   config, static serving, proxied GET and multipart-route POST errors against the
   hosted backend. Local PostgreSQL company listing returns saved company IDs.
+
+2026-11-10 — Retry failed jobs, hide history entries and flag incomplete census records
+- Added Retry on failed jobs using the exact captured multipart upload and source
+  namespace. Retries create a new run; committed writes disable automatic retry.
+- Added DELETE /runs/{id} and Remove from history for finished jobs. A .hidden
+  marker filters the history list; original traces and census records remain.
+  No new database tables, migrations or extraction paths.
+- Saved census and PDF tables show record-specific open issues, including missing
+  employee SSNs. Resolved issues stop appearing beside the corrected saved facts;
+  dependent issues remain attached to their subject rather than their parent.
+- Reduced run-list polling to active processing and added a clear HTTP 429 error.
+  Changed the hosted frontend BACKEND_URL to Railway private networking; verified
+  /api/companies returns HTTP 200 with the saved company still present.
+- Updated web documentation. Go offline tests and frontend tests/type-check/build
+  pass, including original-file recovery, history removal and census correction
+  display. Backend run logs still require persistent storage across deployments.

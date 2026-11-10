@@ -42,6 +42,9 @@ func (s *server) handleRuns(w http.ResponseWriter, r *http.Request) {
 		if !entry.IsDir() {
 			continue
 		}
+		if _, err := os.Stat(filepath.Join(s.logDir, entry.Name(), ".hidden")); err == nil {
+			continue
+		}
 		run, ok := readRunListing(filepath.Join(s.logDir, entry.Name(), "audit.jsonl"))
 		if ok && (r.URL.Query().Get("company") == "" || run.Company == r.URL.Query().Get("company")) {
 			runs = append(runs, run)
@@ -158,4 +161,35 @@ func (s *server) handleCompanies(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Header().Set("Cache-Control", "no-store")
 	writeJSON(w, http.StatusOK, companies)
+}
+
+/*
+handleRemoveRun hides a finished job while preserving its trace for provenance and retry.
+
+* @brief: handleRemoveRun -> removes a job from visible run history
+* @params: w [http.ResponseWriter] -> JSON response writer
+* @params: r [*http.Request] -> run identity
+* @api: /runs/{id} [DELETE] -> hides a finished run without changing census data
+*/
+func (s *server) handleRemoveRun(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	if id == "" || id == "." || id == ".." || strings.ContainsAny(id, `/\`) {
+		writeJSON(w, http.StatusBadRequest, errorResponse{Error: "invalid run id"})
+		return
+	}
+	dir := filepath.Join(s.logDir, id)
+	run, ok := readRunListing(filepath.Join(dir, "audit.jsonl"))
+	if !ok {
+		writeJSON(w, http.StatusNotFound, errorResponse{Error: "run not found"})
+		return
+	}
+	if run.Status == "running" {
+		writeJSON(w, http.StatusConflict, errorResponse{Error: "a running job cannot be removed"})
+		return
+	}
+	if err := os.WriteFile(filepath.Join(dir, ".hidden"), nil, 0600); err != nil {
+		writeJSON(w, http.StatusInternalServerError, errorResponse{Error: "run could not be removed"})
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]string{"removed": id})
 }

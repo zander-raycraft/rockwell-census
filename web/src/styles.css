@@ -932,3 +932,14 @@ td {
     flex: 1;
   }
 }
+.job-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-top: 16px;
+}
+.job-actions span {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 4px;
+}

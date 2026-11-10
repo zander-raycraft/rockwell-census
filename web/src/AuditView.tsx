@@ -236,7 +236,9 @@ export function AuditView({ events, status, error }: AuditViewProps) {
               event.operation === stage.id &&
               event.status === "input",
           );
-          const failures = records.filter((event) => event.status === "error");
+          const failures = records.filter(
+            (event) => event.status === "error" || event.status === "failed",
+          );
           const outcome = result
             ? "Complete"
             : failures.length

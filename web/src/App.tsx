@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import type { DragEvent, FormEvent } from "react";
 import {
   listCompanies,
+  recoverUpload,
+  removeRun,
   listRuns,
   loadState,
   loadTrace,
@@ -34,6 +36,7 @@ export function App() {
   const [feedback, setFeedback] = useState("");
   const [files, setFiles] = useState<File[]>([]);
   const [isDragging, setIsDragging] = useState(false);
+  const [isEditingRun, setIsEditingRun] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [uploadStatus, setUploadStatus] = useState("");
   const [runs, setRuns] = useState<Run[]>([]);
@@ -95,9 +98,11 @@ export function App() {
      * @returns: done [Promise<void>] -> one polling cycle
      */
     async function pollRuns(): Promise<void> {
+      let shouldPoll = isSubmitting;
       try {
         const next = await listRuns(company, controller.signal);
         if (controller.signal.aborted) return;
+        shouldPoll ||= next.some((run) => run.status === "running");
         setRuns(next);
         const discovered = next.find(
           (run) =>
@@ -114,7 +119,8 @@ export function App() {
       } catch (failure) {
         if (!controller.signal.aborted) setRunError(errorText(failure));
       } finally {
-        if (!controller.signal.aborted) timer = setTimeout(pollRuns, 2000);
+        if (!controller.signal.aborted && shouldPoll)
+          timer = setTimeout(pollRuns, 2000);
       }
     }
     void pollRuns();
@@ -122,7 +128,7 @@ export function App() {
       controller.abort();
       clearTimeout(timer);
     };
-  }, [company, refresh]);
+  }, [company, refresh, isSubmitting]);
 
   useEffect(() => {
     if (!company) return;
@@ -270,9 +276,13 @@ export function App() {
    * processFiles submits the batch in order so later documents see earlier commits.
    * @brief: processFiles -> runs one request at a time and stops on failure
    * @params: batch [File[]] -> documents in processing order
+   * @params: sourceSystem [string] -> retained source namespace for a retry
    * @returns: completed [Promise<boolean>] -> whether every document succeeded
    */
-  async function processFiles(batch: File[]): Promise<boolean> {
+  async function processFiles(
+    batch: File[],
+    sourceSystem = "",
+  ): Promise<boolean> {
     if (!company || isSubmitting || batch.length === 0) return false;
     const controller = new AbortController();
     uploadController.current = controller;
@@ -289,7 +299,12 @@ export function App() {
         knownIDs: new Set(runs.map((run) => run.id)),
       };
       try {
-        const result = await submitDocument(company, file, controller.signal);
+        const result = await submitDocument(
+          company,
+          file,
+          controller.signal,
+          sourceSystem,
+        );
         if (controller.signal.aborted) return false;
         pendingRun.current = undefined;
         setSelectedID(result.run_id);
@@ -320,6 +335,51 @@ export function App() {
       setRefresh((value) => value + 1);
     }
     return completed && !controller.signal.aborted;
+  }
+
+  /**
+   * retrySelected restores a failed job's document and creates a new processing run.
+   * @brief: retrySelected -> retries the original input against current company data
+   * @returns: done [Promise<void>] -> retry started or retrieval error displayed
+   */
+  async function retrySelected(): Promise<void> {
+    if (isSubmitting || isEditingRun) return;
+    setIsEditingRun(true);
+    const controller = new AbortController();
+    uploadController.current = controller;
+    try {
+      const original = await recoverUpload(events, company);
+      if (controller.signal.aborted) return;
+      await processFiles([original.file], original.sourceSystem);
+    } catch (failure) {
+      if (!controller.signal.aborted) setError(errorText(failure));
+    } finally {
+      setIsEditingRun(false);
+    }
+  }
+
+  /**
+   * removeSelected hides a finished run for this company while retaining audit evidence.
+   * @brief: removeSelected -> removes the selected history entry
+   * @returns: done [Promise<void>] -> removed entry or displayed failure
+   */
+  async function removeSelected(): Promise<void> {
+    if (isSubmitting || isEditingRun || !selectedID) return;
+    const id = selectedID;
+    const controller = new AbortController();
+    uploadController.current = controller;
+    setIsEditingRun(true);
+    try {
+      await removeRun(id, controller.signal);
+      if (controller.signal.aborted) return;
+      setRuns((current) => current.filter((run) => run.id !== id));
+      setSelectedID("");
+      setRefresh((value) => value + 1);
+    } catch (failure) {
+      if (!controller.signal.aborted) setError(errorText(failure));
+    } finally {
+      setIsEditingRun(false);
+    }
   }
 
   /**
@@ -584,6 +644,46 @@ export function App() {
                     </span>
                   </summary>
                   <div className="job-body">
+                    <div className="job-actions">
+                      {selectedRun?.status === "failed" && (
+                        <button
+                          className="text-button"
+                          aria-label="Retry run"
+                          title="Rerun the original document as a new job"
+                          disabled={
+                            isSubmitting ||
+                            isEditingRun ||
+                            events.length === 0 ||
+                            events.some(
+                              (event) =>
+                                (event.component === "pipeline" &&
+                                  event.operation === "WRITE" &&
+                                  event.status === "finished") ||
+                                (event.component === "database" &&
+                                  event.operation === "commit" &&
+                                  event.status === "completed"),
+                            )
+                          }
+                          onClick={() => void retrySelected()}
+                        >
+                          <span aria-hidden="true">↻</span> Retry
+                        </button>
+                      )}
+                      <button
+                        className="text-button"
+                        aria-label="Remove run from history"
+                        title="Hide this job from history. Saved census and audit evidence stay intact."
+                        disabled={
+                          isSubmitting ||
+                          isEditingRun ||
+                          !selectedRun ||
+                          selectedRun.status === "running"
+                        }
+                        onClick={() => void removeSelected()}
+                      >
+                        <span aria-hidden="true">×</span> Remove from history
+                      </button>
+                    </div>
                     <AuditView
                       events={events}
                       status={selectedRun?.status || ""}
