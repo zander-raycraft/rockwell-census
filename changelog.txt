@@ -1,0 +1,744 @@
+Census prototype changelog
+
+Record completed changes with their purpose, validation, and remaining limits.
+Keep proposed work separate from completed changes. Dates use America/Chicago.
+Entries describe the code layout and evidence at that time; old paths and run
+results are historical. A source fix or archived replay is not a new live run.
+
+2026-11-09
+
+Completed
+- Created this changelog for tracking development changes and the reasoning
+  behind them. No backend behavior changed in this entry.
+- Validation: reviewed the initial entry; no runtime tests needed for this
+  documentation-only change.
+
+Proposed next work (not implemented)
+- Keep extraction improvements within the existing Go pipeline. Start with
+  two small functions: normalize the SLM extraction plan, then validate it
+  against the parsed document before Format applies it to all rows.
+- Normalize equivalent field names and labels into the existing canonical
+  vocabulary. Preserve unknown meanings rather than guessing.
+- Validate source headers, supported destinations, and incompatible mappings.
+  Flag ambiguous interpretations; normalization alone cannot establish that
+  a source column was interpreted correctly.
+- Refine the extraction prompt/schema so person roles, benefit meanings, and
+  document intent are explicit and consistent across different file layouts.
+- Evaluate meaningful extracted facts on small audit cases and repeated
+  extractions, rather than judging success by valid JSON or mapping counts.
+- After extraction is reliable, address identity matching, issue resolution,
+  and company-scoped source identifier links across documents.
+
+Context
+- Requirements: portotype-specs.md.
+- Baseline failures and trial evidence: census-audit.md and backend/logs/.
+- Preserve one document plus current company state producing the next state,
+  with complete stage logging. Keep the proof of concept lightweight.
+
+2026-11-09 - Extraction plan checks and local cleanup
+
+Completed
+- Added normalizePlan and validatePlan, plus one categorical-label helper,
+  in backend/src/plan.go. The pipeline checks model output before Format.
+- Normalize supported casing, whitespace, benefit aliases, header references,
+  and categorical values on a copied plan. Unknown meanings remain unsupported.
+- Reject missing or ambiguous headers, unsupported fields/labels, conflicting
+  mappings, invalid benefit literals, and unusable plans before census writes.
+  Partial identity supplements with an identifier but no name remain accepted.
+- Clarified extraction instructions: mapping sources are headers; label sources
+  are actual cell values. Uncertain meanings should be omitted and explained.
+- Log raw model responses, including responses returned with extraction errors,
+  and log the normalized accepted plan separately for inspection.
+- Changed the default extraction model from gpt-6-luna to gpt-6.1-sol with
+  medium reasoning. OPENAI_MODEL and OPENAI_REASONING_EFFORT remain configurable.
+  Omit temperature when reasoning is enabled; retain zero for effort=none.
+  Raised the default HTTP model timeout from 60 to 120 seconds.
+- Cleared old backend/logs contents as requested. Removed unused Docker build
+  cache, eight stopped containers, and unused images (about 5 GB reported).
+  Retained running Census/Postgres services and all data volumes.
+
+Validation and remaining work
+- Offline Go tests with the race detector, go vet, and local image build passed.
+  Changed Go files pass gofmt checks. Tests include invalid plans, normalization through Format, email ownership,
+  partial identifiers, and reasoning request parameters with a fake transport.
+- Live retest is pending explicit approval. Automatic approval review rejected
+  both the original-file run and a synthetic-only run because they would send
+  census-shaped previews to the OpenAI API. No live retest results are claimed.
+- Planned live scope: two passes of synthetic Companies C, E, and K, using
+  fresh company names and logs. Fixture answer keys stay out of model inputs.
+- Reconciliation is unchanged. A valid but incorrectly interpreted mapping can
+  still pass these checks. Repeat-run correctness and stronger-model quality
+  remain unverified until live evaluation completes.
+
+2026-11-09 - Full pipeline evaluation after explicit live-test approval
+
+Completed
+- Ran all 33 example CSVs twice in fresh A-M company sequences with
+  gpt-6.1-sol / medium: 66 full pipeline requests, all HTTP 200.
+- Ran five controls for same-person email, no-change email, replay, and invalid
+  extraction plans (including the control census setup). Total 71 requests;
+  PostgreSQL confirms 70 document commits and one expected plan rejection.
+- Compared parsed data, normalized plans, formatted facts, HTTP responses,
+  saved /state output, direct PostgreSQL counts, and live/completed stage logs.
+  Fixture answer keys were not sent to the model. Runtime code stayed fixed.
+- Saved detailed findings in census-audit-retest.txt. Raw snapshots, runner,
+  analysis, and evidence are under backend/evaluations/20261109-131406/;
+  fresh stage logs are under backend/logs/r3-20261109-131406-*.
+- Added backend/evaluations/ to .gitignore to keep generated snapshots out of git.
+
+Results and development recommendations
+- Parser matched in all 33 pairs, normalized plan sets in 27, formatted facts in
+  30. Only A and C met fixture employee headcounts on both passes.
+- Serious drift remains: Company I ended at 61 / 179 employees (expected 60)
+  after identity mappings were omitted; Company J's DMY/MIXED change corrupted
+  hire dates and produced extra DOB conflicts/invalid-date issues.
+- Ten successful fixture responses and WRITE logs differ from committed state:
+  the save layer silently drops an inverted-date enrollment in F/G/H/K/L
+  household files on both passes. Fix this before treating logs as write truth.
+- Unapproved J change requests still create ten people and coverage records,
+  even when the model explicitly identifies them as unconfirmed requests.
+- Baseline final states contain 7,134 OPEN issues and no resolved issues. An
+  email control merged two people, but its pre-existing SSN conflict stayed open.
+  No-change email added two issues; replay kept A facts stable but issues 8 -> 18.
+- Invalid-plan control correctly stopped before Format/write, retained raw
+  response/failure logs, and left stored census state unchanged.
+- Next priorities: committed-state consistency; executable document intent,
+  scoped date/row rules and identity completeness; safer matching with persistent
+  source links; stable issue identities and field-specific resolution rules.
+- An optional additional changed-SSN email control was blocked by automatic
+  approval review as outside the approved batch and was not executed. Explicit
+  correction replacement remains untested. No runtime fixes made in this audit.
+
+2026-11-09 - Minimal pipeline safety fixes and full live retest
+
+Completed
+- Kept the existing package/pipeline. Added no tables, services, frameworks,
+  or dependencies. One additive prototype_fixes.sql migration adds source refs
+  to employees and structured issue fields to open_issues. Public table count
+  remains seven. Source refs establish cross-document identity; structured
+  issue keys/claims support deduplication and targeted resolution.
+- Added executable document intent: no-change preserves the census; unapproved
+  requests and unsupported table corrections retain proposed facts in review
+  issues instead of creating employees or coverage.
+- Validate populated recognizable DOB/SSN columns and literal date legends;
+  clarify employee/self-member identity routing; parse ISO dates independently.
+  Table extraction no longer receives accumulated issue text.
+- Persist confirmed source links. Optional multipart source_system scopes opaque
+  or numeric identifiers. Literal identifier prefixes are otherwise used when
+  available. Ref ownership collisions fail instead of silently linking people.
+- Hold insufficient/ambiguous identities and their proposed facts for review;
+  do not merge conflicting known SSNs by name/DOB. Preserve known distinct
+  same-name employees. Apply held facts only after a compatible, unambiguous
+  explicit confirmation. Validate correction SSNs and existing ownership.
+- Use stable issue keys and structured fields/claims; resolve missing employee
+  DOB/SSN and explicit SSN corrections without free-text substring matching.
+  Keep model uncertainties in extraction logs rather than creating tickets.
+- Return/log the exact normalized committed state. Invalid coverage date ranges
+  become explicit structured issues instead of silent persistence drops.
+- Include run_id/log_path in failed-run responses; close log files after writes
+  rather than retaining one descriptor per stage across runs.
+
+Validation
+- Offline and isolated PostgreSQL-backed go test -race ./... passed; go vet
+  passed. HTTP integration tests compare POST, GET, persisted state, and WRITE
+  logs; cover failure atomicity and explicit numeric source identifiers.
+- Built/restarted Docker and cleaned stale images/build cache before live tests.
+  Final Docker inventory: two active images, two running containers, zero build
+  cache. Retained all application volumes. Removed the isolated test database.
+- Full R5 live run: 33 fixtures twice, 66/66 HTTP 200, 66/66 response/saved-state
+  equality (previously 56/66). Five original controls also completed, with the
+  invalid-plan control correctly rejected before a census write.
+- A preceding R4 smoke run exposed a same-name matching regression; fixed it
+  with a distinct-person regression test and excluded that aborted evaluation.
+- After R5, additional email-only ambiguity/SSN-ownership guards were added and
+  regression-tested. Rebuilt, cleaned Docker, then reran the same five approved
+  controls on the final image: confirmation resolves the held identity issues,
+  no-change and A replay preserve exact state, invalid input leaves state alone
+  and returns log metadata. No new changed-SSN live payload was sent.
+- R5 artifacts: backend/evaluations/20261109-141007/. Final controls and source
+  hashes: final-controls/ within it. New critical report: census-fixes-retest.txt.
+
+Remaining limits
+- This is safer, not fully uniform extraction: parse 33/33 repeated pairs,
+  normalized plans 29/33, formatted facts 29/33. A coverage differs across
+  passes; its first replay added an UNKNOWN_TIER issue. The final replay is
+  stable but does not establish general idempotence.
+- B still defers many nickname/coverage matches. I now remains at 58 employees
+  on both passes rather than exploding to 61/179, but expected 60 is incomplete.
+- J requests no longer create ten people/coverage; nine distinct requests are
+  held. Large fixtures still contain substantial unknown-status/identity issues.
+- The stronger model and these guards reduce unsafe outcomes; neither proves
+  all source meanings or guarantees complete cross-document reconciliation.
+
+2026-11-09 - Extraction and reconciliation reliability integration
+
+Completed
+- Cleared all local census application rows at the user's request: company,
+  documents, employees, dependents, enrollments, and open_issues. Preserved
+  schema and schema_migrations. Stopped the backend during reset. Subsequent
+  database tests use a separate disposable database, not the application DB.
+- Kept delivery features deferred. No new tables, migrations, enum values,
+  dependencies, services, or architectural layers in this pass.
+- Improved model context: up to 20 distributed sample rows, plus bounded
+  full-table categorical counts, blank counts, omitted-value notices, and an
+  explicit clipping marker. Model context remains bounded to 32,000 runes.
+- Added semantic plan checks so supported labels cannot change their meaning,
+  tiers cannot substitute for statuses, and N/No/non-election cannot become
+  waivers or pending coverage. Check every mapped date cell for evidence
+  contradicting the chosen convention, including rows outside the preview.
+- Tightened report-summary recognition without discarding real names containing
+  Total or Headcount. Added header/row-count expectations for all 33 fixtures.
+- Added limited spelling/prefix/compound-surname identity matching only with
+  exact DOB, compatible surname, one candidate, and no conflicting known SSN.
+  Exact-name partial employee/dependent profiles can accept later compatible
+  evidence. Bob/Robert and Kate/Katherine still need explicit confirmation.
+- Retain ambiguous dependent claims with their full proposed facts. Retry held
+  employee/household facts when later evidence supplies a unique owner. Resolve
+  held issues only after successful application. Parent SSN corrections do not
+  resolve dependent conflicts. Existing facts and unrelated conflicts remain.
+- Coverage matching preserves different periods, fills a shared-start period,
+  and holds undated claims when more than one compatible period exists. Explicit
+  Terminated <date> retains termination and its end date; Y/Yes means enrolled.
+  Household membership and coverage tiers alone do not establish enrollment.
+- Updated matching log text to describe compatible partial household-name
+  evidence rather than falsely claiming a DOB match when DOB is absent.
+- Added natural-language rationale and audit decisions in reliability-changes.txt.
+
+Validation
+- Offline go test -race ./... and go vet ./... passed. Final PostgreSQL-backed
+  race tests passed using census_reliability_tests_20261109 in isolation.
+- Semantic acceptance tests check original A household/waiver facts, original B
+  payroll and member-benefit facts after HR confirmation, preserved Samuel DOB
+  conflict, missing-DOB fulfillment, targeted issue resolution, and exact replay.
+- Company B fixed-plan checks reach 10 employees/3 dependents/14 elections before
+  nickname confirmations and 10/5/22 after Bob/Robert and Kate/Katherine replies.
+  Samuel's conflicting DOB remains held. Linda's coverage attaches immediately
+  after confirmation without reupload; replay then leaves complete state equal.
+- Offline replay of 66 archived R5 model plans accepts 65 and rejects one old A
+  plan for interpreting new-hire non-election as PENDING. This is a diagnostic,
+  not fresh model evaluation. It excludes Save normalization. Artifacts are in
+  backend/evaluations/20261109-reliability-offline/ (ignored generated output).
+- Built the updated backend image. Existing live evaluation findings remain
+  historical; this pass did not make fresh model requests or claim a new live
+  accuracy rate. Application database is intentionally left empty.
+
+Remaining work and audit decisions
+- Limited name variants are a heuristic, not proof of identity; unseen cases
+  still require evaluation. No nickname dictionary or guessed SSN/DOB values.
+- Bare negative-code legends remain unsupported; unfamiliar codes remain review
+  work. Ambiguous slash dates and arbitrary multi-section layouts are not solved.
+- Full-table profiles use recognized categorical headers and first 16 distinct
+  values per column, with omitted-row counts; they are not exhaustive semantics.
+- Current semantic expectations cover targeted cases, not every fact in all 33
+  fixtures. Complete fixture ground truth and a fresh live extraction evaluation
+  are still needed before calling the company's data fully reliable.
+- Final service verification: rebuilt backend and healthy PostgreSQL are running;
+  all six application table counts remain zero. Removed the isolated test DB,
+  unused replacement images, and build cache; retained application volumes.
+
+2026-11-09 - Fresh live reliability evaluation
+
+Completed
+- Ran all 33 fixtures twice plus 11 controls: 77 requests using the current
+  gpt-6.1-sol / medium extractor. No runtime code changes during evaluation.
+  PostgreSQL confirms 76 document commits and one expected inventory rejection.
+- All 76 successful responses and WRITE logs exactly match stored state; all
+  have complete stage logs. Invalid input preserves state and has no WRITE.
+- Live HR confirmations attach B's held facts immediately: 10/3/14 baseline
+  employees/dependents/benefits becomes 10/4/20 then 10/5/22. Payroll identity,
+  explicit benefits and termination survive; Samuel's DOB claim stays held.
+- A replay and no-change controls preserve exact state. A now has 17 benefits
+  on both passes. Inspected lower dependent counts reflect partial-record
+  consolidation rather than the previous repeated missing-DOB records.
+- Repeat parsing: 33/33. Mapping/date/label plans: 30/33 (R5 29/33).
+  Formatted facts: 31/33 (R5 29/33). Strict plans including document_type and
+  intent: 18/33, a different measure; intent itself matches in all 33 pairs.
+- Offline race tests pass. Final live server file-descriptor count is nine.
+- Detailed critical report: census-reliability-live-retest.txt. Artifacts:
+  backend/evaluations/20261109-161733/; logs: r7-20261109-161733-*.
+  Retained evaluation database content and logs for review.
+
+Failures and next priorities
+- B/D trial 2 model plans omit dependent.relationship while retaining row.role.
+  Plans pass validation, and explicit spouse/child values disappear without
+  missing-relationship issues. Matching counts hide different saved facts.
+- B replay is stable in trial 1 but changes trial 2 by filling omitted
+  relationships. General live-model idempotence is not established.
+- B has two explicit child-versus-spouse-only coverage-tier contradictions that
+  are not flagged. Add shared role/relationship interpretation and a small
+  post-reconciliation tier/member check before further architecture changes.
+- I remains incomplete at 58 employees against 60 reference identities; M still
+  has 1,202 UNKNOWN_STATUS issues. These runs do not establish reliable data
+  across all source meanings, despite improved execution and selected matches.
+
+2026-11-09 - Council simplification integrated
+
+Completed
+- Restored the code-standards single package main, with focused files for
+  parsing, extraction, plan checks, formatting, matching, email resolution,
+  coverage, copying, and storage. Tests and fixtures sit beside that code.
+- Removed production/test aliases and forwarding APIs, including names.go,
+  reconcile/export.go, reconcile/aliases.go, parser/prompt wrapper exports,
+  and trivial test wrappers. Real database cleanup now lives in test support.
+- Removed redundant caller copies before Reconcile and Save; kept ownership
+  copies inside reconciliation/storage. Replaced custom integer conversion
+  and manual decision-string joining with strconv.Itoa and strings.Join.
+- Consolidated source-reference index construction and exact reference dedupe.
+  Confirmation claims are decoded once, with uniqueness checked before mutation.
+- Removed the custom SQL lexer. Execute each complete static migration script
+  inside its existing transaction; retain migration order, ledger and rollback.
+  Whitespace-only scripts still fail. Comment-only SQL follows PostgreSQL's
+  successful no-op behavior; no existing migration is comment-only.
+- Split the 2,768-line reconciliation file by responsibility without adding
+  services, interfaces, tables, dependencies, or a generic rules engine.
+- Retained mandatory concise function contracts; removed comments belonging
+  to deleted scaffolding and corrected a stale extractor-test parameter tag.
+
+Validation
+- Offline go test -race ./... and go vet ./... passed.
+- Isolated PostgreSQL race tests passed, including fresh/repeated migrations,
+  dollar-quoted/multi-statement SQL, late-error rollback and ledger preservation,
+  empty-script rejection, HTTP/storage/WRITE equality, and failed-write rollback.
+- Differential offline replay of all 77 archived R7 inputs/plans produced exact
+  matches before/after cleanup for previews, formatted facts, decisions,
+  normalized state, and validation rejection. Fixed UUID sequences make full
+  state comparable. Results have identical SHA256 digests; verification record
+  is backend/evaluations/20261109-simplicity/verification.json.
+- Runtime Go source decreased from 7,258 to 6,751 lines (507 removed, including
+  associated contracts). Total Go source decreased by 379 lines after adding
+  migration tests. This measures source size, not a runtime speed benchmark.
+- Docker build passed. The isolated test database was removed; existing live
+  evaluation application data was retained. No fresh model calls were needed.
+
+Preserved limits
+- This is a behavior-preserving cleanup. The known dependent-relationship loss,
+  missing tier/member contradiction checks, and live extraction variability
+  remain separate correctness work. Async logging timing is unchanged; no new
+  logging failure or concurrency guarantees are claimed by this refactor.
+
+2026-11-09 - Role/relationship retention and focused consistency checks
+
+Completed
+- Added three concrete helpers inside existing formatting/reconciliation files.
+  No new tables, schema, dependencies, services, or pipeline layers.
+- Interpret a canonical relationship cell once: Spouse/Child/Employee now supply
+  both role and relationship where applicable. Removed the unused role-only
+  helper. Duplicate mappings are no longer needed to retain spouse/child facts.
+- Keep conflicting spouse/child meanings unknown with original review claims;
+  hold unknown or contradictory roles instead of inserting a guessed employee.
+  Generic DEP retains dependent role and surfaces an unspecified relationship
+  after all mappings, so complementary valid relationship columns still work.
+- Recognized relationship/employment/enrollment-status columns omitted or sent
+  to irrelevant destinations create structured UNMAPPED_SOURCE_FIELD claims
+  with raw column/value. Unclassified relationship rows retain proposed facts
+  for review. Existing populated DOB/SSN plan guards remain unchanged.
+- Preserve formatting-only review claims in unapproved change handling, without
+  applying requested census changes. NO_CHANGE still preserves exact state.
+- Flag explicit ENROLLED dependent records whose own known tier excludes the
+  relationship: child/spouse-only, spouse/children-only, dependent/employee-only.
+  Preserve all source facts; do not infer coverage from household membership
+  or the subscriber's tier. Waived and unknown coverage do not create conflicts.
+- Stable contradiction issues resolve only when that same current enrollment
+  becomes known compatible or explicitly waived. Unknown facts and unrelated
+  issues stay open; a recurring real contradiction reopens its matching issue.
+- Added regressions using the actual archived B/D omitted-relationship plans,
+  plus source omission/misrouting, unknown codes, contradictory roles, generic
+  dependent codes, replay and narrow coverage-issue resolution cases.
+
+Validation and limits
+- Offline and isolated PostgreSQL-backed go test -race ./... passed; go vet
+  passed. A separate isolated database round-trip confirmed contradiction
+  retention, exact replay and resolution after explicit waiver.
+- Replayed all 77 archived R7 inputs/plans offline: 76 accepted and the same
+  expected inventory rejection. Formatted facts match across all 33 repeated
+  pairs (previously 31). Both B confirmation sequences reach 10 employees,
+  5 dependents and 22 benefits with no missing relationships and exact replay.
+  Both previously missed child-versus-spouse-only contradictions are now OPEN.
+- Verification: backend/evaluations/20261109-fact-retention/verification.json.
+  These are saved-output regressions, not a new live-model accuracy result.
+- Header guards intentionally recognize a small explicit set; arbitrary opaque
+  columns still depend on model mapping. Historical extraction-review claims
+  are not automatically resolved merely because another document supplies
+  better facts. Identity ambiguity and unrelated remaining audit gaps persist.
+- Docker build and restart passed; application data retained. Removed the
+  isolated test database, unused replacement images, and build cache.
+
+2026-11-09 - Clean-reset integrated live run (R8)
+
+Completed
+- Cleared all old run logs and seven generated evaluation directories, and all
+  census application table rows. Preserved schema/migration history, fixtures,
+  source code and audit notes. Verified empty data/log space before restart.
+- Ran 33 fixtures twice plus 11 controls using gpt-6.1-sol / medium: 77 requests,
+  76 committed documents and the one expected inventory rejection. No runtime
+  code changes or hidden retries during this evaluation.
+- All 76 successful responses/WRITE logs exactly match saved state, and every
+  successful run has all seven log files. Verified GET /logs during EXTRACT
+  and after completion; final descriptor count nine. Offline race tests pass.
+- Parsing and formatted facts match in 33/33 repeated pairs. Employee,
+  dependent and benefit facts match across all 13 company pairs. Mapping/date/
+  label plans match 31/33; strict metadata-inclusive plans 22/33.
+- Both B confirmations produce 10 employees/5 dependents/22 benefits with all
+  dependent relationships retained. Both exact replays are stable, and both
+  explicit child-versus-spouse-only tier contradictions are now OPEN issues.
+- Same-person, no-change, A replay and invalid-plan controls behave as expected.
+- Updated census-reliability-live-retest.txt with critical findings. Only fresh
+  R8 logs and backend/evaluations/20261109-180007/ remain as generated outputs.
+
+Remaining gaps
+- Blank/indirect relationships in A/C/J still lack dedicated missing-field
+  issues. I remains incomplete at 58 saved employees against 60 references.
+  M still produces 1,202 UNKNOWN_STATUS issues. Consistency is improved; full
+  semantic accuracy and complete missing-field review are not established.
+
+2026-11-09 - Consolidate prototype schema definitions
+
+- Moved source_refs into employees.sql and issue_key/field/subject/claims into
+  open_issues.sql, retaining their existing types and defaults.
+- Removed prototype_fixes.sql and its migration-list entry; six table files
+  now define the complete fresh-database schema. Code layout is unchanged.
+- Documented the baseline and existing-database upgrade limitation.
+- Verified all six files in order against PostgreSQL 16 in a temporary schema,
+  checked all five reconciliation columns, then rolled back the transaction.
+  Current application data and migration history were left unchanged.
+
+2026-11-09 - Missing relationship checks and computed member tally
+
+- Extended the existing missing-field refresh to flag a saved dependent with no
+  relationship. A later known relationship resolves only that dependent's
+  structured issue; employee and other dependent issues remain independent.
+- Kept existing identity holds and recovery. Added a reconciliation safeguard
+  for formatted proposals whose application fails without a retained claim;
+  unknown proposed roles are held instead of becoming employees. This covers
+  formatted proposals, not arbitrary unmapped raw source rows.
+- Added a computed summary to successful POST /run responses and MAP logs:
+  employees, dependents, held identity evidence groups, members missing required
+  fields, and open/resolved issues. MAP also reports issues opened/resolved in
+  that run. Held groups deduplicate identical role/name/subscriber/DOB/SSN
+  evidence across benefits, but cannot establish the true number of people
+  behind incomplete or conflicting identities. No tables, migrations or layout
+  changes; GET /state and WRITE state snapshots retain their existing shape.
+- Diagnosed Company I's two unsaved reference identities: Alex Morgan BEN-0017
+  has neither DOB nor SSN and two existing namesakes; Jordan Ellis BEN-0019 has
+  the same name/DOB as BEN-0018 but a different full SSN, so the current matcher
+  holds the conflicting identity. No guessed merge or wider identity policy
+  change was introduced. Omar Morgan is already saved; later SSNs conflict.
+- Added regression coverage for missing relationships, narrow resolution and
+  replay; unknown-role retention and nonduplicated identity holds; computed
+  cross-benefit held-identity totals. Offline go test ./... passes.
+
+2026-11-09 - Clean-reset member accounting live run (R9)
+
+- Cleared all prior generated logs/evaluation data and six application tables;
+  preserved fixtures, schema and migration history. Rebuilt/restarted backend.
+- Offline race/vet and isolated PostgreSQL race suite passed, including HTTP
+  summary and fresh consolidated migration checks; removed disposable database.
+- Ran the same 66 fixture requests and 11 controls: 76 successes and the expected
+  inventory rejection. Added six synthetic controls (all safely rejected by
+  plan validation) and two explicit A relationship confirmation/replay controls
+  (both successful). Total 85 requests, 78 commits; no hidden request retries.
+- All 78 successful responses/WRITE logs match saved state, with complete stage
+  files and correct computed summary counts. MAP contains per-run issue deltas.
+- Missing relationships are flagged for saved dependents. Explicit Sofia CHILD
+  input resolves exactly its missing-field issue; replay preserves exact state.
+- Both B identity recovery/replay/tier checks pass. Formatted facts match 32/33
+  repeated pairs versus R8's 33/33: C's blank-role Eli is a dependent in one
+  pass and an employee in the other. This classification gap remains open.
+- Six synthetic failures expose conflicting mappings/generic Dependent label
+  validation gaps; all preserve census state. I remains 58 employees and M's
+  1,202 UNKNOWN_STATUS issues remain. No claims of complete member recovery.
+- Updated census-reliability-live-retest.txt. Fresh artifacts are in
+  backend/evaluations/20261109-185100 and 85 corresponding run-log directories.
+
+2026-11-09 - Focused hard-spec fixes: roles and required logging
+
+Completed
+- Preserved the current package/file layout; no tables, migrations, dependencies,
+  service layers or worker machinery were added.
+- Modified existing role handling so a blank/unclassified role in a mapped role
+  column is held with full mapped evidence as AMBIGUOUS_ROW_ROLE. An optional
+  second relationship mapping no longer changes that row into a saved employee
+  or dependent. Employee-only documents without a role mapping remain supported.
+- Aligned generic Dependent/DEP labels with DEPENDENT (unknown subtype), including
+  legacy OTHER labels for those exact generic codes. Do not invent spouse/child.
+- Allowed complementary row.role mappings; contradictory role/subtype cells still
+  produce review claims. Conflicting identity-column mappings remain rejected;
+  clarified the model prompt to require a single employee.source_id source.
+- Replaced asynchronous log queuing with synchronous append/flush/error returns,
+  preserving StartLogService/Stop callers. Stage-log failures before Save abort
+  census writes. Failures after Commit return the committed state and an explicit
+  error; HTTP errors include committed=true so clients do not assume rollback.
+- Allocate unique run directories and preserve host-readable 0755 permissions.
+- Added regressions for actual C and six rejected R9 plans, complementary-role
+  order/conflicts, retained mapped evidence, unique/immediately readable logs,
+  disk errors, and PostgreSQL logging failures before and after commit.
+
+Validation and changelog audit
+- Integrated go test -race ./... passed offline and against a disposable local
+  PostgreSQL database; go vet, formatting and whitespace checks passed.
+- PostgreSQL fault tests verify unchanged state before commit and preservation
+  of genuinely changed state with explicit errors after commit.
+- All 66 archived R9 fixture plans validate; formatted facts match across all
+  33 repeated pairs (the R9 live baseline was 32/33). This is offline captured-
+  plan replay, not a fresh model run or proof of complete semantic accuracy.
+- Three captured name-based generic-dependent plans now validate and preserve
+  subscriber/relationship facts. Three conflicting-ID plans still fail safely;
+  accepting complementary role mappings does not choose between identity columns.
+- Audited earlier entries against retained R9 metrics and current source changes.
+  Kept historical failures/results intact and clarified that old paths/results
+  describe their original revision. R9 remains the latest live-model evaluation.
+- Docker build/restart passed; existing application counts and logs were
+  preserved. No cleanup or fresh live-model run was performed for these fixes.
+
+Remaining limits
+- Unknown identities and status meanings still require evidence or review;
+  these changes do not recover all members or interpret arbitrary new layouts.
+- Synchronous logging can report a disk failure but cannot guarantee a complete
+  trace on unavailable storage. A postcommit logging error cannot undo the
+  already committed census transaction; committed=true makes that explicit.
+- Same-company overlapping requests and unseen private examples still need
+  broader validation. No claim that every hard requirement is now fully met.
+
+2026-11-09 - Actual full live comparison after hard-spec fixes (R10)
+
+- Ran the same 85 requests as R9 using fresh company states and the live model;
+  preserved the old baseline. No runtime edits or hidden retries during the run.
+- 84 successful commits and the expected inventory rejection, compared with
+  R9's 78 successes and six unexpected synthetic-control rejections.
+- All 84 response/WRITE states match the database, with complete seven-stage
+  logs and correct summary counts. Verified GET /logs during and after extraction.
+- C blank-role handling is now consistent and held. Actual live formatted facts
+  still match 32/33 pairs: E's On leave label varies unknown versus ACTIVE.
+  The earlier offline replay's 33/33 result is not a live-model accuracy result.
+- Name-based dependent linkage/missing-field resolution/replay passes. ID-based
+  controls are accepted but still leave the dependent unmatched because separate
+  employee and subscriber identifiers cannot both be retained by the chosen plan.
+- Explicit Sofia CHILD input saves the member and replay is stable, but the old
+  role-review issue stays OPEN. Generic relationship-review issues can also stay
+  open after a member-specific missing-field issue resolves. No full issue-
+  lifecycle or member-completeness pass is claimed.
+- Both B identity/coverage/replay checks pass. I remains 58 saved employees;
+  M's 1,202 UNKNOWN_STATUS issues remain. Data export is outside this assessment.
+- Updated census-reliability-live-retest.txt. Evidence retained under
+  backend/evaluations/20261109-191123 and 85 new uniquely named log directories.
+
+2026-11-09 - Integrate audited reconciliation fixes and verify live (R12)
+
+Changes
+- Added dependent.subscriber_id mapping so employee and parent identifiers can
+  come from separate columns while using existing census fields and tables.
+- Accepted explicit role rows now resolve uniquely supported blank-role claims,
+  applying their retained facts first. Rejected rows and ambiguous identities
+  cannot authorize closure. Generic Dependent now uses one member-bound missing-
+  relationship issue, preserving review of genuinely unknown supplied codes.
+- Undated incompatible coverage is retained as AMBIGUOUS_COVERAGE_PERIOD rather
+  than accepted as an unexplained new enrollment period.
+- Person/enrollment deduplication redirects issue subjects to surviving IDs,
+  recomputes existing stable keys and consolidates equivalent issues.
+- Same-person SSN conflicts now store subject/field/claims consistently, allowing
+  later explicit correction to resolve the targeted conflict.
+- Parent name/reference disagreement remains reviewable. Confirmed aliases are
+  accepted only from successfully applied employee rows independently matched
+  by identity evidence; no nickname dictionary or persistent alias system added.
+- Preserved package/file layout; no tables, migrations or dependencies added.
+
+Validation
+- Integrated offline and isolated PostgreSQL go test -race ./... passed, as did
+  go vet, formatting/whitespace checks and Docker build/restart.
+- Focused regressions prove retained undated coverage/replay, issue remapping and
+  SSN correction closure, unrelated-conflict preservation, targeted role closure,
+  separate subscriber identifiers, contradictory references and confirmed aliases.
+- Initial live R11 exposed an over-conservative parent-name check; it held Alex
+  aliases despite accepted ID/DOB/SSN evidence. Preserved that run and added the
+  narrow accepted-row evidence check plus exact F regressions before final R12.
+- Final R12 ran all 33 CSVs twice plus the same 19 controls: 85 live requests,
+  84 committed documents and the expected inventory rejection. No runtime code
+  edits or hidden retries during the run; previous baseline data/logs retained.
+- All 84 successful responses and WRITE logs match saved state, with complete
+  seven-stage traces and correct summary counts. Live log viewing verified
+  during extraction and after commit. Repeated formatted facts match 33/33;
+  employee/dependent/benefit facts match across all 13 company pairs.
+- ID-based and name-based dependent missing-to-CHILD sequences and replay pass.
+  Sofia saves as CHILD, its old role-review issue resolves, and replay is stable.
+  Both B recovery/coverage/replay checks pass. F/H confirmed aliases stay linked;
+  their genuinely unknown parent reference remains under review.
+- Updated census-reliability-live-retest.txt. Final evidence is in
+  backend/evaluations/20261109-193637 and 85 uniquely named R12 log folders.
+
+Limits
+- Historical relationship warnings containing only descriptive text lack a safe
+  member binding and are not automatically closed by guessing or parsing detail.
+- Unknown identities/status meanings and unanchored periods still need evidence
+  or review. Repeatability is not complete field-level ground-truth accuracy.
+- No schema/data cleanup was performed; prior live results remain available.
+
+2026-11-09 — Collect grouped live input-accuracy evidence
+- Ran four development and seven fresh synthetic holdout cases twice: 52 live
+  requests, all successful, with saved-state/response/WRITE agreement and all
+  364 stage files preserved. Application code, prompts and model unchanged.
+- Recorded field, household, coverage and review outcomes separately. Preserved
+  the original frozen answers/raw scores and documented post-run adjudication
+  of an appropriately held identity conflict and unsupported name boundaries.
+- Confirmed three repeatable gaps: narrative employment end not captured,
+  unapproved email request missing from review, and stale unmatched-dependent
+  issue after explicit parent clarification. No fixes or cleanup performed.
+- Report and raw/adjudicated data:
+  backend/evaluations/20261109-195348-accuracy/accuracy-report.txt
+- Synthetic holdout is evaluator-authored; it does not establish independent
+  real-world accuracy or complete compliance with every specification.
+
+2026-11-09 — Council-led simplification and retained-parent issue closure
+- Three agents audited stage ownership, reconciliation and runtime/storage.
+  Kept the existing files/packages, HTTP routes, Docker image/Compose commands,
+  migration files and exported API signatures.
+- Extended the existing accepted-member resolver to close structured unmatched-
+  dependent issues after unique identity and compatible parent clarification.
+  Retained facts are applied first; contradictory/unknown references and rejected
+  rows cannot authorize closure. Original claims remain available for review.
+- Removed 29 forwarding functions and one duplicate merge helper; callers reach
+  real stage implementations directly. Removed redundant fresh DB-result copies
+  and log filename sorting. Net reduction: 355 Go lines including comments.
+- Existing offline tests, race tests, vet and isolated PostgreSQL integration
+  race suite pass. Docker rebuilt/restarted. No new test cases added.
+- Replayed the exact existing 52 grouped requests: all succeeded with complete
+  logs and response/saved-state/WRITE agreement. All 1,746 raw field-score rows
+  equal the baseline. H3 now resolves in both trials; unexpected open issues in
+  the scored synthetic group fell from 2 to 0.
+- Narrative employment-end extraction and unapproved-email review retention
+  remain known gaps. No application data/log cleanup or speculative issue repair.
+- Audit: census-simplicity-audit.txt. Evidence:
+  backend/evaluations/20261109-201856-accuracy/comparison.json
+
+2026-11-09 — Add unified verbatim runtime and latency tracing
+- Three integration agents added HTTP/model/SQL boundary capture around one
+  shared synchronous audit writer. Each /run and /state has ordered audit.jsonl
+  events with run ID, timestamps, input/output types, complete payloads and
+  per-operation duration. Existing stage logs and API response shapes remain.
+- Recorded actual multipart bytes, pipeline arguments/results, complete model
+  request/response JSON, exact SQL/typed parameters/raw returned values, affected
+  rows, transaction outcome and HTTP response/transport acceptance. Credential
+  headers/model keys are explicitly redacted. No payload clipping by recorder.
+- Added GET /logs/<run-id>?format=jsonl and X-Run-ID for live trace discovery.
+  Source documents INSERT now returns generated metadata into the trace.
+- Preserve rollback and committed=true behavior when logging fails. No new
+  tables, migrations, dependencies or extraction/reconciliation policy changes.
+- Existing offline/race/vet and isolated PostgreSQL race suites passed. Docker
+  rebuilt/restarted. Same 52 live grouped requests all succeeded, all 1,746 field
+  result rows unchanged; verified 5,202 audit events plus 104 GET /state traces,
+  exact payloads/SQL counts/document checksums and live readability. Malformed
+  request/redaction and existing inventory-rejection controls also captured.
+- Details: runtime-tracing.txt. Evidence:
+  backend/evaluations/20261109-204053-accuracy/trace-verification.json
+- Capture is at application boundaries, not TLS/wire framing or client-delivery
+  proof; post-transport audit failure is reported to stderr. Log retrieval is
+  not self-traced. Known data interpretation/review gaps remain unchanged.
+
+2026-11-09 — Include temporal field/process history in the unified output
+- Inspected existing traces, including H3 parent clarification and B identity
+  recovery. Added history/prior_runs and history/committed_changes to the same
+  audit.jsonl, retaining earlier original events, timestamps, source metadata,
+  before/after field values, table/row IDs and issue status transitions.
+- Unchanged reinserted values do not become new fact sources. Earlier history
+  summaries are excluded from imports to avoid recursive duplication. Unknown
+  baseline origins, missing evidence and unexplained snapshot transitions are
+  explicit; trigger documents are not falsely treated as origins of held facts.
+- Normal GET /logs/<id> now exposes the unified JSONL when available; format=text
+  preserves the legacy stages and older folders fall back to legacy text.
+- No tables, migrations, provenance service or database state-shape changes.
+  Original trace files remain untouched. Updated runtime-tracing.txt.
+- Existing race/vet and isolated PostgreSQL checks pass; Docker rebuilt/restarted.
+  Ten existing H3/H4 live requests pass: relationship null->CHILD, issue closure,
+  zero-change replay, correct prior histories and response/WRITE/saved agreement.
+  One archived clarification replay also includes both original traces in one
+  file without reporting new facts. No new test cases added.
+- Evidence: backend/evaluations/20261109-210210-history/history-verification.json
+  and archived-history-audit.jsonl in the same directory.
+
+2026-11-09 — Retain employment-note facts and unapproved requests; verify via curl
+- Three agents integrated employment-note handling, document-level email review,
+  and fresh evaluation fixtures with separate source review before requests.
+- Added employee.employment_notes mapping and conservative completed-termination
+  handling. Preserve ambiguous/contradictory notes and raw structured status for
+  review; never infer employee termination from coverage/COBRA or apply to child.
+- Preserve full email input beyond model preview in existing review issues;
+  stable exact-body keys prevent duplicate replay and preserve distinct requests.
+  No unapproved member/coverage changes. No schema/new CLI/dependency changes.
+- Fresh frozen curl evaluation exposed existing rejection of a valid one-name
+  SSN correction. Preserved first results; minimally relaxed that specific case
+  with existing nine-digit, same-person, ambiguity and collision guards retained.
+- Final curl rerun: 26/26 successful, 98/98 field checks and exact request/replay/
+  contradiction controls pass. Existing group: 52/52 successful; Ellis inactive
+  and Emil retained now pass, household/coverage behavior preserved, 40/40 required
+  issue checks after preexisting documented truth adjudication.
+- Final 78 POST runs have ordered commit/history traces; all client operations
+  actually used curl. Existing race/vet and isolated PostgreSQL suite pass;
+  Docker rebuilt/restarted. No new Go tests. See curl-usage.txt for commands and
+  data-reliability-curl-retest.txt for evidence and limits.
+- Fresh data is internally author/reviewer-separated synthetic evidence, not
+  unseen client proof. Conservative notes still create extra review items; full
+  issue precision and arbitrary narrative accuracy are not established.
+
+2026-11-09 — Add readable per-run issues.txt view
+- One existing-stage helper writes the committed issue list to issues.txt in each
+  run folder, grouped OPEN/RESOLVED with current totals, affected records, fields,
+  IDs and original claims. Pending emails render as readable original text.
+- PostgreSQL remains the running issue source; no detection/resolution policy,
+  tables or UI framework added. Future UI can render existing state.open_issues.
+- Successful /run now returns issues_path; GET /logs/<id>?format=issues serves the
+  report. The same text/timing is included in audit.jsonl. Post-commit report
+  failures retain committed=true behavior. Older snapshots stay unchanged.
+- Existing race/vet and isolated PostgreSQL integration suite pass. Docker
+  rebuilt/restarted. Four curl checks verify open->resolved, retained pending
+  request and empty report, matching saved issue counts and unified audit text.
+- Updated curl-usage.txt/runtime-tracing.txt. Evidence:
+  backend/evaluations/20261109-215508-issue-report/verification.json
+
+2026-11-09 — Verify two-document issue lifecycle through curl
+- Fresh company: first CSV opens one missing-relationship issue for Ari Quill;
+  second CSV supplies Child, saves CHILD and resolves that same issue ID.
+- Independently checked PostgreSQL after both requests, text report totals,
+  audit field transitions, stable dependent identity and unchanged first report.
+  No code changes or new permanent tests.
+- Evidence: backend/evaluations/20261109-215753-two-document-issue/verification.json
+
+2026-11-10 — Start React document upload screen
+- Added a minimal React/Vite app in web with the Rockwell dark green palette.
+- One screen supports batch file selection, drag-and-drop, duplicate selection
+  suppression, individual removal and clearing. Files stay in browser memory;
+  no backend integration or persistent storage added.
+- Production build passed; browser verified batch selection, removal and clear,
+  with no console errors. Added local run instructions in web/README.md.
+
+2026-11-10 — Connect the React workspace to census processing and observability
+- Followed web/.agents/code-standards.md: strict TypeScript, named components,
+  checked JSON boundaries, cancellable requests, plain React state and CSS.
+- Added an explicit company form and sequential batch submission through /run.
+  Failed requests retain the previous census and remaining selected files.
+- Added saved run history, live trace polling, stage timings, component filters,
+  exact expandable payloads, raw trace download and saved census display.
+- Issues show saved open/resolved status, retained claims and per-document
+  committed field changes with links back to each processing run.
+- Added read-only GET /runs derived from existing audit files plus company/file
+  request metadata and a compact completion event. No new tables or processing
+  logic. Vite proxies /api using the existing web/.env BACKEND_URL.
+- Production build/type check, three offline UI tests and existing Go suite pass.
+  Rebuilt/restarted the local backend. Two real documents submitted through the
+  browser verified active extraction visibility and one persistent issue ID
+  changing OPEN -> RESOLVED, with both documents visible after page reload.
+- Evidence: backend/evaluations/20261110-web-observability/verification.json
+
+2026-11-10 — Simplify jobs, census display and correction replies
+- Each selected run is one expandable job with readable stage results. Timing
+  buttons isolate document receipt, extraction, reconciliation and other stages;
+  original calls/payloads remain expandable beneath their owning step.
+- Saved census uses employee, dependent and coverage tables with explicit Unknown
+  values and household names. Export PDF opens a landscape print layout for the
+  browser Save as PDF destination; no PDF service or dependency added.
+- Added natural-language corrections on the Issues tab. Replies are text/plain
+  email.txt documents sent through the existing pipeline and recorded as jobs;
+  failed replies retain their content and the previous census.
+- Two integration subagents implemented stage navigation and focused UI checks.
+  Eight offline frontend tests and the production type-check/build pass. Live
+  browser check confirms typed SSN/identity confirmation produces CORRECTION
+  with email_resolution and an auditable committed run. Backend logic unchanged.
+- Temporary verification used port 5174 and was stopped afterward; 5173 stays off.

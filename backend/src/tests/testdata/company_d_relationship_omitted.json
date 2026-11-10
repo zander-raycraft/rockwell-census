@@ -1,0 +1,187 @@
+{
+  "document_type": "benefits administration extract",
+  "intent": "SNAPSHOT",
+  "date_format": "MDY",
+  "mappings": [
+    {
+      "destination": "enrollment.type",
+      "source": "Product",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.plan",
+      "source": "Plan Option",
+      "literal": ""
+    },
+    {
+      "destination": "employee.source_id",
+      "source": "Subscriber Ref",
+      "literal": ""
+    },
+    {
+      "destination": "employee.full_name",
+      "source": "Subscriber",
+      "literal": ""
+    },
+    {
+      "destination": "dependent.full_name",
+      "source": "Covered Person",
+      "literal": ""
+    },
+    {
+      "destination": "row.role",
+      "source": "Rel Code",
+      "literal": ""
+    },
+    {
+      "destination": "dependent.dob",
+      "source": "DOB",
+      "literal": ""
+    },
+    {
+      "destination": "dependent.ssn",
+      "source": "Member SSN",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.coverage_tier",
+      "source": "Tier",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.effective_start",
+      "source": "Begin",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.effective_end",
+      "source": "End",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.status",
+      "source": "Election Status",
+      "literal": ""
+    }
+  ],
+  "labels": [
+    {
+      "field": "enrollment.type",
+      "source": "MED",
+      "value": "MEDICAL"
+    },
+    {
+      "field": "enrollment.type",
+      "source": "DEN",
+      "value": "DENTAL"
+    },
+    {
+      "field": "enrollment.type",
+      "source": "VIS",
+      "value": "VISION"
+    },
+    {
+      "field": "row.role",
+      "source": "SELF",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "row.role",
+      "source": "EE",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "row.role",
+      "source": "Employee",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "row.role",
+      "source": "SP",
+      "value": "SPOUSE"
+    },
+    {
+      "field": "row.role",
+      "source": "Spouse",
+      "value": "SPOUSE"
+    },
+    {
+      "field": "row.role",
+      "source": "CH",
+      "value": "CHILD"
+    },
+    {
+      "field": "row.role",
+      "source": "Child",
+      "value": "CHILD"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "EE",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "Employee",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "Employee Only",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "EE+SP",
+      "value": "EMPLOYEE_SPOUSE_ONLY"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "EE+CH",
+      "value": "EMPLOYEE_CHILDREN"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "FAM",
+      "value": "EMPLOYEE_FAMILY"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "Waived",
+      "value": "WAIVED"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "Declined",
+      "value": "WAIVED"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "DECLINED",
+      "value": "WAIVED"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "Active",
+      "value": "ENROLLED"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "ENROLLED",
+      "value": "ENROLLED"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "Terminated",
+      "value": "TERMINATED"
+    }
+  ],
+  "uncertainties": [
+    "Row 22 is an END OF REPORT footer, not a person or enrollment record; the reported 22-row count includes it.",
+    "Two detail rows are not sampled; the supplied categorical counts were also reviewed.",
+    "The extract reports an exact duplicate; this row-level plan does not deduplicate or merge people.",
+    "Subscriber Ref identifies subscribers within this file, not payroll worker numbers. The two Alex Patel subscriber references remain distinct.",
+    "Election Status describes enrollment, not employment; employment status is not established by these columns."
+  ],
+  "email_resolution": null
+}

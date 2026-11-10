@@ -13,7 +13,9 @@ coverage/
 
 # Logs and temp files
 *.log
+backend/logs/
 npm-debug.log*
 .DS_Store
 Thumbs.db
 ~$*
+backend/evaluations/

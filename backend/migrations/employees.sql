@@ -6,7 +6,8 @@ CREATE TABLE employees (
     dob               DATE,
     ssn               TEXT,
     employment_status BOOLEAN,
-    hire_date         DATE
+    hire_date         DATE,
+    source_refs       JSONB NOT NULL DEFAULT '[]'::jsonb
 );
 
 CREATE INDEX employees_company_id_idx ON employees (company_id);

@@ -1,0 +1,8 @@
+{
+  "name": "census",
+  "private": true,
+  "scripts": {
+    "docker:build": "docker compose build",
+    "docker:start": "docker compose up -d --no-build && docker compose port census 8080 | awk -F: '{print \"listening on http://127.0.0.1:\" $NF}' && mkdir -p logs && echo logging to logs/server.txt && docker compose logs -f --tail=100 2>&1 | tee -a logs/server.txt"
+  }
+}

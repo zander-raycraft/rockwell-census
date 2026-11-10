@@ -68,3 +68,20 @@ INGESTION / RECONCILIATION (NEXT):
     FIELD SOURCES -> Track original values and where they came from
     CONFLICTS / REVIEW -> Preserve conflicting values and recorded resolution decisions
 
+
+RECONCILIATION FIELDS (employees.sql / open_issues.sql):
+    EMPLOYEES.source_refs -> JSONB array of {namespace, value}; confirmed identifiers
+        stay on the employee row and are scoped by that employee's company.
+        Supply multipart source_system for opaque/numeric identifiers. Otherwise
+        a literal identifier prefix may provide a namespace; filenames are not
+        source systems. Conflicting reference ownership requires review.
+    OPEN_ISSUES.issue_key -> stable application key for repeated evidence
+    OPEN_ISSUES.field / subject -> targeted field and person/claim identity
+    OPEN_ISSUES.claims -> JSONB array preserving conflicting or deferred facts
+    No additional census tables are required for these prototype fixes.
+
+MIGRATION BASELINE:
+    The six table files create the complete schema for a fresh database.
+    Existing databases that applied prototype_fixes.sql already have these fields.
+    Older databases without those fields require an explicit upgrade or rebuild;
+    editing an already-recorded migration does not cause it to run again.

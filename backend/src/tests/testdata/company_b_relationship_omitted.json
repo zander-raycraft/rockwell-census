@@ -1,0 +1,129 @@
+{
+  "document_type": "csv",
+  "intent": "SNAPSHOT",
+  "date_format": "MDY",
+  "mappings": [
+    {
+      "destination": "employee.source_id",
+      "source": "Employee ID",
+      "literal": ""
+    },
+    {
+      "destination": "employee.full_name",
+      "source": "Employee Name",
+      "literal": ""
+    },
+    {
+      "destination": "dependent.full_name",
+      "source": "Member Name",
+      "literal": ""
+    },
+    {
+      "destination": "row.role",
+      "source": "Relationship",
+      "literal": ""
+    },
+    {
+      "destination": "dependent.dob",
+      "source": "Member DOB",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.type",
+      "source": "Coverage Type",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.plan",
+      "source": "Plan Name",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.coverage_tier",
+      "source": "Coverage Level",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.effective_start",
+      "source": "Effective Date",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.status",
+      "source": "Enrollment Status",
+      "literal": ""
+    }
+  ],
+  "labels": [
+    {
+      "field": "row.role",
+      "source": "Employee",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "row.role",
+      "source": "Spouse",
+      "value": "SPOUSE"
+    },
+    {
+      "field": "row.role",
+      "source": "Child",
+      "value": "CHILD"
+    },
+    {
+      "field": "enrollment.type",
+      "source": "Medical",
+      "value": "MEDICAL"
+    },
+    {
+      "field": "enrollment.type",
+      "source": "Dental",
+      "value": "DENTAL"
+    },
+    {
+      "field": "enrollment.type",
+      "source": "Vision",
+      "value": "VISION"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "Employee Only",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "Employee + Spouse",
+      "value": "EMPLOYEE_SPOUSE_ONLY"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "Employee + Child(ren)",
+      "value": "EMPLOYEE_CHILDREN"
+    },
+    {
+      "field": "enrollment.coverage_tier",
+      "source": "Family",
+      "value": "EMPLOYEE_FAMILY"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "Active",
+      "value": "ENROLLED"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "Waived",
+      "value": "WAIVED"
+    },
+    {
+      "field": "enrollment.status",
+      "source": "Terminated 09/30/2026",
+      "value": "TERMINATED"
+    }
+  ],
+  "uncertainties": [
+    "Rows 18 and 20 report child members with Employee + Spouse coverage tiers; retain the reported tiers for review.",
+    "Enrollment Status contains an embedded termination date of 09/30/2026; no standalone effective-end date column is available to map."
+  ],
+  "email_resolution": null
+}

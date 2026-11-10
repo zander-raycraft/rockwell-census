@@ -1,0 +1,120 @@
+{
+  "document_type": "csv",
+  "date_format": "DMY",
+  "mappings": [
+    {
+      "destination": "enrollment.plan",
+      "source": "Plan",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.type",
+      "source": "Benefit",
+      "literal": ""
+    },
+    {
+      "destination": "employee.source_id",
+      "source": "Subscriber Ref",
+      "literal": ""
+    },
+    {
+      "destination": "employee.full_name",
+      "source": "Subscriber",
+      "literal": ""
+    },
+    {
+      "destination": "dependent.full_name",
+      "source": "Member",
+      "literal": ""
+    },
+    {
+      "destination": "row.role",
+      "source": "Relationship",
+      "literal": ""
+    },
+    {
+      "destination": "dependent.relationship",
+      "source": "Relationship",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.coverage_tier",
+      "source": "Tier",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.status",
+      "source": "Status",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.effective_start",
+      "source": "Start",
+      "literal": ""
+    },
+    {
+      "destination": "enrollment.effective_end",
+      "source": "End",
+      "literal": ""
+    }
+  ],
+  "labels": [
+    {
+      "field": "type",
+      "source": "DENTAL",
+      "value": "DENTAL"
+    },
+    {
+      "field": "relationship",
+      "source": "Employee",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "relationship",
+      "source": "Child",
+      "value": "CHILD"
+    },
+    {
+      "field": "relationship",
+      "source": "Child",
+      "value": "CHILD"
+    },
+    {
+      "field": "tier",
+      "source": "EE",
+      "value": "EMPLOYEE"
+    },
+    {
+      "field": "tier",
+      "source": "EE+CH",
+      "value": "EMPLOYEE_CHILDREN"
+    },
+    {
+      "field": "status",
+      "source": "Active",
+      "value": "ENROLLED"
+    },
+    {
+      "field": "status",
+      "source": "ENROLLED",
+      "value": "ENROLLED"
+    },
+    {
+      "field": "status",
+      "source": "Terminated",
+      "value": "TERMINATED"
+    }
+  ],
+  "uncertainties": [
+    "Dates are explicitly DD/MM/YYYY.",
+    "The preview reports 90 data rows, including 70 not shown, rather than the 121 rows cited in open issues. Apply the plan to every actual data row, preserving exact duplicates; exclude titles, repeated headers, blanks, and footers.",
+    "Review categorical values in all unshown rows before extending labels.",
+    "Member DOB and Member SSN require conditional routing, which this mapping format cannot express. Their mappings are omitted: on EMPLOYEE rows route to employee.dob and employee.ssn; on dependent rows route to dependent.dob and dependent.ssn.",
+    "Apply Member to dependent.full_name and Relationship to dependent.relationship only on dependent rows. Do not create a dependent on EMPLOYEE rows.",
+    "Several open issues do not match this preview: rows 4\u20135 show EE+CH and a child, row 6 has a plan, and rows 13\u201314 show Oscar and Remy Morgan with EE+CH. The cited E+1 and Jordan Ellis conflicts are not verified here.",
+    "If E+1 occurs elsewhere, leave it unresolved; it does not distinguish spouse-only from children coverage.",
+    "Preserve stated tiers and blank cells. Do not infer coverage from dependent presence or fill values from another row.",
+    "Do not merge people by name; the preview contains distinct subscribers named Alex Morgan with different Subscriber Ref values."
+  ],
+  "email_resolution": null
+}

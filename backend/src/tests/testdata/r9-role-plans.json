@@ -1,0 +1,1330 @@
+[
+  {
+    "tag": "t1-C-1",
+    "plan": {
+      "document_type": "benefits census",
+      "intent": "SNAPSHOT",
+      "date_format": "MIXED",
+      "mappings": [
+        {
+          "destination": "dependent.full_name",
+          "source": "Full Name",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Rel",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.relationship",
+          "source": "Rel",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.dob",
+          "source": "Birth Date",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.ssn",
+          "source": "Social Security #",
+          "literal": ""
+        },
+        {
+          "destination": "enrollment.coverage_tier",
+          "source": "Med Election",
+          "literal": "MEDICAL"
+        },
+        {
+          "destination": "enrollment.coverage_tier",
+          "source": "Dental Election",
+          "literal": "DENTAL"
+        },
+        {
+          "destination": "enrollment.coverage_tier",
+          "source": "Vision Election",
+          "literal": "VISION"
+        },
+        {
+          "destination": "employee.hire_date",
+          "source": "Hired",
+          "literal": ""
+        }
+      ],
+      "labels": [
+        {
+          "field": "row.role",
+          "source": "EE",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Husband",
+          "value": "SPOUSE"
+        },
+        {
+          "field": "row.role",
+          "source": "SP",
+          "value": "SPOUSE"
+        },
+        {
+          "field": "row.role",
+          "source": "Son",
+          "value": "CHILD"
+        },
+        {
+          "field": "row.role",
+          "source": "Dtr",
+          "value": "CHILD"
+        },
+        {
+          "field": "dependent.relationship",
+          "source": "Husband",
+          "value": "SPOUSE"
+        },
+        {
+          "field": "dependent.relationship",
+          "source": "SP",
+          "value": "SPOUSE"
+        },
+        {
+          "field": "dependent.relationship",
+          "source": "Son",
+          "value": "CHILD"
+        },
+        {
+          "field": "dependent.relationship",
+          "source": "Dtr",
+          "value": "CHILD"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "EE",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "Employee Only",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "EE + Spouse",
+          "value": "EMPLOYEE_SPOUSE_ONLY"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "EE+Child(ren)",
+          "value": "EMPLOYEE_CHILDREN"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "EE+CH",
+          "value": "EMPLOYEE_CHILDREN"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "Family",
+          "value": "EMPLOYEE_FAMILY"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "Y",
+          "value": "ENROLLED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "Yes",
+          "value": "ENROLLED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "waived - spouse coverage",
+          "value": "WAIVED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "waive",
+          "value": "WAIVED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "Waive",
+          "value": "WAIVED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "Decline",
+          "value": "WAIVED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "new hire / pending",
+          "value": "PENDING"
+        }
+      ],
+      "uncertainties": [
+        "Full Name, Birth Date, and Social Security # are member fields; route them to the employee on EMPLOYEE rows.",
+        "No and not enrolled remain unresolved: neither establishes an explicit waiver under the supported status vocabulary.",
+        "Coverage tiers do not establish ENROLLED status. Avery Morgan's medical PENDING label reflects the explicit pending text, not confirmed coverage.",
+        "Eli D'Angelo's comment identifies Luca's child, but the blank Rel cell cannot receive a role label; the enrollment question supplies no confirmed coverage.",
+        "Ellis Brown's comment reports employment ending 09/30/2026 and COBRA effective 10/01/2026. The composite Comments column is not mapped to employment status or benefit dates; employment ending does not establish coverage termination.",
+        "Jordan Reed's DOB, 02/30/1988, is invalid and requires review; no replacement is supplied.",
+        "The footer reports eight employees from a prior-month manual count, while the data contains seven explicitly employee-coded rows."
+      ],
+      "email_resolution": null
+    },
+    "parsed": {
+      "kind": "csv",
+      "delimiter": ",",
+      "header_row": 4,
+      "headers": [
+        "Full Name",
+        "Rel",
+        "Birth Date",
+        "Social Security #",
+        "Sex",
+        "Med Election",
+        "Dental Election",
+        "Vision Election",
+        "Hired",
+        "Mailing Address",
+        "Comments"
+      ],
+      "row_count": 12,
+      "skipped": [
+        "record 1 title: Maple Lantern Workshop - benefits census / October 2026 |  |  |  |  |  |  |  |  |  | ",
+        "record 2 title: Prepared by: HR | As of: 10/31/2026 | Dependents listed beneath employee unless noted |  |  |  |  |  |  |  | ",
+        "record 3 blank",
+        "record 10 repeated header: Full Name | Rel | Birth Date | Social Security # | Sex | Med Election | Dental Election | Vision Election | Hired | Mailing Address | Comments",
+        "record 18 blank",
+        "record 19 footer: TOTAL EMPLOYEES: 8 |  |  |  |  |  |  |  |  |  | Manual count from prior month"
+      ],
+      "preview": "delimiter: comma (,)\nheader_row: 4\nheaders: Full Name | Rel | Birth Date | Social Security # | Sex | Med Election | Dental Election | Vision Election | Hired | Mailing Address | Comments\nskipped:\nrecord 1 title: Maple Lantern Workshop - benefits census / October 2026 |  |  |  |  |  |  |  |  |  | \nrecord 2 title: Prepared by: HR | As of: 10/31/2026 | Dependents listed beneath employee unless noted |  |  |  |  |  |  |  | \nrecord 3 blank\nrecord 10 repeated header: Full Name | Rel | Birth Date | Social Security # | Sex | Med Election | Dental Election | Vision Election | Hired | Mailing Address | Comments\nrecord 18 blank\nrecord 19 footer: TOTAL EMPLOYEES: 8 |  |  |  |  |  |  |  |  |  | Manual count from prior month\ncolumn_evidence (counts use all data rows; values are bounded, not definitions):\n\"Rel\": blank=1 | \"Dtr\" count=1 | \"EE\" count=6 | \"Employee\" count=1 | \"Husband\" count=1 | \"SP\" count=1 | \"Son\" count=1\n\"Med Election\": blank=2 | \"EE\" count=1 | \"EE + Spouse\" count=1 | \"EE+Child(ren)\" count=1 | \"Employee\" count=1 | \"Family\" count=1 | \"Y\" count=1 | \"Yes\" count=1 | \"new hire / pending\" count=1 | \"not enrolled\" count=1 | \"waived - spouse coverage\" count=1\n\"Dental Election\": blank=3 | \"EE\" count=1 | \"EE+CH\" count=1 | \"Employee\" count=1 | \"Employee Only\" count=1 | \"Family\" count=1 | \"No\" count=2 | \"Y\" count=1 | \"waive\" count=1\n\"Vision Election\": blank=7 | \"Decline\" count=1 | \"EE\" count=1 | \"Family\" count=1 | \"No\" count=1 | \"Waive\" count=1\ndata_row_count: 12\ndata_rows_not_sampled: 0\nrow 1: Hale, Rebecca | EE | 5/18/1982 | 900-60-1001 | F | EE + Spouse | Employee Only | Decline | 02/11/2013 | 18 Paper Lantern Ln, Dayton, OH 45402 | Goes by Becca\nrow 2: Rivera, Luis | Husband | 1980-11-02 | 900601002 | M | Yes | No |  |  |  | Rebecca's spouse; different last name\nrow 3: Hale, Noah | Son | 2014-07-09 |  | M | not enrolled | No | No |  |  | Listed for household only\nrow 4: Price, Owen | Employee | 1989-03-24 | 900-60-1010 | M | EE+Child(ren) | EE+CH | EE | 9/3/2020 | 51 Birch Ribbon Rd, Dayton OH 45405 | \nrow 5: Price, Iris | Dtr | 6/21/2017 |  | F | Y | Y |  |  |  | \nrow 6: Chen, Mei | EE |  | 900-60-1020 | F | waived - spouse coverage | waive |  | 2024-01-08 | 6 Crane Path, Dayton OH | DOB requested from employee\nrow 7: D'Angelo, Luca | EE | 07/08/1991 |  | M | Family | Family | Family | 11/18/2019 | 92 Copper Finch Ave, Apt 4, Dayton OH 45409 | \nrow 8: D'Angelo, Simone | SP | 9/20/1992 |  | F |  |  |  |  |  | Coverage not explicitly stated; do not infer from blank cells\nrow 9: D'Angelo, Eli |  | 12/14/2020 |  |  |  |  |  |  |  | Luca's child Please confirm whether enrolled\nrow 10: Morgan, Avery | EE | 1998-02-14 | 900-60-1040 |  | new hire / pending |  |  | 10/26/2026 | 7 Moss Paper Ct, Dayton OH 45403 | No elections received\nrow 11: Brown, Ellis | EE | 1965-08-30 | 900-60-1050 | M | EE | EE | Waive | 4/2/1997 | 33 Wren Parcel St, Dayton OH 45404 | COBRA effective 10/01/2026; employment ended 09/30/2026\nrow 12: Reed, Jordan | EE | 02/30/1988 | 900-60-1060 | F | Employee | Employee |  | 6/12/2018 | 40 Glass Orchard Rd, Dayton OH 45406 | DOB copied from old form; needs checking\n",
+      "rows": [
+        [
+          "Hale, Rebecca",
+          "EE",
+          "5/18/1982",
+          "900-60-1001",
+          "F",
+          "EE + Spouse",
+          "Employee Only",
+          "Decline",
+          "02/11/2013",
+          "18 Paper Lantern Ln, Dayton, OH 45402",
+          "Goes by Becca"
+        ],
+        [
+          "Rivera, Luis",
+          "Husband",
+          "1980-11-02",
+          "900601002",
+          "M",
+          "Yes",
+          "No",
+          "",
+          "",
+          "",
+          "Rebecca's spouse; different last name"
+        ],
+        [
+          "Hale, Noah",
+          "Son",
+          "2014-07-09",
+          "",
+          "M",
+          "not enrolled",
+          "No",
+          "No",
+          "",
+          "",
+          "Listed for household only"
+        ],
+        [
+          "Price, Owen",
+          "Employee",
+          "1989-03-24",
+          "900-60-1010",
+          "M",
+          "EE+Child(ren)",
+          "EE+CH",
+          "EE",
+          "9/3/2020",
+          "51 Birch Ribbon Rd, Dayton OH 45405",
+          ""
+        ],
+        [
+          "Price, Iris",
+          "Dtr",
+          "6/21/2017",
+          "",
+          "F",
+          "Y",
+          "Y",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Chen, Mei",
+          "EE",
+          "",
+          "900-60-1020",
+          "F",
+          "waived - spouse coverage",
+          "waive",
+          "",
+          "2024-01-08",
+          "6 Crane Path, Dayton OH",
+          "DOB requested from employee"
+        ],
+        [
+          "D'Angelo, Luca",
+          "EE",
+          "07/08/1991",
+          "",
+          "M",
+          "Family",
+          "Family",
+          "Family",
+          "11/18/2019",
+          "92 Copper Finch Ave, Apt 4, Dayton OH 45409",
+          ""
+        ],
+        [
+          "D'Angelo, Simone",
+          "SP",
+          "9/20/1992",
+          "",
+          "F",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Coverage not explicitly stated; do not infer from blank cells"
+        ],
+        [
+          "D'Angelo, Eli",
+          "",
+          "12/14/2020",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Luca's child\nPlease confirm whether enrolled"
+        ],
+        [
+          "Morgan, Avery",
+          "EE",
+          "1998-02-14",
+          "900-60-1040",
+          "",
+          "new hire / pending",
+          "",
+          "",
+          "10/26/2026",
+          "7 Moss Paper Ct, Dayton OH 45403",
+          "No elections received"
+        ],
+        [
+          "Brown, Ellis",
+          "EE",
+          "1965-08-30",
+          "900-60-1050",
+          "M",
+          "EE",
+          "EE",
+          "Waive",
+          "4/2/1997",
+          "33 Wren Parcel St, Dayton OH 45404",
+          "COBRA effective 10/01/2026; employment ended 09/30/2026"
+        ],
+        [
+          "Reed, Jordan",
+          "EE",
+          "02/30/1988",
+          "900-60-1060",
+          "F",
+          "Employee",
+          "Employee",
+          "",
+          "6/12/2018",
+          "40 Glass Orchard Rd, Dayton OH 45406",
+          "DOB copied from old form; needs checking"
+        ]
+      ]
+    }
+  },
+  {
+    "tag": "t2-C-1",
+    "plan": {
+      "document_type": "benefits_census",
+      "intent": "SNAPSHOT",
+      "date_format": "MIXED",
+      "mappings": [
+        {
+          "destination": "dependent.full_name",
+          "source": "Full Name",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Rel",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.dob",
+          "source": "Birth Date",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.ssn",
+          "source": "Social Security #",
+          "literal": ""
+        },
+        {
+          "destination": "enrollment.coverage_tier",
+          "source": "Med Election",
+          "literal": "MEDICAL"
+        },
+        {
+          "destination": "enrollment.coverage_tier",
+          "source": "Dental Election",
+          "literal": "DENTAL"
+        },
+        {
+          "destination": "enrollment.coverage_tier",
+          "source": "Vision Election",
+          "literal": "VISION"
+        },
+        {
+          "destination": "employee.hire_date",
+          "source": "Hired",
+          "literal": ""
+        }
+      ],
+      "labels": [
+        {
+          "field": "row.role",
+          "source": "EE",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Husband",
+          "value": "SPOUSE"
+        },
+        {
+          "field": "row.role",
+          "source": "SP",
+          "value": "SPOUSE"
+        },
+        {
+          "field": "row.role",
+          "source": "Son",
+          "value": "CHILD"
+        },
+        {
+          "field": "row.role",
+          "source": "Dtr",
+          "value": "CHILD"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "EE",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "Employee Only",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "EE + Spouse",
+          "value": "EMPLOYEE_SPOUSE_ONLY"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "EE+Child(ren)",
+          "value": "EMPLOYEE_CHILDREN"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "EE+CH",
+          "value": "EMPLOYEE_CHILDREN"
+        },
+        {
+          "field": "enrollment.coverage_tier",
+          "source": "Family",
+          "value": "EMPLOYEE_FAMILY"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "Y",
+          "value": "ENROLLED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "Yes",
+          "value": "ENROLLED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "new hire / pending",
+          "value": "PENDING"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "waived - spouse coverage",
+          "value": "WAIVED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "waive",
+          "value": "WAIVED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "Waive",
+          "value": "WAIVED"
+        },
+        {
+          "field": "enrollment.status",
+          "source": "Decline",
+          "value": "WAIVED"
+        }
+      ],
+      "uncertainties": [
+        "No and not enrolled remain unresolved; neither is labeled as an explicit waiver.",
+        "Eli D'Angelo's comment identifies him as Luca's child, but Rel is blank; no blank-role label or confirmed coverage is assigned.",
+        "Ellis Brown's comment reports employment ending 09/30/2026 and COBRA effective 10/01/2026. These narrative facts are not mapped from the free-text Comments column; COBRA does not establish termination of coverage.",
+        "Jordan Reed's Birth Date, 02/30/1988, is invalid and requires review without substituting a date.",
+        "The footer's prior-month total of eight employees differs from the seven explicitly employee-coded data rows."
+      ],
+      "email_resolution": null
+    },
+    "parsed": {
+      "kind": "csv",
+      "delimiter": ",",
+      "header_row": 4,
+      "headers": [
+        "Full Name",
+        "Rel",
+        "Birth Date",
+        "Social Security #",
+        "Sex",
+        "Med Election",
+        "Dental Election",
+        "Vision Election",
+        "Hired",
+        "Mailing Address",
+        "Comments"
+      ],
+      "row_count": 12,
+      "skipped": [
+        "record 1 title: Maple Lantern Workshop - benefits census / October 2026 |  |  |  |  |  |  |  |  |  | ",
+        "record 2 title: Prepared by: HR | As of: 10/31/2026 | Dependents listed beneath employee unless noted |  |  |  |  |  |  |  | ",
+        "record 3 blank",
+        "record 10 repeated header: Full Name | Rel | Birth Date | Social Security # | Sex | Med Election | Dental Election | Vision Election | Hired | Mailing Address | Comments",
+        "record 18 blank",
+        "record 19 footer: TOTAL EMPLOYEES: 8 |  |  |  |  |  |  |  |  |  | Manual count from prior month"
+      ],
+      "preview": "delimiter: comma (,)\nheader_row: 4\nheaders: Full Name | Rel | Birth Date | Social Security # | Sex | Med Election | Dental Election | Vision Election | Hired | Mailing Address | Comments\nskipped:\nrecord 1 title: Maple Lantern Workshop - benefits census / October 2026 |  |  |  |  |  |  |  |  |  | \nrecord 2 title: Prepared by: HR | As of: 10/31/2026 | Dependents listed beneath employee unless noted |  |  |  |  |  |  |  | \nrecord 3 blank\nrecord 10 repeated header: Full Name | Rel | Birth Date | Social Security # | Sex | Med Election | Dental Election | Vision Election | Hired | Mailing Address | Comments\nrecord 18 blank\nrecord 19 footer: TOTAL EMPLOYEES: 8 |  |  |  |  |  |  |  |  |  | Manual count from prior month\ncolumn_evidence (counts use all data rows; values are bounded, not definitions):\n\"Rel\": blank=1 | \"Dtr\" count=1 | \"EE\" count=6 | \"Employee\" count=1 | \"Husband\" count=1 | \"SP\" count=1 | \"Son\" count=1\n\"Med Election\": blank=2 | \"EE\" count=1 | \"EE + Spouse\" count=1 | \"EE+Child(ren)\" count=1 | \"Employee\" count=1 | \"Family\" count=1 | \"Y\" count=1 | \"Yes\" count=1 | \"new hire / pending\" count=1 | \"not enrolled\" count=1 | \"waived - spouse coverage\" count=1\n\"Dental Election\": blank=3 | \"EE\" count=1 | \"EE+CH\" count=1 | \"Employee\" count=1 | \"Employee Only\" count=1 | \"Family\" count=1 | \"No\" count=2 | \"Y\" count=1 | \"waive\" count=1\n\"Vision Election\": blank=7 | \"Decline\" count=1 | \"EE\" count=1 | \"Family\" count=1 | \"No\" count=1 | \"Waive\" count=1\ndata_row_count: 12\ndata_rows_not_sampled: 0\nrow 1: Hale, Rebecca | EE | 5/18/1982 | 900-60-1001 | F | EE + Spouse | Employee Only | Decline | 02/11/2013 | 18 Paper Lantern Ln, Dayton, OH 45402 | Goes by Becca\nrow 2: Rivera, Luis | Husband | 1980-11-02 | 900601002 | M | Yes | No |  |  |  | Rebecca's spouse; different last name\nrow 3: Hale, Noah | Son | 2014-07-09 |  | M | not enrolled | No | No |  |  | Listed for household only\nrow 4: Price, Owen | Employee | 1989-03-24 | 900-60-1010 | M | EE+Child(ren) | EE+CH | EE | 9/3/2020 | 51 Birch Ribbon Rd, Dayton OH 45405 | \nrow 5: Price, Iris | Dtr | 6/21/2017 |  | F | Y | Y |  |  |  | \nrow 6: Chen, Mei | EE |  | 900-60-1020 | F | waived - spouse coverage | waive |  | 2024-01-08 | 6 Crane Path, Dayton OH | DOB requested from employee\nrow 7: D'Angelo, Luca | EE | 07/08/1991 |  | M | Family | Family | Family | 11/18/2019 | 92 Copper Finch Ave, Apt 4, Dayton OH 45409 | \nrow 8: D'Angelo, Simone | SP | 9/20/1992 |  | F |  |  |  |  |  | Coverage not explicitly stated; do not infer from blank cells\nrow 9: D'Angelo, Eli |  | 12/14/2020 |  |  |  |  |  |  |  | Luca's child Please confirm whether enrolled\nrow 10: Morgan, Avery | EE | 1998-02-14 | 900-60-1040 |  | new hire / pending |  |  | 10/26/2026 | 7 Moss Paper Ct, Dayton OH 45403 | No elections received\nrow 11: Brown, Ellis | EE | 1965-08-30 | 900-60-1050 | M | EE | EE | Waive | 4/2/1997 | 33 Wren Parcel St, Dayton OH 45404 | COBRA effective 10/01/2026; employment ended 09/30/2026\nrow 12: Reed, Jordan | EE | 02/30/1988 | 900-60-1060 | F | Employee | Employee |  | 6/12/2018 | 40 Glass Orchard Rd, Dayton OH 45406 | DOB copied from old form; needs checking\n",
+      "rows": [
+        [
+          "Hale, Rebecca",
+          "EE",
+          "5/18/1982",
+          "900-60-1001",
+          "F",
+          "EE + Spouse",
+          "Employee Only",
+          "Decline",
+          "02/11/2013",
+          "18 Paper Lantern Ln, Dayton, OH 45402",
+          "Goes by Becca"
+        ],
+        [
+          "Rivera, Luis",
+          "Husband",
+          "1980-11-02",
+          "900601002",
+          "M",
+          "Yes",
+          "No",
+          "",
+          "",
+          "",
+          "Rebecca's spouse; different last name"
+        ],
+        [
+          "Hale, Noah",
+          "Son",
+          "2014-07-09",
+          "",
+          "M",
+          "not enrolled",
+          "No",
+          "No",
+          "",
+          "",
+          "Listed for household only"
+        ],
+        [
+          "Price, Owen",
+          "Employee",
+          "1989-03-24",
+          "900-60-1010",
+          "M",
+          "EE+Child(ren)",
+          "EE+CH",
+          "EE",
+          "9/3/2020",
+          "51 Birch Ribbon Rd, Dayton OH 45405",
+          ""
+        ],
+        [
+          "Price, Iris",
+          "Dtr",
+          "6/21/2017",
+          "",
+          "F",
+          "Y",
+          "Y",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Chen, Mei",
+          "EE",
+          "",
+          "900-60-1020",
+          "F",
+          "waived - spouse coverage",
+          "waive",
+          "",
+          "2024-01-08",
+          "6 Crane Path, Dayton OH",
+          "DOB requested from employee"
+        ],
+        [
+          "D'Angelo, Luca",
+          "EE",
+          "07/08/1991",
+          "",
+          "M",
+          "Family",
+          "Family",
+          "Family",
+          "11/18/2019",
+          "92 Copper Finch Ave, Apt 4, Dayton OH 45409",
+          ""
+        ],
+        [
+          "D'Angelo, Simone",
+          "SP",
+          "9/20/1992",
+          "",
+          "F",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Coverage not explicitly stated; do not infer from blank cells"
+        ],
+        [
+          "D'Angelo, Eli",
+          "",
+          "12/14/2020",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Luca's child\nPlease confirm whether enrolled"
+        ],
+        [
+          "Morgan, Avery",
+          "EE",
+          "1998-02-14",
+          "900-60-1040",
+          "",
+          "new hire / pending",
+          "",
+          "",
+          "10/26/2026",
+          "7 Moss Paper Ct, Dayton OH 45403",
+          "No elections received"
+        ],
+        [
+          "Brown, Ellis",
+          "EE",
+          "1965-08-30",
+          "900-60-1050",
+          "M",
+          "EE",
+          "EE",
+          "Waive",
+          "4/2/1997",
+          "33 Wren Parcel St, Dayton OH 45404",
+          "COBRA effective 10/01/2026; employment ended 09/30/2026"
+        ],
+        [
+          "Reed, Jordan",
+          "EE",
+          "02/30/1988",
+          "900-60-1060",
+          "F",
+          "Employee",
+          "Employee",
+          "",
+          "6/12/2018",
+          "40 Glass Orchard Rd, Dayton OH 45406",
+          "DOB copied from old form; needs checking"
+        ]
+      ]
+    }
+  },
+  {
+    "tag": "tally-missing",
+    "plan": {
+      "document_type": "csv",
+      "intent": "SNAPSHOT",
+      "date_format": "ISO",
+      "mappings": [
+        {
+          "destination": "dependent.first_name",
+          "source": "First Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.last_name",
+          "source": "Last Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.dob",
+          "source": "DOB",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.ssn",
+          "source": "SSN",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Role",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.relationship",
+          "source": "Relationship",
+          "literal": ""
+        },
+        {
+          "destination": "employee.source_id",
+          "source": "Employee ID",
+          "literal": ""
+        },
+        {
+          "destination": "employee.source_id",
+          "source": "Subscriber ID",
+          "literal": ""
+        }
+      ],
+      "labels": [
+        {
+          "field": "row.role",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Dependent",
+          "value": "OTHER"
+        }
+      ],
+      "uncertainties": [
+        "Dependent identifies a nonemployee row but does not establish a specific relationship; OTHER is used only as the generic row role.",
+        "Employee ID and Subscriber ID provide complementary worker/subscriber references on the respective rows."
+      ],
+      "email_resolution": null
+    },
+    "parsed": {
+      "kind": "csv",
+      "delimiter": ",",
+      "header_row": 1,
+      "headers": [
+        "First Name",
+        "Last Name",
+        "DOB",
+        "SSN",
+        "Role",
+        "Relationship",
+        "Employee ID",
+        "Subscriber ID"
+      ],
+      "row_count": 2,
+      "skipped": null,
+      "preview": "delimiter: comma (,)\nheader_row: 1\nheaders: First Name | Last Name | DOB | SSN | Role | Relationship | Employee ID | Subscriber ID\nskipped:\n(none)\ncolumn_evidence (counts use all data rows; values are bounded, not definitions):\n\"Relationship\": blank=2\ndata_row_count: 2\ndata_rows_not_sampled: 0\nrow 1: Taylor | Audit | 1980-05-12 | 900-21-1111 | Employee |  | AUD001 | \nrow 2: Casey | Audit | 2010-06-15 |  | Dependent |  |  | AUD001\n",
+      "rows": [
+        [
+          "Taylor",
+          "Audit",
+          "1980-05-12",
+          "900-21-1111",
+          "Employee",
+          "",
+          "AUD001",
+          ""
+        ],
+        [
+          "Casey",
+          "Audit",
+          "2010-06-15",
+          "",
+          "Dependent",
+          "",
+          "",
+          "AUD001"
+        ]
+      ]
+    }
+  },
+  {
+    "tag": "tally-supplied",
+    "plan": {
+      "document_type": "csv",
+      "intent": "SNAPSHOT",
+      "date_format": "ISO",
+      "mappings": [
+        {
+          "destination": "dependent.first_name",
+          "source": "First Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.last_name",
+          "source": "Last Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.dob",
+          "source": "DOB",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.ssn",
+          "source": "SSN",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Role",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.relationship",
+          "source": "Relationship",
+          "literal": ""
+        },
+        {
+          "destination": "employee.source_id",
+          "source": "Employee ID",
+          "literal": ""
+        },
+        {
+          "destination": "employee.source_id",
+          "source": "Subscriber ID",
+          "literal": ""
+        }
+      ],
+      "labels": [
+        {
+          "field": "row.role",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "dependent.relationship",
+          "source": "Child",
+          "value": "CHILD"
+        }
+      ],
+      "uncertainties": [
+        "Role value 'Dependent' does not specify a canonical relationship role; the Relationship column identifies this row as CHILD.",
+        "The shared identity columns contain employee and dependent values and require employee-row routing."
+      ],
+      "email_resolution": null
+    },
+    "parsed": {
+      "kind": "csv",
+      "delimiter": ",",
+      "header_row": 1,
+      "headers": [
+        "First Name",
+        "Last Name",
+        "DOB",
+        "SSN",
+        "Role",
+        "Relationship",
+        "Employee ID",
+        "Subscriber ID"
+      ],
+      "row_count": 2,
+      "skipped": null,
+      "preview": "delimiter: comma (,)\nheader_row: 1\nheaders: First Name | Last Name | DOB | SSN | Role | Relationship | Employee ID | Subscriber ID\nskipped:\n(none)\ncolumn_evidence (counts use all data rows; values are bounded, not definitions):\n\"Relationship\": blank=1 | \"Child\" count=1\ndata_row_count: 2\ndata_rows_not_sampled: 0\nrow 1: Taylor | Audit | 1980-05-12 | 900-21-1111 | Employee |  | AUD001 | \nrow 2: Casey | Audit | 2010-06-15 |  | Dependent | Child |  | AUD001\n",
+      "rows": [
+        [
+          "Taylor",
+          "Audit",
+          "1980-05-12",
+          "900-21-1111",
+          "Employee",
+          "",
+          "AUD001",
+          ""
+        ],
+        [
+          "Casey",
+          "Audit",
+          "2010-06-15",
+          "",
+          "Dependent",
+          "Child",
+          "",
+          "AUD001"
+        ]
+      ]
+    }
+  },
+  {
+    "tag": "tally-replay",
+    "plan": {
+      "document_type": "csv",
+      "intent": "SNAPSHOT",
+      "date_format": "ISO",
+      "mappings": [
+        {
+          "destination": "dependent.first_name",
+          "source": "First Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.last_name",
+          "source": "Last Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.dob",
+          "source": "DOB",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.ssn",
+          "source": "SSN",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Role",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Relationship",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.relationship",
+          "source": "Relationship",
+          "literal": ""
+        },
+        {
+          "destination": "employee.source_id",
+          "source": "Employee ID",
+          "literal": ""
+        },
+        {
+          "destination": "employee.source_id",
+          "source": "Subscriber ID",
+          "literal": ""
+        }
+      ],
+      "labels": [
+        {
+          "field": "row.role",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Child",
+          "value": "CHILD"
+        },
+        {
+          "field": "dependent.relationship",
+          "source": "Child",
+          "value": "CHILD"
+        }
+      ],
+      "uncertainties": [
+        "Role 'Dependent' is nonspecific; Relationship 'Child' supplies the CHILD role.",
+        "Employee ID and Subscriber ID provide the worker reference on their respective rows."
+      ],
+      "email_resolution": null
+    },
+    "parsed": {
+      "kind": "csv",
+      "delimiter": ",",
+      "header_row": 1,
+      "headers": [
+        "First Name",
+        "Last Name",
+        "DOB",
+        "SSN",
+        "Role",
+        "Relationship",
+        "Employee ID",
+        "Subscriber ID"
+      ],
+      "row_count": 2,
+      "skipped": null,
+      "preview": "delimiter: comma (,)\nheader_row: 1\nheaders: First Name | Last Name | DOB | SSN | Role | Relationship | Employee ID | Subscriber ID\nskipped:\n(none)\ncolumn_evidence (counts use all data rows; values are bounded, not definitions):\n\"Relationship\": blank=1 | \"Child\" count=1\ndata_row_count: 2\ndata_rows_not_sampled: 0\nrow 1: Taylor | Audit | 1980-05-12 | 900-21-1111 | Employee |  | AUD001 | \nrow 2: Casey | Audit | 2010-06-15 |  | Dependent | Child |  | AUD001\n",
+      "rows": [
+        [
+          "Taylor",
+          "Audit",
+          "1980-05-12",
+          "900-21-1111",
+          "Employee",
+          "",
+          "AUD001",
+          ""
+        ],
+        [
+          "Casey",
+          "Audit",
+          "2010-06-15",
+          "",
+          "Dependent",
+          "Child",
+          "",
+          "AUD001"
+        ]
+      ]
+    }
+  },
+  {
+    "tag": "tally-names-missing",
+    "plan": {
+      "document_type": "census",
+      "intent": "SNAPSHOT",
+      "date_format": "ISO",
+      "mappings": [
+        {
+          "destination": "dependent.full_name",
+          "source": "Full Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.dob",
+          "source": "DOB",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.ssn",
+          "source": "SSN",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Role",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.relationship",
+          "source": "Relationship",
+          "literal": ""
+        },
+        {
+          "destination": "employee.full_name",
+          "source": "Subscriber Name",
+          "literal": ""
+        }
+      ],
+      "labels": [
+        {
+          "field": "row.role",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Dependent",
+          "value": "OTHER"
+        }
+      ],
+      "uncertainties": [
+        "The generic role 'Dependent' is represented as OTHER; it does not establish a spouse or child relationship."
+      ],
+      "email_resolution": null
+    },
+    "parsed": {
+      "kind": "csv",
+      "delimiter": ",",
+      "header_row": 1,
+      "headers": [
+        "Full Name",
+        "DOB",
+        "SSN",
+        "Role",
+        "Relationship",
+        "Subscriber Name"
+      ],
+      "row_count": 2,
+      "skipped": null,
+      "preview": "delimiter: comma (,)\nheader_row: 1\nheaders: Full Name | DOB | SSN | Role | Relationship | Subscriber Name\nskipped:\n(none)\ncolumn_evidence (counts use all data rows; values are bounded, not definitions):\n\"Relationship\": blank=2\ndata_row_count: 2\ndata_rows_not_sampled: 0\nrow 1: Taylor Audit | 1980-05-12 | 900-21-1111 | Employee |  | \nrow 2: Casey Audit | 2010-06-15 |  | Dependent |  | Taylor Audit\n",
+      "rows": [
+        [
+          "Taylor Audit",
+          "1980-05-12",
+          "900-21-1111",
+          "Employee",
+          "",
+          ""
+        ],
+        [
+          "Casey Audit",
+          "2010-06-15",
+          "",
+          "Dependent",
+          "",
+          "Taylor Audit"
+        ]
+      ]
+    }
+  },
+  {
+    "tag": "tally-names-supplied",
+    "plan": {
+      "document_type": "csv",
+      "intent": "SNAPSHOT",
+      "date_format": "ISO",
+      "mappings": [
+        {
+          "destination": "dependent.full_name",
+          "source": "Full Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.dob",
+          "source": "DOB",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.ssn",
+          "source": "SSN",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Role",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.relationship",
+          "source": "Relationship",
+          "literal": ""
+        },
+        {
+          "destination": "employee.full_name",
+          "source": "Subscriber Name",
+          "literal": ""
+        }
+      ],
+      "labels": [
+        {
+          "field": "row.role",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Dependent",
+          "value": "OTHER"
+        },
+        {
+          "field": "dependent.relationship",
+          "source": "Child",
+          "value": "CHILD"
+        }
+      ],
+      "uncertainties": [
+        "The generic role Dependent is mapped to OTHER; the Relationship column supplies the specific dependent relationship."
+      ],
+      "email_resolution": null
+    },
+    "parsed": {
+      "kind": "csv",
+      "delimiter": ",",
+      "header_row": 1,
+      "headers": [
+        "Full Name",
+        "DOB",
+        "SSN",
+        "Role",
+        "Relationship",
+        "Subscriber Name"
+      ],
+      "row_count": 2,
+      "skipped": null,
+      "preview": "delimiter: comma (,)\nheader_row: 1\nheaders: Full Name | DOB | SSN | Role | Relationship | Subscriber Name\nskipped:\n(none)\ncolumn_evidence (counts use all data rows; values are bounded, not definitions):\n\"Relationship\": blank=1 | \"Child\" count=1\ndata_row_count: 2\ndata_rows_not_sampled: 0\nrow 1: Taylor Audit | 1980-05-12 | 900-21-1111 | Employee |  | \nrow 2: Casey Audit | 2010-06-15 |  | Dependent | Child | Taylor Audit\n",
+      "rows": [
+        [
+          "Taylor Audit",
+          "1980-05-12",
+          "900-21-1111",
+          "Employee",
+          "",
+          ""
+        ],
+        [
+          "Casey Audit",
+          "2010-06-15",
+          "",
+          "Dependent",
+          "Child",
+          "Taylor Audit"
+        ]
+      ]
+    }
+  },
+  {
+    "tag": "tally-names-replay",
+    "plan": {
+      "document_type": "csv",
+      "intent": "SNAPSHOT",
+      "date_format": "ISO",
+      "mappings": [
+        {
+          "destination": "dependent.full_name",
+          "source": "Full Name",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.dob",
+          "source": "DOB",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.ssn",
+          "source": "SSN",
+          "literal": ""
+        },
+        {
+          "destination": "row.role",
+          "source": "Role",
+          "literal": ""
+        },
+        {
+          "destination": "dependent.relationship",
+          "source": "Relationship",
+          "literal": ""
+        },
+        {
+          "destination": "employee.full_name",
+          "source": "Subscriber Name",
+          "literal": ""
+        }
+      ],
+      "labels": [
+        {
+          "field": "row.role",
+          "source": "Employee",
+          "value": "EMPLOYEE"
+        },
+        {
+          "field": "row.role",
+          "source": "Dependent",
+          "value": "OTHER"
+        },
+        {
+          "field": "dependent.relationship",
+          "source": "Child",
+          "value": "CHILD"
+        }
+      ],
+      "uncertainties": [],
+      "email_resolution": null
+    },
+    "parsed": {
+      "kind": "csv",
+      "delimiter": ",",
+      "header_row": 1,
+      "headers": [
+        "Full Name",
+        "DOB",
+        "SSN",
+        "Role",
+        "Relationship",
+        "Subscriber Name"
+      ],
+      "row_count": 2,
+      "skipped": null,
+      "preview": "delimiter: comma (,)\nheader_row: 1\nheaders: Full Name | DOB | SSN | Role | Relationship | Subscriber Name\nskipped:\n(none)\ncolumn_evidence (counts use all data rows; values are bounded, not definitions):\n\"Relationship\": blank=1 | \"Child\" count=1\ndata_row_count: 2\ndata_rows_not_sampled: 0\nrow 1: Taylor Audit | 1980-05-12 | 900-21-1111 | Employee |  | \nrow 2: Casey Audit | 2010-06-15 |  | Dependent | Child | Taylor Audit\n",
+      "rows": [
+        [
+          "Taylor Audit",
+          "1980-05-12",
+          "900-21-1111",
+          "Employee",
+          "",
+          ""
+        ],
+        [
+          "Casey Audit",
+          "2010-06-15",
+          "",
+          "Dependent",
+          "Child",
+          "Taylor Audit"
+        ]
+      ]
+    }
+  }
+]

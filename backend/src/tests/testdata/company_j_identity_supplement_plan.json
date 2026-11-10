@@ -1,0 +1,62 @@
+{
+  "document_type": "employee identity and payroll supplement",
+  "date_format": "MIXED",
+  "mappings": [
+    {
+      "destination": "employee.source_id",
+      "source": "Worker No",
+      "literal": ""
+    },
+    {
+      "destination": "employee.full_name",
+      "source": "Name",
+      "literal": ""
+    },
+    {
+      "destination": "employee.dob",
+      "source": "Birth Date",
+      "literal": ""
+    },
+    {
+      "destination": "employee.ssn",
+      "source": "SSN",
+      "literal": ""
+    },
+    {
+      "destination": "employee.employment_status",
+      "source": "Employment Status",
+      "literal": ""
+    },
+    {
+      "destination": "employee.hire_date",
+      "source": "Hire Date",
+      "literal": ""
+    }
+  ],
+  "labels": [
+    {
+      "field": "employment",
+      "source": "Active",
+      "value": "ACTIVE"
+    },
+    {
+      "field": "employment",
+      "source": "Terminated",
+      "value": "INACTIVE"
+    }
+  ],
+  "uncertainties": [
+    "Apply the plan to all 81 data rows, including the 61 not shown. Exclude titles, headers, the blank record, and the footer; do not deduplicate people or rows.",
+    "The footer reports 80 and says it excludes an exact duplicate; reconcile this with the 81 data rows without dropping the duplicate from extraction.",
+    "Structured dates are explicitly DD/MM/YYYY; Notes also contains an ISO date, so the document date format is MIXED.",
+    "Preview row 11, Morgan, Miles, has invalid DOB 31/04/1988; flag it without correction.",
+    "Leave of Absence cannot be reliably classified as ACTIVE or INACTIVE without a business rule.",
+    "Worker No 000012 appears for Zara and Hugo Morgan. Preserve leading zeros, review surrounding whitespace, and do not merge these rows.",
+    "The two Jordan Ellis rows have different worker numbers and SSNs; preserve them separately pending review.",
+    "Blank cells remain unknown. Review unseen rows for additional categorical values.",
+    "No dependent, relationship, role, or benefit columns are present. The supplied open issues referring to those columns and 160 rows do not match this document.",
+    "Notes reports employment ending for preview row 9, not row 17. Do not map that date as a benefit termination date.",
+    "ZIP, Pay, Pay Basis, Address, and Notes have no established destination among the supported fields."
+  ],
+  "email_resolution": null
+}

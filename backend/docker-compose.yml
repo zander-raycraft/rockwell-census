@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: census
+      POSTGRES_PASSWORD: census
+      POSTGRES_DB: census
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "census", "-d", "census"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  census:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file: .env
+    environment:
+      DATABASE_URL: "postgres://census:census@postgres:5432/census?sslmode=disable"
+      OPENAI_MODEL: "${OPENAI_MODEL:-gpt-6.1-sol}"
+      OPENAI_REASONING_EFFORT: "${OPENAI_REASONING_EFFORT:-medium}"
+      MIGRATIONS_DIR: /app/migrations
+      LOG_DIR: /logs
+    volumes:
+      - ./logs:/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
